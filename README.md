@@ -1,2 +1,2 @@
 # exercises-js
-Each exercise starts with a problem description. Read this description and try to solve the exercise.
+Each exercise starts with a problem description. Read this description and try to solve the exercise. If you run into problems, consider reading the hints after the exercise. If you want to learn something from the exercises, I recommend looking at the solutions only after you’ve solved the exercise, or at least after you’ve attacked it long and hard enough to have a slight headache.
