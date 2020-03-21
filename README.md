@@ -17,7 +17,7 @@ Write a loop that makes seven calls to console.log to output the following trian
 #######
 ```
 > It may be useful to know that you can find the length of a string by writing .length after it.
-```
+```js
 let abc = "abc";
 console.log(abc.length);
 // → 3
@@ -71,7 +71,7 @@ When you have a program that generates this pattern, define a binding size = 8 a
 
 ## Minimum
 The previous chapter introduced the standard function Math.min that returns its smallest argument. We can build something like that now. Write a function min that takes two arguments and returns their minimum.
-```
+```js
 console.log(min(0, 10));
 // → 0
 console.log(min(0, -10));
@@ -93,7 +93,7 @@ We’ve seen that % (the remainder operator) can be used to test whether a numbe
 Define a recursive function isEven corresponding to this description. The function should accept a single parameter (a positive, whole number) and return a Boolean.
 
 Test it on 50 and 75. See how it behaves on -1. Why? Can you think of a way to fix this?
-```
+```js
 console.log(isEven(50));
 // → true
 console.log(isEven(75));
