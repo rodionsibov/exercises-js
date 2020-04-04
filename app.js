@@ -192,18 +192,104 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 // const assert = require('assert');
 
-var myDog = {
-    'name': 'Camper',
-    'legs': 4,
-    'tails': 1,
-    'friends': ['everything']
-};
-console.log(myDog)
-myDog.bark = 'bow-wow';
+// var myDog = {
+//     'name': 'Camper',
+//     'legs': 4,
+//     'tails': 1,
+//     'friends': ['everything']
+// };
+// console.log(myDog)
+// myDog.bark = 'bow-wow';
 
-console.log(myDog)
-myDog.name = 'Happy Camper'
-console.log(myDog)
+// console.log(myDog)
+// myDog.name = 'Happy Camper'
+// console.log(myDog)
 
-delete myDog['bark']
-console.log(myDog)
+// delete myDog['bark']
+// console.log(myDog)
+
+// var myDog = {
+//     'name': 'Camper',
+//     'legs': 4,
+//     'tails': 1,
+//     'friends': ['everything']
+// };
+
+// function checkObj(n) {
+// if (myDog.hasOwnProperty(n)) {
+//     console.log(myDog[n]);
+//     return myDog[n]
+// }
+//     console.log('Not found'); 
+// }
+
+// checkObj('n')
+
+// var firstName = "Voo"
+// var lastName = "Fer"
+// var country = "UK"
+// var country = "London"
+// var age = 33
+// var isMarried = true
+
+// const now = new Date()
+// var year = now.getFullYear()
+
+// let array = [firstName, lastName, country, age, isMarried, year]
+// console.log(array)
+
+// const typeOfIndexInArray = (array) => {
+//     for (let i = 0; i < array.length; i++) {
+// 	console.log(`${array[i]}: ${typeof array[i]}`)
+//     }
+// }
+
+// typeOfIndexInArray(array)
+
+// console.log(parseInt(9.8) === 10)
+// console.log(parseInt(9.8))
+// console.log(10 === 10)
+
+
+// console.log(5 === "5")
+// console.log(true === "true")
+// console.log(5 < 3)
+
+// console.log(true == 1)
+// console.log(1 > -5)
+// console.log('love' === 'love')
+
+// console.log('python'.length === 'jargon'.length)
+
+
+// console.log('The result is:', !(4 > 3 && 10 < 12))
+// console.log('The result is:', !(4 === '4'))
+// console.log("There is no 'on' in both dragon and python", !('dragon'.includes('on') && 'python'.includes('on')))
+
+
+// const now = new Date()
+// console.log(now.getFullYear())
+// console.log(now.getMonth())
+// console.log(now.getDate())
+// console.log(now.getHours())
+// console.log(now.getMinutes())
+// console.log(now.getTime())
+// console.log(now.getDay())
+
+// const b = prompt('Enter base:')
+// const h = prompt('Enter height:')
+
+// alert('The area of the triangle is' + 0.5 * b * h)
+
+// const b = prompt('Enter base:')
+// const h = prompt('Enter height:')
+
+// alert('The area of the triangle is ' + 0.5 * b * h)
+
+// const a = +prompt('Enter side a:')
+// const b = +prompt('Enter side b:')
+// const c = +prompt('Enter side c:')
+
+// alert(`The perimeter of the triangle is ${a + b + c}`)
+
+
