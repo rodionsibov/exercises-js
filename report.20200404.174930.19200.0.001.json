@@ -1,0 +1,293 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20200404.174930.19200.0.001.json",
+    "dumpEventTime": "2020-04-04T17:49:30Z",
+    "dumpEventTimeStamp": "1586018970295",
+    "processId": 19200,
+    "cwd": "/storage/emulated/0/Download/web-development/git-folder/exercises-js",
+    "commandLine": [
+      "node",
+      "app.js"
+    ],
+    "nodejsVersion": "v13.0.0",
+    "wordSize": 32,
+    "arch": "ia32",
+    "platform": "android",
+    "componentVersions": {
+      "node": "13.0.0",
+      "v8": "7.8.279.17-node.14",
+      "uv": "1.32.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.14.0",
+      "modules": "79",
+      "nghttp2": "1.39.2",
+      "napi": "5",
+      "llhttp": "1.1.4",
+      "openssl": "1.1.1d",
+      "cldr": "36.1",
+      "icu": "66.1",
+      "tz": "2019c",
+      "unicode": "13.0"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v13.0.0/node-v13.0.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v13.0.0/node-v13.0.0.tar.gz"
+    },
+    "osName": "Linux",
+    "osRelease": "3.18.0-20383-g0a51eb05ce33",
+    "osVersion": "#1 SMP PREEMPT Thu Mar 26 00:07:31 PDT 2020",
+    "osMachine": "i686",
+    "networkInterfaces": [
+      {
+        "name": "lo",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "wlan0",
+        "internal": false,
+        "mac": "3e:71:1b:4f:e8:85",
+        "address": "100.115.92.10",
+        "netmask": "255.255.255.252",
+        "family": "IPv4"
+      },
+      {
+        "name": "arc0",
+        "internal": false,
+        "mac": "5e:d9:a7:61:a6:7f",
+        "address": "100.115.92.2",
+        "netmask": "255.255.255.252",
+        "family": "IPv4"
+      },
+      {
+        "name": "lo",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 1701671023
+      },
+      {
+        "name": "wlan0",
+        "internal": false,
+        "mac": "3e:71:1b:4f:e8:85",
+        "address": "fdf2:4ae6:eb4e:1:3c71:1bff:fe4f:e885",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "wlan0",
+        "internal": false,
+        "mac": "3e:71:1b:4f:e8:85",
+        "address": "fe80::3c71:1bff:fe4f:e885",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 4
+      },
+      {
+        "name": "arc0",
+        "internal": false,
+        "mac": "5e:d9:a7:61:a6:7f",
+        "address": "fe80::5cd9:a7ff:fe61:a67f",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 7
+      }
+    ],
+    "host": "localhost"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+  ],
+  "javascriptHeap": {
+    "totalMemory": 1358049280,
+    "totalCommittedMemory": 1342259208,
+    "usedMemory": 1339104928,
+    "availableMemory": 8384128,
+    "memoryLimit": 1033371648,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 22712,
+        "capacity": 22572,
+        "used": 22572,
+        "available": 0
+      },
+      "new_space": {
+        "memorySize": 16777216,
+        "committedMemory": 1800860,
+        "capacity": 8384128,
+        "used": 0,
+        "available": 8384128
+      },
+      "old_space": {
+        "memorySize": 1572864,
+        "committedMemory": 1124440,
+        "capacity": 722064,
+        "used": 722064,
+        "available": 0
+      },
+      "code_space": {
+        "memorySize": 1048576,
+        "committedMemory": 1022720,
+        "capacity": 156896,
+        "used": 156896,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 262144,
+        "committedMemory": 162140,
+        "capacity": 89040,
+        "used": 89040,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 886870016,
+        "committedMemory": 886870016,
+        "capacity": 886858916,
+        "used": 886858916,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 0,
+        "used": 0,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 451256320,
+        "committedMemory": 451256320,
+        "capacity": 451255440,
+        "used": 451255440,
+        "available": 0
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 5.281,
+    "kernelCpuSeconds": 0.691,
+    "cpuConsumptionPercent": 85.3143,
+    "maxRss": 1376313344,
+    "pageFaults": {
+      "IORequired": 276,
+      "IONotRequired": 356693
+    },
+    "fsActivity": {
+      "reads": 0,
+      "writes": 0
+    }
+  },
+  "uvthreadResourceUsage": {
+    "userCpuSeconds": 5.129,
+    "kernelCpuSeconds": 0.685,
+    "cpuConsumptionPercent": 83.0571,
+    "fsActivity": {
+      "reads": 0,
+      "writes": 0
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "SHELL": "/data/data/com.termux/files/usr/bin/bash",
+    "PREFIX": "/data/data/com.termux/files/usr",
+    "TERMCAP": "eterm-color:li#22:co#148:cl=\\E[H\\E[J:cd=\\E[J:bs:am:xn:cm=\\E[%i%d;%dH:nd=\\E[C:up=\\E[A:ce=\\E[K:ho=\\E[H:pt:al=\\E[L:dl=\\E[M:DL=\\E[%dM:AL=\\E[%dL:cs=\\E[%i%d;%dr:sf=^J:dc=\\E[P:DC=\\E[%dP:IC=\\E[%d@:im=\\E[4h:ei=\\E[4l:mi::so=\\E[7m:se=\\E[m:us=\\E[4m:ue=\\E[m:md=\\E[1m:mr=\\E[7m:me=\\E[m:UP=\\E[%dA:DO=\\E[%dB:LE=\\E[%dD:RI=\\E[%dC:kl=\\EOD:kd=\\EOB:kr=\\EOC:ku=\\EOA:kN=\\E[6~:kP=\\E[5~:@7=\\E[4~:kh=\\E[1~:mk=\\E[8m:cb=\\E[1K:op=\\E[39;49m:Co#8:pa#64:AB=\\E[4%dm:AF=\\E[3%dm:cr=^M:bl=^G:do=^J:le=^H:ta=^I:se=\\E[27m:ue=\\E[24m:kb=^?:kD=^[[3~:sc=\\E7:rc=\\E8:r1=\\Ec:",
+    "INSIDE_EMACS": "26.3,term:0.96",
+    "PWD": "/data/data/com.termux/files/home/storage/downloads/web-development/git-folder/exercises-js",
+    "LINES": "22",
+    "EXTERNAL_STORAGE": "/sdcard",
+    "LD_PRELOAD": "/data/data/com.termux/files/usr/lib/libtermux-exec.so",
+    "HOME": "/data/data/com.termux/files/home",
+    "LANG": "en_US.UTF-8",
+    "COLUMNS": "148",
+    "TMPDIR": "/data/data/com.termux/files/usr/tmp",
+    "ANDROID_DATA": "/data",
+    "TERM": "eterm-color",
+    "TERMINFO": "/data/data/com.termux/files/usr/share/emacs/26.3/etc/",
+    "SHLVL": "2",
+    "ANDROID_ROOT": "/system",
+    "BOOTCLASSPATH": "/system/framework/core-oj.jar:/system/framework/core-libart.jar:/system/framework/conscrypt.jar:/system/framework/okhttp.jar:/system/framework/bouncycastle.jar:/system/framework/apache-xml.jar:/system/framework/ext.jar:/system/framework/framework.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/ims-common.jar:/system/framework/android.hidl.base-V1.0-java.jar:/system/framework/android.hidl.manager-V1.0-java.jar:/system/framework/framework-oahl-backward-compatibility.jar:/system/framework/android.test.base.jar",
+    "PATH": "/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/bin/applets",
+    "OLDPWD": "/data/data/com.termux/files/home",
+    "_": "/data/data/com.termux/files/usr/bin/node"
+  },
+  "userLimits": {
+    "core_file_size_blocks": {
+      "soft": 0,
+      "hard": "unlimited"
+    },
+    "data_seg_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "file_size_blocks": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_locked_memory_bytes": {
+      "soft": 268435456,
+      "hard": 268435456
+    },
+    "max_memory_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "open_files": {
+      "soft": 16384,
+      "hard": 16384
+    },
+    "stack_size_bytes": {
+      "soft": 8388608,
+      "hard": "unlimited"
+    },
+    "cpu_time_seconds": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_user_processes": {
+      "soft": 15373,
+      "hard": 15373
+    },
+    "virtual_memory_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    }
+  },
+  "sharedObjects": [
+    "/system/bin/linker",
+    "[vdso]",
+    "/data/data/com.termux/files/usr/bin/node",
+    "/data/data/com.termux/files/usr/lib/libtermux-exec.so",
+    "/data/data/com.termux/files/usr/lib/libz.so.1.2.11",
+    "/data/data/com.termux/files/usr/lib/libcares.so",
+    "/data/data/com.termux/files/usr/lib/libcrypto.so.1.1",
+    "/data/data/com.termux/files/usr/lib/libssl.so.1.1",
+    "/data/data/com.termux/files/usr/lib/libicui18n.so.66.1",
+    "/data/data/com.termux/files/usr/lib/libicuuc.so.66.1",
+    "/system/lib/libm.so",
+    "/system/lib/libdl.so",
+    "/data/data/com.termux/files/usr/lib/libc++_shared.so",
+    "/system/lib/libc.so",
+    "/data/data/com.termux/files/usr/lib/libicudata.so.66.1",
+    "/system/lib/libnetd_client.so",
+    "/system/lib/libc++.so",
+    "/system/lib/libicuuc.so"
+  ]
+}

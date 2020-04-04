@@ -292,4 +292,44 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 // alert(`The perimeter of the triangle is ${a + b + c}`)
 
+// const length = +prompt('Enter length:')
+// const width = +prompt('Enter width:')
+// const area = length * width 
+
+// alert(`The area of the rectangle  is ${a + b + c}`)
+
+// var ourArray = [];
+
+// var i = 0;
+// while (i < 50) {
+//     ourArray.push(i);
+//     i++;
+// }
+
+// console.log(ourArray)
+
+// ourArray = [];
+
+// var i = 49;
+// while (i >= 0) {
+//     ourArray.push(i);
+//     i--;
+// }
+
+
+// for (i = 4999; i >= 0; i--) {
+//     ourArray.push(i);
+// }
+
+
+// console.log(ourArray)
+
+// let = ourArray = [];
+// for (i = 1; i < 10; i += 2) {
+//     ourArray.push(i);
+// }
+// console.log(ourArray)
+
+
+
 
