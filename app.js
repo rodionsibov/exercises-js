@@ -354,9 +354,19 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 // multiplyAll([[1,2],[3,4],[5,6,7]]);
 
-function multiply(arr, n) {
-    n < 0
-	? console.log(1)
-	: console.log(multiply(arr, n - 1) * arr[n - 1])
-}
-multiply([1, 2, 3], 3)
+// const randomRange = (min, max) => {
+//     console.log(Math.random() * (max - min + 1) + min)
+
+//    setTimeout(randomRange, 3000)
+// }
+
+
+// const getCompetenceLogs = (fun, times) => {
+//     for (let i = 1; i <= times; i++) {
+// 	fun
+//     }
+// }
+
+// getCompetenceLogs(randomRange(1,2), 5)
+
+
