@@ -317,19 +317,46 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // }
 
 
-// for (i = 4999; i >= 0; i--) {
+// for (let i = 4999; i >= 0; i--) {
 //     ourArray.push(i);
 // }
 
 
 // console.log(ourArray)
 
-// let = ourArray = [];
-// for (i = 1; i < 10; i += 2) {
+// let ourArray = [];
+// for (let i = 1; i < 10; i += 2) {
 //     ourArray.push(i);
 // }
 // console.log(ourArray)
 
+// let myArr = [10, 9, 8, 7, 6];
+// let myArr = [2, 3, 4, 5, 6];
+// let total = 0;
 
+// for (let i = 0; i < myArr.length; i++) {
+//     total += myArr[i];
+//     console.log(total)
+// }
 
+// function multiplyAll(arr) {
+//     let product = 1;
+//     console.log(arr)
+//     for (let i = 0; i < arr.length; i++) {
+// 	for (let j = 0; j < arr[i].length; j++) {
+// 	    product *= arr[i][j];
+// 	    console.log(product)
+// 	}
+//     }
+//     console.log('result is:', product)
+//     return product;
+// }
 
+// multiplyAll([[1,2],[3,4],[5,6,7]]);
+
+function multiply(arr, n) {
+    n < 0
+	? console.log(1)
+	: console.log(multiply(arr, n - 1) * arr[n - 1])
+}
+multiply([1, 2, 3], 3)
