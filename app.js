@@ -400,6 +400,25 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // console.log(countDown(4, 25))
 
 
-const increment = (number, value = +'') => number + value;
-console.log(increment(5, 2))
-console.log(typeof increment(5))
+// const increment = (number, value = +'') => number + value;
+// console.log(increment(5, 2))
+// console.log(typeof increment(5))
+
+// let a = 8, b = 6;
+// let temp = b;
+// b = a;
+// a = temp
+
+// [a, b] = [b, a]
+// console.log('a:', a)
+// console.log('b:', b)
+
+const source = [1,2,3,4,5,6,7,8,9,10];
+const removeFirstTwo = list => {
+    const [,,...arr] = list;
+    return arr;
+}
+
+const arr = removeFirstTwo(source);
+console.log(arr);
+console.log(source);
