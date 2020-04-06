@@ -26,7 +26,7 @@ console.log(abc.length);
 >
 > Now consider the equivalence between numbers and strings of hash characters. You can go from 1 to 2 by adding 1 (+= 1). You can go from "#" to "##" by adding a character (+= "#"). Thus, your solution can closely follow the number-printing program.
 
-[Download source code and solution to exercise]()
+~[Download source code and solution to exercise]()~
 
 ## FizzBuzz
 Write a program that uses console.log to print all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, print "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), print "Buzz" instead.
