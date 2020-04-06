@@ -370,3 +370,36 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // getCompetenceLogs(randomRange(1,2), 5)
 
 
+// console.log(typeof parseInt('56'))
+
+// const checkEqual = (a, b) => a === b ? `"${a}" and "${b}" are Equal` : `"${a}" and "${b}" are Not Equal`
+// console.log(checkEqual(3, 31))
+
+
+// const countDown = n => {
+//     if (n < 1) {
+// 	return []
+//     } else {
+// 	const countArray = countDown(n - 1)
+// 	countArray.unshift(n)
+// 	return countArray
+//     }
+// }
+// console.log(countDown(5))
+
+
+// const countDown = (start, end) => {
+//     if (start === end + 1) {
+// 	return []
+//     } else {
+// 	const arr = countDown(start + 1, end)
+// 	arr.unshift(start)
+// 	return arr
+//     }
+// }
+// console.log(countDown(4, 25))
+
+
+const increment = (number, value = +'') => number + value;
+console.log(increment(5, 2))
+console.log(typeof increment(5))

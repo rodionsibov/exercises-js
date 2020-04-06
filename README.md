@@ -41,7 +41,7 @@ When you have that working, modify your program to print "FizzBuzz" for numbers 
 >
 > The second version of the program has a straightforward solution and a clever one. The simple solution is to add another conditional “branch” to precisely test the given condition. For the clever solution, build up a string containing the word or words to output and print either this word or the number if there is no word, potentially by making good use of the || operator.
 
-[Download source code and solution to exercise]()
+~[Download source code and solution to exercise]()~
 
 ## Chessboard
 Write a program that creates a string that represents an 8×8 grid, using newline characters to separate lines. At each position of the grid there is either a space or a "#" character. The characters should form a chessboard.
@@ -67,7 +67,7 @@ When you have a program that generates this pattern, define a binding size = 8 a
 >
 > Terminating a line by adding a newline character must happen after the line has been built up, so do this after the inner loop but inside the outer loop.
 
-[Download source code and solution to exercise]()
+~[Download source code and solution to exercise]()~
 
 ## Minimum
 The previous chapter introduced the standard function Math.min that returns its smallest argument. We can build something like that now. Write a function min that takes two arguments and returns their minimum.
@@ -81,7 +81,7 @@ console.log(min(0, -10));
 >
 > A function may contain multiple return statements.
 
-[Download source code and solution to exercise]()
+~[Download source code and solution to exercise]()~
 
 ## Recursion
 We’ve seen that % (the remainder operator) can be used to test whether a number is even or odd by using % 2 to see whether it’s divisible by two. Here’s another way to define whether a positive whole number is even or odd:
@@ -105,7 +105,7 @@ console.log(isEven(-1));
 >
 > When given a negative number, the function will recurse again and again, passing itself an ever more negative number, thus getting further and further away from returning a result. It will eventually run out of stack space and abort.
 
-[Download source code and solution to exercise]()
+~[Download source code and solution to exercise]()~
 
 ---
 _The exercises are from the book [Eloquent JavaScript](https://eloquentjavascript.net/index.html)_
