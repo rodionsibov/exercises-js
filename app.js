@@ -413,12 +413,26 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // console.log('a:', a)
 // console.log('b:', b)
 
-const source = [1,2,3,4,5,6,7,8,9,10];
-const removeFirstTwo = list => {
-    const [,,...arr] = list;
-    return arr;
-}
+// const source = [1,2,3,4,5,6,7,8,9,10];
+// const removeFirstTwo = list => {
+//     const [,,...arr] = list;
+//     return arr;
+// }
 
-const arr = removeFirstTwo(source);
-console.log(arr);
-console.log(source);
+// const arr = removeFirstTwo(source);
+// console.log(arr);
+// console.log(source);
+
+// let movieName = "2001: A Space Odyssey";
+// let numRegex = /\D/g;
+// let result = movieName.match(numRegex).length;
+// console.log(result)
+
+
+let username = "Za97aa1";
+let userCheck = /^[A-z][A-z]\w\d/;
+let result = username.match(userCheck);
+let result2 = userCheck.test(username);
+
+console.log(result)
+console.log(result2)
