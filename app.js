@@ -429,10 +429,13 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // console.log(result)
 
 
-let username = "Za97aa1";
-let userCheck = /^[A-z][A-z]\w\d/;
-let result = username.match(userCheck);
-let result2 = userCheck.test(username);
+// let username = "Za97aa1";
+// let userCheck = /^[A-z][A-z]\w\d$/;
+// let result = username.match(userCheck);
+// let result2 = userCheck.test(username);
 
-console.log(result)
-console.log(result2)
+// console.log(result)
+// console.log(result2)
+
+
+console.log(`${'world'[1]}${'world'[4]}` === `${'world'[1]}${'word'[4]}`)
