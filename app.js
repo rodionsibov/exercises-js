@@ -429,8 +429,8 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // console.log(result)
 
 
-// let username = "Za97aa1";
-// let userCheck = /^[A-z][A-z]\w\d$/;
+// let username = "Z97";
+// let userCheck = /^[a-z]([0-9][0-9]+|[a-z]+\d*)$/i;
 // let result = username.match(userCheck);
 // let result2 = userCheck.test(username);
 
@@ -438,4 +438,7 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // console.log(result2)
 
 
-console.log(`${'world'[1]}${'world'[4]}` === `${'world'[1]}${'word'[4]}`)
+// console.log(`${'world'[1]}${'world'[4]}` === `${'world'[1]}${'word'[4]}`)
+
+// for (let i = 1; i <= 50; i++)
+//     console.log((i % 3 ? '' : '%3') + (i % 5 ? '' : '%5') + (i % 8 ? '' : '%8')|| i);   
