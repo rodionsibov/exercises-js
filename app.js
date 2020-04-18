@@ -444,16 +444,18 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 //     console.log((i % 3 ? '' : '%3') + (i % 5 ? '' : '%5') + (i % 8 ? '' : '%8')|| i);   
 
 
-const num1 = 5;
-const num2 = 10;
+// const num1 = 5;
+// const num2 = 10;
 
-const sum = (a, b) => {
-    return a + b;
-}
+// const sum = (a, b) => {
+//     return a + b;
+// }
 
-const func = () => {
-    const num2 = 2;
-    return sum(num1, num2);
-};
-console.log(func())
-func();
+// const func = () => {
+//     const num2 = 2;
+//     return sum(num1, num2);
+// };
+// console.log(func())
+// func();
+
+console.log("Hello!")
