@@ -462,3 +462,19 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // arr.sort();
 // console.log(arr); 
 
+// function htmlColorNames(arr) {
+//     arr.splice(0, 2, 'DarkSalmon', 'BlanchedAlmond');
+//     return arr;
+// }
+
+// console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
+
+
+let ageUserInput = +prompt('Enter your age:', '437287498')
+let nameEl = document.querySelector('h1')
+
+
+ageUserInput >= 18
+    ? nameEl.innerHTML = 'You are old enough to drive'
+    : nameEl.innerHTML = `You are left with ${18 - ageUserInput} years to drive.`
+
