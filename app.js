@@ -458,4 +458,7 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // console.log(func())
 // func();
 
-console.log("Hello!")
+// const arr = [3, 8, 1];
+// arr.sort();
+// console.log(arr); 
+
