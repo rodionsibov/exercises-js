@@ -7,11 +7,18 @@
 
     <style>
 
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+      
       * {
 	  box-sizing: border-box;
 	  margin: 0;
       }
       
+      :root {
+	  --bright: gold;
+	  --dark: #555;
+      }
+
       body {
 	  flex-wrap: wrap;
 	  flex-direction: column;
@@ -19,47 +26,53 @@
 	  justify-content: center;
 	  align-items: center;
 	  height: 100vh;
-	  
-	  background: azure;
+
+	  background: var(--bright);	      
 	  text-align: center;
-	  font-family: sans;
-	  animation: bg 3s both,
-		     opacity-anim 1s both;
-	  
+	  font-size: 3vh;
+	  font-family: 'Montserrat', sans-serif;
+	  animation: appear 1s both;
       }
 
-      @keyframes opacity-anim {
-	  from {
-	      	  opacity: 0;
-	  }
 
-	  to {
+      @keyframes appear {
+      	  from {
+
+	      opacity: 0;
+	  }
+      	  to {
+
 	      opacity: 1;
 	  }
       }
 
-      @keyframes bg {
-      	  from {background: indigo;}
-      	  to {background: gold;}
-      }
-
-      input[type="submit"] {
-	  cursor: pointer;
-	  background: limegreen;
-	  color: snow;
+      #question {
+	  margin: 40px;
 	  font-weight: bold;
-	  border-top: 2px solid green;
-      	  width: 20%;
-      }
-
-      input[type="submit"]:hover, input[type="text"]:hover {
-	  border-top: 6px solid green;
-
+	  animation: appear 1s reverse infinite 3s;
+	  font-size: 5vh;
+	  
       }
       
-      input[type="text"] {
+      input[type="submit"] {
+	  cursor: pointer;
+	  background: var(--dark);
+	  color: var(--bright);
+	  font-weight: bold;
+	  font-family: inherit;
+      	  width: 20%;
+
+      }
+
+      input[type="submit"]:hover, input[type="number"]:hover {
+	  transform: translateY(2px);
+      }
+      
+      input[type="submit"]:active, input[type="number"]:active {
+	  transform: scale(0.98);
+      }
+      input[type="number"] {
 	  width: 60%;
-	  border-top: 2px solid green;
 	  background: snow;	  
       }
 
@@ -76,7 +89,6 @@
       }
       
       input {
-
 	  transition: all 0.2s;
 	  border: none;
 	  border-radius: 3px;
@@ -92,12 +104,13 @@
   </head>
   <body>
 
+    <p>Hello! My name is Rodion. I am 20 years old.</p>
     <div id="question"></div>
-   <div id="answer"></div>
+    <div id="answer"></div>
     
     <form onsubmit="myFunction(); return false;" >
 
-      <input type="text" id="prompt" required>
+      <input type="number" min="5" max="150" id="prompt" required>
       <input type="submit" id="btn" value="OK">
 
     </form>
@@ -109,26 +122,41 @@
 	  
 	  let prompt = document.querySelector('#prompt').value;
 	  let answer = document.querySelector('#answer')
-      
+
+	  document.querySelector('#question').style.animation = 'paused'
+
+
+	  prompt > 20
+	      ? answer.innerHTML = `You are ${prompt - 20} years older then me.`
+	      : answer.innerHTML = `You are ${20 - prompt} years younger then me.`
+	      
+	  console.log()
 }
+
+
       
     </script>
 
 
     <script>
 
-      let txt = 'How old are you?';
-      let speed = 50;
+      var i = 0;
+      var txt =  'How old are you?';
+      var speed = 70; 
       
-      const typeWriter = () => {
-	  for (let i = 0; i < txt.length; i++) {
-	      document.getElementById("question").innerHTML += txt[i];
-	      console.log(txt[i])
-//	      setTimeout(typeWriter, speed);
+      function typeWriter() {
+	  if (i < txt.length) {
+	      document.getElementById("question").innerHTML += txt.charAt(i);
+	      i++;
+	      setTimeout(typeWriter, speed);
 	  }
       }
       
       window.addEventListener("DOMContentLoaded", typeWriter(), false);
+
+
+
+
     </script>
 
 
