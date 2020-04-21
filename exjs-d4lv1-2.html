@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello World!</title>
+
+    <style>
+
+      * {
+	  box-sizing: border-box;
+	  margin: 0;
+      }
+      
+      body {
+	  flex-wrap: wrap;
+	  flex-direction: column;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  height: 100vh;
+	  
+	  background: azure;
+	  text-align: center;
+	  font-family: sans;
+	  animation: bg 3s both,
+		     opacity-anim 1s both;
+	  
+      }
+
+      @keyframes opacity-anim {
+	  from {
+	      	  opacity: 0;
+	  }
+
+	  to {
+	      opacity: 1;
+	  }
+      }
+
+      @keyframes bg {
+      	  from {background: indigo;}
+      	  to {background: gold;}
+      }
+
+      input[type="submit"] {
+	  cursor: pointer;
+	  background: limegreen;
+	  color: snow;
+	  font-weight: bold;
+	  border-top: 2px solid green;
+      	  width: 20%;
+      }
+
+      input[type="submit"]:hover, input[type="text"]:hover {
+	  border-top: 6px solid green;
+
+      }
+      
+      input[type="text"] {
+	  width: 60%;
+	  border-top: 2px solid green;
+	  background: snow;	  
+      }
+
+      .answer {
+	  font-weight: bold;
+	  font-size: 7vh;
+	  padding: 40px;
+      }
+
+      form {
+	  width: 100%;
+	  position: fixed;
+	  bottom: 60px;
+      }
+      
+      input {
+
+	  transition: all 0.2s;
+	  border: none;
+	  border-radius: 3px;
+	  font-size: 20px;
+	  padding: 20px;
+	  margin: 5px;
+      }
+
+
+
+    </style>
+
+  </head>
+  <body>
+
+    <div id="question"></div>
+   <div id="answer"></div>
+    
+    <form onsubmit="myFunction(); return false;" >
+
+      <input type="text" id="prompt" required>
+      <input type="submit" id="btn" value="OK">
+
+    </form>
+
+    
+    <script>
+
+      function myFunction() {
+	  
+	  let prompt = document.querySelector('#prompt').value;
+	  let answer = document.querySelector('#answer')
+      
+}
+      
+    </script>
+
+
+    <script>
+
+      let txt = 'How old are you?';
+      let speed = 50;
+      
+      const typeWriter = () => {
+	  for (let i = 0; i < txt.length; i++) {
+	      document.getElementById("question").innerHTML += txt[i];
+	      console.log(txt[i])
+//	      setTimeout(typeWriter, speed);
+	  }
+      }
+      
+      window.addEventListener("DOMContentLoaded", typeWriter(), false);
+    </script>
+
+
+  </body>
+</html>
