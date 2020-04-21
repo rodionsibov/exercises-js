@@ -46,8 +46,13 @@
 	  }
       }
 
+      #answer, p {
+	  padding: 55px;
+
+      }
+
       #question {
-	  margin: 40px;
+	  margin: 30px;
 	  font-weight: bold;
 	  animation: appear 1s reverse infinite 3s;
 	  font-size: 5vh;
@@ -71,16 +76,12 @@
       input[type="submit"]:active, input[type="number"]:active {
 	  transform: scale(0.98);
       }
+
       input[type="number"] {
 	  width: 60%;
 	  background: snow;	  
       }
 
-      .answer {
-	  font-weight: bold;
-	  font-size: 7vh;
-	  padding: 40px;
-      }
 
       form {
 	  width: 100%;
@@ -106,7 +107,7 @@
 
     <p>Hello! My name is Rodion. I am 20 years old.</p>
     <div id="question"></div>
-    <div id="answer"></div>
+    <p id="answer"></p>
     
     <form onsubmit="myFunction(); return false;" >
 
