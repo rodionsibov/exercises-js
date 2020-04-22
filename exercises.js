@@ -480,8 +480,8 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 
 
-function convertToF(celcius) {
-    let fahrenheit = celcius * 9 / 5 + 32;
+function convertToF(celsius) {
+    let fahrenheit = celsius * 9 / 5 + 32;
     return fahrenheit;
 }
 
