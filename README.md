@@ -1,3 +1,9 @@
+- https://rodionsibov.github.io/exercises-js/exjs-d4lv1-1.html
+- https://rodionsibov.github.io/exercises-js/exjs-d4lv1-2.html
+
+
+
+
 # Exercises JavaScript
 Each exercise starts with a problem description. Read this description and try to solve the exercise. If you run into problems, consider reading the hints after the exercise. 
 
@@ -126,11 +132,6 @@ console.log(countChar("kakkerlak", "k"));
 > Take care to make all the bindings used in the function local to the function by properly declaring them with the let or const keyword.
 
 ~[Download source code and solution to exercise]()~
-
-
-
-
-https://rodionsibov.github.io/exercises-js/exjs-d4lv1-2.html
 
 
 
