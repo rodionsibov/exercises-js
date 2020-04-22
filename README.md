@@ -127,6 +127,6 @@ console.log(countChar("kakkerlak", "k"));
 
 ~[Download source code and solution to exercise]()~
 
-
+https://rodionsibov.github.io/exercises-js/exjs-d4lv1-2.html
 ---
 _The exercises are from the book [Eloquent JavaScript](https://eloquentjavascript.net/index.html)_
