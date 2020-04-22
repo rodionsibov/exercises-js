@@ -130,7 +130,7 @@ console.log(countChar("kakkerlak", "k"));
 
 
 
-https://rodionsibov.github.io/exercises-js/exjs-d4lv1-2.html
+https://rodionsibov.github.io/exercises-js/tetris.html
 
 
 
