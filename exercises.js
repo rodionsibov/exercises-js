@@ -496,8 +496,23 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 // reverse a string
 
-function reverseString(str) {
-    return str.split('').reverse().join('');
+// function reverseString(str) {
+//     return str.split('').reverse().join('');
+// }
+
+// console.log(reverseString('hello'));
+
+
+// BAS: Factorialize a Number
+
+
+const factorialize = num => {
+    let result = 1;
+    for (let i = 2; i <= num; i++) {
+	result *= i;
+
+    }
+    console.log(result)
 }
 
-console.log(reverseString('hello'));
+factorialize(7);
