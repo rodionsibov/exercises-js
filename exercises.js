@@ -470,11 +470,19 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
 
 
-let ageUserInput = +prompt('Enter your age:', '437287498')
-let nameEl = document.querySelector('h1')
+// let ageUserInput = +prompt('Enter your age:', '437287498')
+// let nameEl = document.querySelector('h1')
 
 
-ageUserInput >= 18
-    ? nameEl.innerHTML = 'You are old enough to drive'
-    : nameEl.innerHTML = `You are left with ${18 - ageUserInput} years to drive.`
+// ageUserInput >= 18
+//     ? nameEl.innerHTML = 'You are old enough to drive'
+//     : nameEl.innerHTML = `You are left with ${18 - ageUserInput} years to drive.`
 
+
+
+function convertToF(celcius) {
+    let fahrenheit = celcius * 9 / 5 + 32;
+    return fahrenheit;
+}
+
+console.log(convertToF(40));
