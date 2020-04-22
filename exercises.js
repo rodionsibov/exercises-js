@@ -480,9 +480,24 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 
 
-function convertToF(celsius) {
-    let fahrenheit = celsius * 9 / 5 + 32;
-    return fahrenheit;
+// Basic Algorithm Scripting
+
+
+//
+
+
+// function convertToF(celsius) {
+//     let fahrenheit = celsius * 9 / 5 + 32;
+//     return fahrenheit;
+// }
+
+// console.log(convertToF(40));
+
+
+// reverse a string
+
+function reverseString(str) {
+    return str.split('').reverse().join('');
 }
 
-console.log(convertToF(40));
+console.log(reverseString('hello'));
