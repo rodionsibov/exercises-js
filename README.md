@@ -3,7 +3,7 @@
 - https://rodionsibov.github.io/exercises-js/exjs-d4lv1-2.html
 
 ---
-<script src="https://gist.github.com/rodionsibov/d8baec1ad6ab8fe8b6f25b34ace0e694.js"></script>
+[https://gist.github.com/rodionsibov/d8baec1ad6ab8fe8b6f25b34ace0e694.js]
 ---
 
 # Exercises JavaScript
