@@ -506,13 +506,34 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // BAS: Factorialize a Number
 
 
-const factorialize = num => {
-    let result = 1;
-    for (let i = 2; i <= num; i++) {
-	result *= i;
+// const factorialize = num => {
+//     let result = 1;
+//     for (let i = 2; i <= num; i++) {
+// 	result *= i;
+
+//     }
+//     console.log(result)
+// }
+
+// factorialize(7);
+
+
+
+
+// BAS: Find the Longest Word in a String
+
+
+const findLongestWordString = (str) => {
+    let result = 0;
+    let words = str.split(' ')
+    for (let i = 0; i < words.length; i++) {
+	let wordsLength = words[i].length
+	result += [wordsLength]
 
     }
-    console.log(result)
+	console.log(result)	
+
 }
 
-factorialize(7);
+
+findLongestWordString('The quick brown fox jumped over the lazy dog')
