@@ -3,8 +3,6 @@
 - https://rodionsibov.github.io/exercises-js/exjs-d4lv1-2.html
 
 ---
-[https://gist.github.com/rodionsibov/d8baec1ad6ab8fe8b6f25b34ace0e694.js]
----
 
 # Exercises JavaScript
 Each exercise starts with a problem description. Read this description and try to solve the exercise. If you run into problems, consider reading the hints after the exercise. 
