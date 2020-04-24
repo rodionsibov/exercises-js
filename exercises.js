@@ -524,16 +524,15 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 
 const findLongestWordString = (str) => {
-    let result = 0;
-    let words = str.split(' ')
-    for (let i = 0; i < words.length; i++) {
-	let wordsLength = words[i].length
-	result += [wordsLength]
+    let result = ''
+    let wordsArr = str.split(' ')
+    let wordsLength = wordsArr.map(element => element.length)
+    let wordMaxNum = Math.max(...wordsLength)
 
-    }
-	console.log(result)	
+    result = wordsArr.filter(value => value.length === wordMaxNum).join().toUpperCase()
 
+    console.log(`The longest word in this string '${str}' is ${result}`)    
+    
 }
 
-
-findLongestWordString('The quick brown fox jumped over the lazy dog')
+findLongestWordString('The quick brown fox jumped over  askfjsdkfj the lazy dog')
