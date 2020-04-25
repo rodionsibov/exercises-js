@@ -5,11 +5,11 @@ __If you want to learn something from the exercises, I recommend looking at the 
 
 Good luck!
 
-https://the-winter.github.io/codingjs/
+- https://the-winter.github.io/codingjs/
+- https://eloquentjavascript.net/
+- https://github.com/Asabeneh/30DaysOfJavaScript
 
-https://eloquentjavascript.net/
 
-https://github.com/Asabeneh/30DaysOfJavaScript
-
+<script src="https://gist.github.com/rodionsibov/d8baec1ad6ab8fe8b6f25b34ace0e694.js"></script>
 
 
