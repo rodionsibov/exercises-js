@@ -10,6 +10,5 @@ Good luck!
 - https://github.com/Asabeneh/30DaysOfJavaScript
 
 
-<script src="https://gist.github.com/rodionsibov/d8baec1ad6ab8fe8b6f25b34ace0e694.js"></script>
 
 
