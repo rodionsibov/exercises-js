@@ -6,7 +6,9 @@ __If you want to learn something from the exercises, I recommend looking at the 
 Good luck!
 
 https://the-winter.github.io/codingjs/
+
 https://eloquentjavascript.net/
+
 https://github.com/Asabeneh/30DaysOfJavaScript
 
 
