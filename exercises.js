@@ -523,18 +523,18 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // BAS: Find the Longest Word in a String
 
 
-const findLongestWordString = (str = 'The quick brown fox jumped over the lazy dog') => {
-    let result = 0
-    let wordsArr = str.split(' ')
-    let wordsLength = wordsArr.map(element => element.length)
-    let wordMaxNum = Math.max(...wordsLength)
+// const findLongestWordString = (str = 'The quick brown fox jumped over the lazy dog') => {
+//     let result = 0
+//     let wordsArr = str.split(' ')
+//     let wordsLength = wordsArr.map(element => element.length)
+//     let wordMaxNum = Math.max(...wordsLength)
 
 
-    result = wordsArr.filter(value => value.length === wordMaxNum).join().toUpperCase()
+//     result = wordsArr.filter(value => value.length === wordMaxNum).join().toUpperCase()
 
-    console.log(`The longest word in this string '${str}' is ${result}`)    
+//     console.log(`The longest word in this string '${str}' is ${result}`)    
     
-}
+// }
 
-findLongestWordString()
+// findLongestWordString()
 
