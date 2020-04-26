@@ -78,13 +78,14 @@ toCamelCase("the-stealth-warrior") // returns "theStealthWarrior"
 toCamelCase("The_Stealth_Warrior") // returns "TheStealthWarrior"
 ```
 9) Write a function that takes a sentence (string) and reverses each word in the sentence.
+```
 Example:
 " A fun little challenge! " => " A nuf elttil !egnellahc "
-
+```
 10) Write a function stringExpansion
 Given a string that includes alphanumeric characters ('3a4B2d') return the expansion of that string: The numeric values represent the occurance of each letter preceding that numeric value. There should be no numeric characters in the final string. Empty strings should return an empty string.
 
-The first occurance of a numeric value should be the number of times each character behind it is repeated, until the next numeric value appears.
+> The first occurance of a numeric value should be the number of times each character behind it is repeated, until the next numeric value appears.
 stringExpansion('3D2a5d2f') === 'DDDaadddddff'
 If there are two consecutive numeric characters the first one is ignored.
 stringExpansion('3d332f2a') === 'dddffaa'
