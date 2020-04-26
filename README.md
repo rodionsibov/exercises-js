@@ -67,12 +67,13 @@ splitAndMerge("Hello World!",",") should return "H,e,l,l,o W,o,r,l,d,!"
 ```
 7) Write a function convert
 Convert a hash into an array. Nothing more, Nothing less.
-`{name: 'Jeremy', age: 24, role: 'Software Engineer'}
+```{name: 'Jeremy', age: 24, role: 'Software Engineer'}
 should be converted into
 [["name", "Jeremy"], ["age", 24], ["role", "Software Engineer"]]
-`
+```
 8) Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized.
-```Example:
+```
+Example:
 toCamelCase("the-stealth-warrior") // returns "theStealthWarrior"
 toCamelCase("The_Stealth_Warrior") // returns "TheStealthWarrior"
 ```
