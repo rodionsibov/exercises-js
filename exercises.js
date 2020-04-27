@@ -538,3 +538,17 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 // findLongestWordString()
 
+
+//If a is greater than b return 'a is greater than b' else 'a is less than b'. Try to implement in to ways
+
+let a = Math.random() * 10
+let b = Math.floor(Math.random() + a)
+console.log(a)
+console.log(b)
+a > b
+    ? console.log(`${a} is greater than ${b}`)
+    : console.log(`${a} is less than ${b}`)
+    
+
+
+
