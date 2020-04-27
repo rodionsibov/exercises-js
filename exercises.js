@@ -541,14 +541,24 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 //If a is greater than b return 'a is greater than b' else 'a is less than b'. Try to implement in to ways
 
-let a = Math.random() * 10
-let b = Math.floor(Math.random() + a)
-console.log(a)
-console.log(b)
-a > b
-    ? console.log(`${a} is greater than ${b}`)
-    : console.log(`${a} is less than ${b}`)
+// let a = Math.random() * 10
+// let b = Math.floor(Math.random() + a)
+// console.log(a)
+// console.log(b)
+// a > b
+//     ? console.log(`${a} is greater than ${b}`)
+//     : console.log(`${a} is less than ${b}`)
     
+//Even numbers are divisible by 2 and the remainder is zero. How do you check if a number is even or not using JavaScript?
+
+
+
+
+
+let a = Math.floor(Math.random() * 10)
+a % 2 === 0
+    ? console.log(`${a} is an even number`)
+    : console.log(`${a} is an odd number`)
 
 
 
