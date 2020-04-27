@@ -551,14 +551,26 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
     
 //Even numbers are divisible by 2 and the remainder is zero. How do you check if a number is even or not using JavaScript?
 
+// let a = Math.floor(Math.random() * 10)
+// a % 2 === 0
+//     ? console.log(`${a} is an even number`)
+//     : console.log(`${a} is an odd number`)
 
 
+//Write a code which can give grade to students according to theirs scores:
 
+// let score = Math.floor(Math.random() * 100 + 1)
+// console.log(score)
 
-let a = Math.floor(Math.random() * 10)
-a % 2 === 0
-    ? console.log(`${a} is an even number`)
-    : console.log(`${a} is an odd number`)
-
-
+//     if (score > 80 && score < 100) {
+//     console.log(`You have ${score} scores. Your grade is "A"`)	
+//     } else if (score > 70 && score < 89) {
+//     console.log('B')	
+//     } else if (score > 60 && score < 69) {
+//     	console.log('C')
+//     } else if (score > 50 && score < 59) {
+//     	console.log('D')
+//     } else if (score > 0 && score < 49) {
+//     	console.log('F')
+//     }
 
