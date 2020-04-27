@@ -575,5 +575,47 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 //     }
 
 
-const repl = require('repl');
+//Check if the season is Autumn, Winter, Spring or Summer.
 
+let months = [
+    'September',
+    'October',
+    'November',
+    'December',
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August'
+]
+
+let randomMonths = months[Math.floor(Math.random() * 11 )] 
+
+console.log(randomMonths)
+
+switch (randomMonths) {
+case 'September':
+case 'October':
+case 'November':
+    console.log('The season is Autumn')
+    break;
+case 'December':
+case 'January':
+case 'February':
+    console.log('The season is Winter')
+    break;
+case 'March':
+case 'April':
+case 'May':
+    console.log('The season is Spring')
+    break;
+case 'June':
+case 'July':
+case 'August':
+    console.log('The season is Summer')
+    break;
+    
+}
