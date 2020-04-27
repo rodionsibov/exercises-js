@@ -628,9 +628,13 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 // console.log(`Your weekly earning is ${hours * ratePerHour}`)
 
+//If the length of your name is greater than 7 say, your name is long else say your name is short.
 
+let name = 'Oralkdir'
 
-
+name.length > 7
+    ? console.log('Your name is long')
+    : console.log('Your name is short')
 
 
 
