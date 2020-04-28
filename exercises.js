@@ -630,16 +630,32 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 //If the length of your name is greater than 7 say, your name is long else say your name is short.
 
-let name = 'Oralkdir'
+// let name = 'Oralkdir'
 
-name.length > 7
-    ? console.log('Your name is long')
-    : console.log('Your name is short')
+// name.length > 7
+//     ? console.log('Your name is long')
+//     : console.log('Your name is short')
 
+
+
+//Write a script that prompt the user to enter number of years. Calculate the number of seconds a person can live. Assume some one lives just hundred years
+
+// let years = 100
+// let now = new Date()
+// console.log(`You lived ${years * now.}`)
 
 
 
 
 //Check if a day is weekend day or a working day. Your script will take day as an input.
 
-let today = 1
+// const now = new Date()
+// let today = now.getDay()
+
+const _ = require('lodash');
+
+const numbers = [33,46,76,44,32,3,876,20,2,2,4,23,5,];
+
+_.each(numbers, function(number, i) {
+    console.log(number)
+});
