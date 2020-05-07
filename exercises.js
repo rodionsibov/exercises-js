@@ -652,10 +652,13 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // const now = new Date()
 // let today = now.getDay()
 
-const _ = require('lodash');
+// const _ = require('lodash');
 
-const numbers = [33,46,76,44,32,3,876,20,2,2,4,23,5,];
+// const numbers = [33,46,76,44,32,3,876,20,2,2,4,23,5,];
 
-_.each(numbers, function(number, i) {
-    console.log(number)
-});
+// _.each(numbers, function(number, i) {
+//     console.log(number)
+// });
+
+
+
