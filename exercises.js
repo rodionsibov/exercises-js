@@ -713,22 +713,44 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 
 //Basic Algorithm Scripting: Return largest numbers in arrays
-let arr  = [['3','4','6'],['12','34']];
+// let arr  = [['3','4','6'],['12','34']]; 
 
-function largesOfTwo(arr){
-let arrOfMax = [];
+// function largesOfTwo(arr){
+// let arrOfMax = [];
 
-for (let i = 0; i < arr.length; i++) {
-    let max = -Infinity;
-    for (let j = 0; j < arr[i].length; j++) {
-	if (arr[i][j] > max) {
-	    max = arr[i][j];
-	}
-    }
-    arrOfMax.push(max);
-}
+// for (let i = 0; i < arr.length; i++) {
+//     let max = -Infinity;
+//     for (let j = 0; j < arr[i].length; j++) {
+// 	if (arr[i][j] > max) {
+// 	    max = arr[i][j];
+// 	}
+//     }
+//     arrOfMax.push(max);
+// }
     
-    return arrOfMax;
-}
+//     return arrOfMax;
+// }
 
-console.log(largesOfTwo(arr));
+//console.log(largesOfTwo(arr));
+
+// const p = document.createElement('p');
+// const t = document.createTextNode('5');
+// p.appendChild(t);
+// document.body.appendChild(p);
+// p.style.fontSize = '20vh';
+// p.style.textAlign = 'center';
+
+// const countItDown = () => {
+//     let currentTime = parseFloat(t.textContent);
+//     if (currentTime > 0) {
+// 	t.textContent = currentTime - 1;
+//     } else {
+// 	clearInterval(timer);
+//     }
+// }
+
+// let timer = setInterval(countItDown, 1000);
+
+
+//Challenge: Stopwatch
+
