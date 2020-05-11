@@ -690,7 +690,7 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // console.log(Object.values(book1));
 
 
-Constructor
+//Constructor
 
 // function Book(title, author, year) {
 //     this.title = title;
@@ -703,8 +703,29 @@ Constructor
 //     }
 // }
 
-//Instatiate an Object
+
+// Instatiate an Object
 // const book1 = new Book('Book One', 'John Doe', '2013');
 // const book2 = new Book('Book Two', 'Jane Doe', '2016');
 
 // console.log(book2.getSummary())
+
+let arr  = [['3','4','6'],['12','34']];
+
+function largesOfTwo(arr){
+let arrOfMax = [];
+
+for (let i = 0; i < arr.length; i++) {
+    let max = -Infinity;
+    for (let j = 0; j < arr[i].length; j++) {
+	if (arr[i][j] > max) {
+	    max = arr[i][j];
+	}
+    }
+    arrOfMax.push(max);
+}
+    
+    return arrOfMax;
+}
+
+console.log(largesOfTwo(arr));
