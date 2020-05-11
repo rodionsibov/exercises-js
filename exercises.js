@@ -662,12 +662,12 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 
 
-Javascript OOP
+//Javascript OOP
 //console.log(window);
 //aler(1);
 //console.log(navigator.appVersion);
 
-//Object Literal
+Object Literal
 
 // const book1 = {
 //     title: 'Book One',
