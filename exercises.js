@@ -662,7 +662,7 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 
 
-//Javascript OOP
+Javascript OOP
 //console.log(window);
 //aler(1);
 //console.log(navigator.appVersion);
@@ -692,19 +692,19 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 //Constructor
 
-function Book(title, author, year) {
-    this.title = title;
-    this.author = author;
-    this.year = year;
+// function Book(title, author, year) {
+//     this.title = title;
+//     this.author = author;
+//     this.year = year;
 
-    this.getSummary = function() {
- 	return `${this.title} was written by ${this.author} in ${this.year}`;
+//     this.getSummary = function() {
+//  	return `${this.title} was written by ${this.author} in ${this.year}`;
 
-    }
-}
+//     }
+// }
 
 //Instatiate an Object
-const book1 = new Book('Book One', 'John Doe', '2013');
-const book2 = new Book('Book Two', 'Jane Doe', '2016');
+// const book1 = new Book('Book One', 'John Doe', '2013');
+// const book2 = new Book('Book Two', 'Jane Doe', '2016');
 
-console.log(book2.getSummary())
+// console.log(book2.getSummary())
