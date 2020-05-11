@@ -667,7 +667,7 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 //aler(1);
 //console.log(navigator.appVersion);
 
-Object Literal
+//Object Literal
 
 // const book1 = {
 //     title: 'Book One',
@@ -690,7 +690,7 @@ Object Literal
 // console.log(Object.values(book1));
 
 
-//Constructor
+Constructor
 
 // function Book(title, author, year) {
 //     this.title = title;
