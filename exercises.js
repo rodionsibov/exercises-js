@@ -662,3 +662,49 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 
 
+//Javascript OOP
+//console.log(window);
+//aler(1);
+//console.log(navigator.appVersion);
+
+//Object Literal
+
+// const book1 = {
+//     title: 'Book One',
+//     author: 'John Doe',
+//     year: '2013',
+//     getSummary: function() {
+// 	return `${this.title} was written by ${this.author} in ${this.year}`;
+//     }
+// }
+
+// const book2 = {
+//     title: 'Book Two',
+//     author: 'Jane Doe',
+//     year: '2016',
+//     getSummary: function() {
+// 	return `${this.title} was written by ${this.author} in ${this.year}`;
+//     }
+// }
+
+// console.log(Object.values(book1));
+
+
+//Constructor
+
+function Book(title, author, year) {
+    this.title = title;
+    this.author = author;
+    this.year = year;
+
+    this.getSummary = function() {
+ 	return `${this.title} was written by ${this.author} in ${this.year}`;
+
+    }
+}
+
+//Instatiate an Object
+const book1 = new Book('Book One', 'John Doe', '2013');
+const book2 = new Book('Book Two', 'Jane Doe', '2016');
+
+console.log(book2.getSummary())
