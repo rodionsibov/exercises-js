@@ -754,3 +754,69 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 //Challenge: Stopwatch
 
+
+// const p = document.createElement('p');
+// const tP = document.createTextNode('0');
+// const b = document.createElement('button');
+// const tB = document.createTextNode('Stop');
+// const s = document.createElement('style');
+
+// p.appendChild(tP);
+// document.bodzy.parentNode.insertBefore(s, document.body);
+// document.body.appendChild(p);
+// b.appendChild(tB);
+// document.body.appendChild(b);
+
+// document.body.style.textAlign = 'center';
+// p.style.fontSize = '20vh';
+// b.style.textAlign = 'center';
+// s.innerHTML = `
+// button {
+// font-size: 30px;
+// padding: 20px;
+// width: 200px;
+// background: tomato;
+// border: none;
+// cursor: pointer;
+// color: white;
+// outline: none;
+// }
+
+// button:hover {
+// filter: brightness(1.4);
+// }
+
+// `
+
+// const countUp = () => {
+//     tP.textContent++
+// }
+
+// const timer = setInterval(countUp, 1000);
+
+// const stopCountUp = () => {
+//     clearInterval(timer)
+//     console.log('You pressed stop!')
+// }
+
+// b.addEventListener('click', stopCountUp);
+
+const e = document.querySelector('script');
+const img = document.createElement('img');
+img.src = 'https://image.flaticon.com/icons/png/512/2598/2598933.png';
+document.body.insertBefore(img, e);
+img.style.width = '100px';
+
+const startTime = new Date().getTime();
+const makeItBigger = () => {
+    const currTime = new Date().getTime();
+    const newWidth = (50 + ((currTime - startTime)/1000) * 30);
+    img.style.width = newWidth + 'px';
+    console.log(newWidth);
+    if (newWidth < 200) {
+	window.requestAnimationFrame(makeItBigger);	
+    }
+};
+
+makeItBigger();
+
