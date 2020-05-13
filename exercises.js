@@ -820,16 +820,32 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 // makeItBigger();
 
+		      
+		      
+// const divEl = document.createElement('div')
+// const classAtt = document.createAttribute('class');
+// classAtt.value = 'penguin';
+// divEl.setAttributeNode(classAtt);
+// divEl.classList.add('penguin');
+// document.body.insertBefore(divEl, document.body.childNodes[penguinsEl.length]);
+
 
 
 //Canvas Clock
  
 const divEl = document.createElement('div');
-divEl.innerHTML = `<canvas id="myCanvas" width="400" height="400" style="border: 1px solid whitesmoke;"></canvas>`;
+divEl.innerHTML = `<canvas id="myCanvas" width="400" height="400" style="background-color: #333;"></canvas>`;
 document.body.insertBefore(divEl, document.body.childNodes[2]);
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
+let radius = canvas.height / 2;
+console.log(canvas.height)
+ctx.translate(radius, radius);
+radius = radius * 0.90;
+drawclock();
 
-
-
-
+function drawclock() {
+    ctx.arc(0, 0, radius, 0, 2 * Math.PI);
+    ctx.fillStyle = 'white';
+    ctx.fill();
+}
