@@ -832,20 +832,77 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 
 //Canvas Clock
- 
-const divEl = document.createElement('div');
-divEl.innerHTML = `<canvas id="myCanvas" width="400" height="400" style="background-color: #333;"></canvas>`;
-document.body.insertBefore(divEl, document.body.childNodes[2]);
-const canvas = document.getElementById('myCanvas');
-const ctx = canvas.getContext('2d');
-let radius = canvas.height / 2;
-console.log(canvas.height)
-ctx.translate(radius, radius);
-radius = radius * 0.90;
-drawclock();
+  
+// const divEl = document.createElement('div');
+// divEl.innerHTML = `<canvas id="myCanvas" width="400" height="400" style="background-color: #333;"></canvas>`;
+// document.body.insertBefore(divEl, document.body.childNodes[2]);
+// const canvas = document.getElementById('myCanvas');
+// const ctx = canvas.getContext('2d');
+// let radius = canvas.height / 2;
+// console.log(canvas.height)
+// ctx.translate(radius, radius);
+// radius = radius * 0.90;
+// drawClock();
 
-function drawclock() {
-    ctx.arc(0, 0, radius, 0, 2 * Math.PI);
-    ctx.fillStyle = 'white';
-    ctx.fill();
-}
+// function drawClock() {
+//     drawFace(ctx, radius);
+//     drawNumbers(ctx, radius);
+// }
+
+// function drawNumbers(ctx, radius) {
+//     var ang;
+//     var num;
+//     ctx.font = radius * 0.15 + "px arial";
+//     ctx.textBaseline = "middle";
+//     ctx.textAlign = "center";
+//     for(num = 1; num < 13; num++){
+// 	ang = num * Math.PI / 6;
+// 	ctx.rotate(ang);
+// 	ctx.translate(0, -radius * 0.85);
+// 	ctx.rotate(-ang);
+// 	ctx.fillText(num.toString(), 0, 0);
+// 	ctx.rotate(ang);
+// 	ctx.translate(0, radius * 0.85);
+// 	ctx.rotate(-ang);
+//     }
+// }
+
+// function drawFace(ctx, radius) {
+//     var grad;
+
+//     ctx.beginPath();
+//     ctx.arc(0, 0, radius, 0, 2 * Math.PI);
+//     ctx.fillStyle = 'white';
+//     ctx.fill();
+
+//     grad = ctx.createRadialGradient(0, 0 ,radius * 0.95, 0, 0, radius * 1.05);
+//     grad.addColorStop(0, '#333');
+//     grad.addColorStop(0.5, 'white');
+//     grad.addColorStop(1, '#333');
+//     ctx.strokeStyle = grad;
+//     ctx.lineWidth = radius*0.1;
+//     ctx.stroke();
+
+//     ctx.beginPath();
+//     ctx.arc(0, 0, radius * 0.1, 0, 2 * Math.PI);
+//     ctx.fillStyle = '#333';
+//     ctx.fill();
+// }
+
+const calculateMax = (coll) => {
+
+    if (coll.length === 0) {
+	return null;
+    }
+
+    let max = coll[0];
+    for (let i = 1; i < coll.length; i += 1) {
+	const currentElement = coll[i];
+	if (currentElement > max) {
+	    max = currentElement;
+	}
+    }
+    return max;
+};
+
+console.log(calculateMax([3, 2, -10, 38, 0]));
