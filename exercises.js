@@ -801,22 +801,47 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 // b.addEventListener('click', stopCountUp);
 
-const e = document.querySelector('script');
-const img = document.createElement('img');
-img.src = 'https://image.flaticon.com/icons/png/512/2598/2598933.png';
-document.body.insertBefore(img, e);
-img.style.width = '100px';
+// const e = document.querySelector('script');
+// const img = document.createElement('img');
+// img.src = 'https://image.flaticon.com/icons/png/512/2598/2598933.png';
+// document.body.insertBefore(img, e);
+// img.style.width = '100px';
 
-const startTime = new Date().getTime();
-const makeItBigger = () => {
-    const currTime = new Date().getTime();
-    const newWidth = (50 + ((currTime - startTime)/1000) * 30);
-    img.style.width = newWidth + 'px';
-    console.log(newWidth);
-    if (newWidth < 200) {
-	window.requestAnimationFrame(makeItBigger);	
-    }
-};
+// const startTime = new Date().getTime();
+// const makeItBigger = () => {
+//     const currTime = new Date().getTime();
+//     const newWidth = (50 + ((currTime - startTime)/1000) * 30);
+//     img.style.width = newWidth + 'px';
+//     console.log(newWidth);
+//     if (newWidth < 200) {
+// 	window.requestAnimationFrame(makeItBigger);	
+//     }
+// };
 
-makeItBigger();
+// makeItBigger();
+
+
+
+// //HTML Canvas 
+// const divEl = document.createElement('div');
+// divEl.innerHTML = `<canvas id="myCanvas" width="400" height="400" style="border: 1px solid whitesmoke;"></canvas>`;
+// document.body.insertBefore(divEl, document.body.childNodes[2]);
+
+// const canvas = document.getElementById('myCanvas');
+// const ctx = canvas.getContext('2d');
+// let x = 1;
+// const startTime = new Date().getTime();
+
+// const draw = () => {
+//     const currTime = new Date().getTime();
+//     ctx.beginPath();
+//     ctx.arc(x, x, x, 0, 2 * Math.PI);
+//     ctx.stroke();
+//     x += (currTime - startTime) / 1000;
+    
+//     if (x <= 400) {
+//     window.requestAnimationFrame(draw);		
+//     }
+
+// }
 
