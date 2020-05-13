@@ -822,26 +822,14 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 
 
-// //HTML Canvas 
-// const divEl = document.createElement('div');
-// divEl.innerHTML = `<canvas id="myCanvas" width="400" height="400" style="border: 1px solid whitesmoke;"></canvas>`;
-// document.body.insertBefore(divEl, document.body.childNodes[2]);
+//Canvas Clock
+ 
+const divEl = document.createElement('div');
+divEl.innerHTML = `<canvas id="myCanvas" width="400" height="400" style="border: 1px solid whitesmoke;"></canvas>`;
+document.body.insertBefore(divEl, document.body.childNodes[2]);
+const canvas = document.getElementById('myCanvas');
+const ctx = canvas.getContext('2d');
 
-// const canvas = document.getElementById('myCanvas');
-// const ctx = canvas.getContext('2d');
-// let x = 1;
-// const startTime = new Date().getTime();
 
-// const draw = () => {
-//     const currTime = new Date().getTime();
-//     ctx.beginPath();
-//     ctx.arc(x, x, x, 0, 2 * Math.PI);
-//     ctx.stroke();
-//     x += (currTime - startTime) / 1000;
-    
-//     if (x <= 400) {
-//     window.requestAnimationFrame(draw);		
-//     }
 
-// }
 
