@@ -856,10 +856,10 @@ document.body.insertBefore(divEl, document.body.childNodes[2]);
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 let radius = canvas.height / 2;
-console.log(canvas.height)
 ctx.translate(radius, radius);
 radius = radius * 0.90;
 drawClock();
+setInterval(drawClock, 1000);
 
 function drawClock() {
   drawFace(ctx, radius);
