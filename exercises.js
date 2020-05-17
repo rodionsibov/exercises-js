@@ -935,3 +935,47 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 //     ctx.fill();
 // }
 
+// const string = 'hello';
+// for (const symbol of string) {
+//     console.log(symbol);
+// }
+
+
+// const numbers = [1, 10];
+// delete numbers[0];
+// console.log(numbers);
+
+// const field = [
+//     [null, null, null],
+//     [null, null, null],
+//     [null, null, null]
+// ];
+
+// field[1][2] = 'x';
+
+// const didPlayerMove = (field, symbol) => {
+//     for (const row of field) {
+// 	if (row.includes(symbol)) {
+// 	    return true;
+// 	}
+//     }
+
+//     return false;
+// }
+
+// console.log(didPlayerMove(field, 'x'));
+
+
+function User(email, name) {
+    this.email = email;
+    this.name = name;
+    this.online = false;
+    this.login = function() {
+	console.log(this.email, 'has logged in');
+    }
+}
+
+let userOne = new User('abc@mail.com', 'Max');
+
+console.log(userOne);
+userOne.login();
