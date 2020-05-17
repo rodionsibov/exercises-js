@@ -966,7 +966,46 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // console.log(didPlayerMove(field, 'x'));
 
 
-function User(email, name) {
+// const getSuperSeriesWinner = (scores) => {
+//     let ussrScore = 0;
+//     let canadaScore = 0;
+    
+//     for (let i = 0; i < scores.length; i++) {
+// 	if (scores[i][0] > scores[i][1]) {
+// 	    canadaScore++
+// 	}
+// 	if (scores[i][0] < scores[i][1]) {
+// 	    ussrScore++
+// 	}
+//     }
+    
+//     if (ussrScore === canadaScore) {
+// 	return null
+//     }    
+
+//     if (ussrScore > canadaScore) {
+// 	return 'ussr'
+//     } else {
+// 	return 'canada'
+//     }
+    
+// }
+
+// getSuperSeriesWinner([
+//     [3, 7],
+//     [4, 9],
+//     [4, 4],
+//     [3, 5],
+//     [4, 5],
+//     [3, 7],
+//     [4, 3],
+//     [6, 5],
+// ])
+
+
+
+
+ User(email, name) {
     this.email = email;
     this.name = name;
     this.online = false;
