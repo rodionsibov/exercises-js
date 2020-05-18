@@ -1003,18 +1003,31 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // ])
 
 
-function longestWord(str) {
-    let words = str.split(" ");
-    let longestWord = "";
+// function longestWord(str) {
+//     let words = str.split(" ");
+//     let longestWord = "";
 
-    for (const word of words) {
-	if (word.length > longestWord.length) {
-	    longestWord = word;
-	}
-    }
+//     for (const word of words) {
+// 	if (word.length > longestWord.length) {
+// 	    longestWord = word;
+// 	}
+//     }
 
-    return longestWord;
+//     return longestWord;
+// }
+
+// console.log(longestWord("I woke up early today"));
+// console.log(longestWord("I went straight to the beach"));
+
+
+function capitalizeWords(str) {
+    let words = str.split(" ").map(word => {
+	return `${word.slice(0, 1).toUpperCase()}${word.slice(1)}`;
+    })
+
+    return words.join(" ");
 }
 
-console.log(longestWord("I woke up early today"));
-console.log(longestWord("I went straight to the beach"));
+console.log(capitalizeWords("I woke up early today"));
+console.log(capitalizeWords("I went straight to the beach"));
+
