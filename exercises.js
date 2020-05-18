@@ -1003,18 +1003,18 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // ])
 
 
+function longestWord(str) {
+    let words = str.split(" ");
+    let longestWord = "";
 
-
- User(email, name) {
-    this.email = email;
-    this.name = name;
-    this.online = false;
-    this.login = function() {
-	console.log(this.email, 'has logged in');
+    for (const word of words) {
+	if (word.length > longestWord.length) {
+	    longestWord = word;
+	}
     }
+
+    return longestWord;
 }
 
-let userOne = new User('abc@mail.com', 'Max');
-
-console.log(userOne);
-userOne.login();
+console.log(longestWord("I woke up early today"));
+console.log(longestWord("I went straight to the beach"));
