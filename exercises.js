@@ -1020,14 +1020,16 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // console.log(longestWord("I went straight to the beach"));
 
 
-function capitalizeWords(str) {
-    let words = str.split(" ").map(word => {
-	return `${word.slice(0, 1).toUpperCase()}${word.slice(1)}`;
-    })
+// function capitalizeWords(str) {
+//     let words = str.split(" ").map(word => {
+// 	return `${word.slice(0, 1).toUpperCase()}${word.slice(1)}`;
+//     })
 
-    return words.join(" ");
-}
+//     return words.join(" ");
+// }
 
-console.log(capitalizeWords("I woke up early today"));
-console.log(capitalizeWords("I went straight to the beach"));
+// console.log(capitalizeWords("I woke up early today"));
+// console.log(capitalizeWords("I went straight to the beach"));
 
+//console.log(Array.isArray([[2],[4,5], 3, "a"]))
+//console.log([[["a","b"],[1], 3], "c"].flat())
