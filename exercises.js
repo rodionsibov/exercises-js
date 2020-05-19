@@ -1035,9 +1035,32 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 //console.log([[["a","b"],[1], 3], "c"].flat())
 
 
-function secondValue(arr) {
-    let values = [...new Set(arr)].sort((a, b) => a - b);
-    return values;
-}
+// function secondValue(arr) {
+//     let values = [...new Set(arr)].sort((a, b) => a - b);
+//     return values;
+// }
 
-console.log(secondValue([3, 2, 88, 3, -11, 67, 7]));
+// console.log(secondValue([3, 2, 88, 3, -11, 67, 7]));
+
+// function unique(str) {
+//     return new Set(str).size === str.length;
+// }
+// console.log(unique("abcdd"));
+
+// const countUniqChars = (text) => {
+//     const uniqChars = [];
+
+//     for (const char of text) {
+// 	if (!uniqChars.includes(char)) {
+// 	    uniqChars.push(char);
+// 	}
+//     }
+
+//     return uniqChars.length;
+// }
+
+
+// console.log(countUniqChars('Fear cuts deeper than swords.'));
+
+// const cUc = (str) => [...new Set(str.split(''))].length;
+
