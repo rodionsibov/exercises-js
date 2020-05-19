@@ -1033,3 +1033,11 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 //console.log(Array.isArray([[2],[4,5], 3, "a"]))
 //console.log([[["a","b"],[1], 3], "c"].flat())
+
+
+function secondValue(arr) {
+    let values = [...new Set(arr)].sort((a, b) => a - b);
+    return values;
+}
+
+console.log(secondValue([3, 2, 88, 3, -11, 67, 7]));
