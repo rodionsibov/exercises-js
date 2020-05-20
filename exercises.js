@@ -1087,18 +1087,43 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 // console.log(bubbleSort([3, 2, 10, -2, 0]));
 
-function isPrime(num) {
-    if (num < 2) {
-	return false;
-    }
+// function isPrime(num) {
+//     if (num < 2) {
+// 	return false;
+//     }
 
-    for (let i = 2; i < num; i++) {
-	if (num % i === 0) {
-	    return false;
-	}
-    }
+//     for (let i = 2; i < num; i++) {
+// 	if (num % i === 0) {
+// 	    return false;
+// 	}
+//     }
 
-    return true;
-}
+//     return true;
+// }
 
-console.log(isPrime(11));
+// console.log(isPrime(11));
+
+
+// for (let i = 0; i < 11; i++) {
+//     console.log(`${i} x ${i} = ${i * i}`)
+// }
+
+// console.log(`i i^2 i^3`)
+// for (let i = 0; i < 11; i++) {
+//     console.log(`${i} ${i*i} ${i*i*i}`)
+// }
+
+//  for (let i = 0; i < 51; i += 1) {
+//      if (i % 2 === 1) {
+// 	 console.log(i)
+//      }
+// }   
+
+// let sum = 0;
+// for (let i = 0; i < 101; i += 1) {
+//     sum += i;
+// }   
+// console.log(sum)
+
+
+
