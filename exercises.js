@@ -1125,5 +1125,41 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // }   
 // console.log(sum)
 
+// let evens = 0, odds = 0;
+// for (let i = 0; i < 101; i++) {
+//     if (i % 2 === 0) {
+// 	evens += i;
+//     } else if (i % 2 === 1) {
+// 	odds += i
+//     }
+// }
+// console.log(`The sum of all evens is ${evens}. And the sum of all odds is ${odds}.`)
 
 
+// let array = [0, 0];
+// for (let i = 0; i < 101; i++) {
+//     if (i % 2 === 0) {
+// 	array[0] += i;
+//     } else if (i % 2 === 1) {
+// 	array[1] += i
+//     }
+// }
+// console.log(array)
+
+// const makeId = (length) => {
+// 	let characters = '0123456789ABCDEF'; //ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
+// 	let result = '#';
+// 	for (let i = 0; i < length; i++) {
+// 	    result += characters[(Math.floor(Math.random() * characters.length))]
+// 	}
+//     return result;
+//     }
+
+//console.log(makeId(6))
+
+
+
+const r = () => Math.floor(Math.random() * 255);  
+const makeRgbColor = () => `rgb(${r()}, ${r()}, ${r()})`;
+
+console.log(makeRgbColor());
