@@ -1159,7 +1159,81 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 
 
-const r = () => Math.floor(Math.random() * 255);  
-const makeRgbColor = () => `rgb(${r()}, ${r()}, ${r()})`;
+// const r = () => Math.floor(Math.random() * 255);  
+// const makeRgbColor = () => `rgb(${r()}, ${r()}, ${r()})`;
 
-console.log(makeRgbColor());
+// console.log(makeRgbColor());
+
+// let countries = ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
+// let cIndex = [7, 7, 6, 7, 8, 7, 7, 7, 7, 5, 5];
+// let arr = []
+// for (let e of cIndex) {
+//     arr.push(countries[e])   
+// }
+// console.log(arr)
+
+
+// let countries = ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
+// let arr = [];
+// for (let e of countries) {
+//     arr.push(e, e.slice(0, 3), e.length)
+// }
+// console.log(arr)
+
+
+// let countries = ['Albania', 'Bolivia','Ethiopia'];
+// let biggestNumberOfCharacters = '';
+//     for (let country of countries ) {
+// 	if (country.length > biggestNumberOfCharacters.length) {
+// 	    biggestNumberOfCharacters = country
+// 	}
+//     }
+    
+//console.log(biggestNumberOfCharacters)
+
+
+// let countries = ["Albania", "Bolivia", "Canada", "Denmark", "Ethiopia", "Finland", "Germany", "Hungary", "Ireland", "Japan", "Kenya"]
+// let result = []
+// for (let c of countries) {
+//     if (c.length < 6) {
+// 	result.push(c)
+//     }
+// }
+// console.log(result)
+
+
+// const webTechs = [
+//   'HTML',
+//   'CSS',
+//   'JavaScript',
+//   'React',
+//   'Redux',
+//   'Node',
+//   'MongoDB'
+// ]
+// let result = '';
+// for (w of webTechs) {
+//     if (w.length > result.length) {
+// 	result = w
+//     }
+// }
+// console.log(result)
+
+
+
+// const webTechs = [
+//   'HTML',
+//   'CSS',
+//   'JavaScript',
+//   'React',
+//   'Redux',
+//   'Node',
+//   'MongoDB'
+// ]
+// let result = []
+// for (w of webTechs) {
+//     result.push([w, w.length])
+// }
+// console.log(result);
+
+
