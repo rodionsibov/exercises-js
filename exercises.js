@@ -1237,3 +1237,7 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // console.log(result);
 
 
+const stack = ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"]
+for (s of stack) {
+    console.log(s)
+}
