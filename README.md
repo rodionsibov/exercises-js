@@ -1,7 +1,7 @@
 # Exercises JavaScript
 Each exercise starts with a problem description. Read this description and try to solve the exercise.  
 
-__If we want to learn something from the exercises, let's looking at the solutions only after we’ve solved the exercise, or at least after we’ve attacked it long and hard enough to have a slight headache.__
+__If we want to learn something from the exercises, let's look at the solutions only after we’ve solved the exercise, or at least after we’ve attacked it long and hard enough to have a slight headache.__
 
 Good luck!
 
