@@ -1460,3 +1460,26 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // }  
 // console.log(arr.indexOf('GHANA'))
 
+
+// //Destructuring
+// const myArray = ["a", "b", "c"];
+// const [x, y] = myArray;
+// console.log(x);
+// console.log(y);
+
+const getWordsCount = (content) => {
+    const words = content.split(' ');
+    const result = {};
+
+    for (const word of words) {
+	if (!result.hasOwnProperty(word)) {
+	    result[word] = 1;
+	} else {
+	    result[word] += 1;
+	}
+    }
+
+    return result;
+};
+
+console.log(getWordsCount('cat cat dog'))
