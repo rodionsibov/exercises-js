@@ -1467,19 +1467,32 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // console.log(x);
 // console.log(y);
 
-const getWordsCount = (content) => {
-    const words = content.split(' ');
-    const result = {};
+// const getWordsCount = (content) => {
+//     const words = content.split(' ');
+//     const result = {};
 
-    for (const word of words) {
-	if (!result.hasOwnProperty(word)) {
-	    result[word] = 1;
-	} else {
-	    result[word] += 1;
-	}
-    }
+//     for (const word of words) {
+// 	if (!result.hasOwnProperty(word)) {
+// 	    result[word] = 1;
+// 	} else {
+// 	    result[word] += 1;
+// 	}
+//     }
 
-    return result;
-};
+//     return result;
+// };
 
-console.log(getWordsCount('cat cat dog'))
+// console.log(getWordsCount('cat cat dog'))
+
+const obj = { name: 'JS: React', slug: 'js-react' };
+
+// console.log(obj)
+// console.log(Object.keys(obj))
+// console.log(Object.values(obj))
+// console.log(Object.entries(obj))
+
+const entries = Object.entries(obj)
+for (const [key, values] of entries) {
+    console.log(key);
+    console.log(values);
+}
