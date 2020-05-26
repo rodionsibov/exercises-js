@@ -1484,15 +1484,41 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 // console.log(getWordsCount('cat cat dog'))
 
-const obj = { name: 'JS: React', slug: 'js-react' };
+// const obj = { name: 'JS: React', slug: 'js-react' };
 
 // console.log(obj)
 // console.log(Object.keys(obj))
 // console.log(Object.values(obj))
 // console.log(Object.entries(obj))
 
-const entries = Object.entries(obj)
-for (const [key, values] of entries) {
-    console.log(key);
-    console.log(values);
-}
+// const entries = Object.entries(obj)
+// for (const [key, values] of entries) {
+//     console.log(key);
+//     console.log(values);
+// }
+
+
+
+const lessonMembers = {
+  syntax: 3,
+  using: 2,
+  foreach: 10,
+  operations: 10,
+  destructuring: 2,
+  array: 2,
+};
+
+const findKeys = (obj, expectedValue) => {
+  const result = [];
+
+  const entries = Object.entries(obj);
+  for (const [key, value] of entries) {
+    if (value === expectedValue) {
+      result.push(key);
+    }
+  }
+
+  return result;
+};
+
+console.log(findKeys(lessonMembers, 2))
