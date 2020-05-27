@@ -1499,26 +1499,33 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 
 
-const lessonMembers = {
-  syntax: 3,
-  using: 2,
-  foreach: 10,
-  operations: 10,
-  destructuring: 2,
-  array: 2,
-};
+// const lessonMembers = {
+//   syntax: 3,
+//   using: 2,
+//   foreach: 10,
+//   operations: 10,
+//   destructuring: 2,
+//   array: 2,
+// };
 
-const findKeys = (obj, expectedValue) => {
-  const result = [];
+// const findKeys = (obj, expectedValue) => {
+//   const result = [];
 
-  const entries = Object.entries(obj);
-  for (const [key, value] of entries) {
-    if (value === expectedValue) {
-      result.push(key);
-    }
-  }
+//   const entries = Object.entries(obj);
+//   for (const [key, value] of entries) {
+//     if (value === expectedValue) {
+//       result.push(key);
+//     }
+//   }
 
-  return result;
-};
+//   return result;
+// };
 
-console.log(findKeys(lessonMembers, 2))
+// console.log(findKeys(lessonMembers, 2))
+
+
+function confirmEnding(str, target) {
+    return str.slice(str.length - target.length) === target;
+}
+
+console.log(confirmEnding("Adfdjf", "f"))
