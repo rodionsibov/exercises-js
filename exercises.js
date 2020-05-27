@@ -1539,3 +1539,36 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 // console.log(repeatStringNumTimes("abc", 3));
 
+
+
+//freeCodeCamp. Basic Algorithm Scripting: Repeat a String Repeat a String
+// function repeatStringNumTimes(str, num) {
+//     if (num < 0) return "";
+//     let finalString = '';
+
+//     for (i = 0; i < num; i++) {
+// 	finalString += str;
+//     }
+
+//     return finalString;
+// }
+
+// console.log(repeatStringNumTimes("abc", 3));
+
+//freeCodeCamp. Basic Algorithm Scripting: Truncate a String
+// function truncateString(str, num) {
+//     if (str.length > num) {
+// 	    return str.slice(0, num) + " ...";
+//     }
+//     return str;
+// }
+// console.log(truncateString("A-tisket, a-tasket A green and yellow basket", 8));
+// console.log(truncateString("basket", 8));
+
+//freeCodeCamp. Basic Algorithm Scripting: Finders Keepers
+// function findElement(arr, func) {
+// //    return arr.find(func);
+//     return arr.filter(func)[0];
+// }
+// console.log(findElement([1, 2, 3, 4], num => num % 2 === 0));
+
