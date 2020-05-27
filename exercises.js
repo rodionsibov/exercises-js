@@ -1586,9 +1586,15 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // console.log(titleCase("I'm a little tea pot"));
 
 //freeCodeCamp. Basic Algorithm Scripting: Slice and Splice
-function frankenSplice(arr1, arr2, n) {
-    const newArr = arr2
-    newArr.splice(n, 0, ...arr1)
-    return newArr;
+// function frankenSplice(arr1, arr2, n) {
+//     const newArr = arr2
+//     newArr.splice(n, 0, ...arr1)
+//     return newArr;
+// }
+// console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
+
+//freeCodeCamp. Basic Algorithm Scripting: Falsy Bouncer
+function bouncer(arr) {
+    return arr.filter(e => !!e)
 }
-console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
+console.log(bouncer([7, "ate", "", false, 9]));
