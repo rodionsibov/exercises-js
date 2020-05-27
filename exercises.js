@@ -1578,9 +1578,17 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // }
 // console.log(booWho([],''))
 
-//freeCodeCamp. Basic Algorithm Scripting: Title Case a Sentence
-function titleCase(str) {
-    return str.split(' ').map(e => e[0].toUpperCase() + e.slice(1).toLowerCase()).join(' ');
-}
+// //freeCodeCamp. Basic Algorithm Scripting: Title Case a Sentence
+// function titleCase(str) {
+//     return str.split(' ').map(e => e[0].toUpperCase() + e.slice(1).toLowerCase()).join(' ');
+// }
 
-console.log(titleCase("I'm a little tea pot"));
+// console.log(titleCase("I'm a little tea pot"));
+
+//freeCodeCamp. Basic Algorithm Scripting: Slice and Splice
+function frankenSplice(arr1, arr2, n) {
+    const newArr = arr2
+    newArr.splice(n, 0, ...arr1)
+    return newArr;
+}
+console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
