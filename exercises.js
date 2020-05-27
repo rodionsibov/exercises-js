@@ -1572,8 +1572,15 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // }
 // console.log(findElement([1, 2, 3, 4], num => num % 2 === 0));
 
-//freeCodeCamp. Basic Algorithm Scripting: Boo who
-function booWho(bool) {
-    return typeof bool === 'boolean';
+// //freeCodeCamp. Basic Algorithm Scripting: Boo who
+// function booWho(bool) {
+//     return typeof bool === 'boolean';
+// }
+// console.log(booWho([],''))
+
+//freeCodeCamp. Basic Algorithm Scripting: Title Case a Sentence
+function titleCase(str) {
+    return str.split(' ').map(e => e[0].toUpperCase() + e.slice(1).toLowerCase()).join(' ');
 }
-booWho(null);
+
+console.log(titleCase("I'm a little tea pot"));
