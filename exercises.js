@@ -1595,6 +1595,7 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 //freeCodeCamp. Basic Algorithm Scripting: Falsy Bouncer
 function bouncer(arr) {
-    return arr.filter(e => !!e)
+    return arr.filter(e => e)
+
 }
 console.log(bouncer([7, "ate", "", false, 9]));
