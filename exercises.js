@@ -1621,3 +1621,16 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // console.log(getIndexToIns([20, 3, 5, 4, 14, 1, 6], 50));
 
 
+// //freeCodeCamp. Basic Algorithm Scripting: Mutations
+// function mutation(arr) {
+//     const [str1, str2] = arr.map(s => s.toLowerCase());
+//     for (let i = 0; i < str2.length; i++) {
+// 	const letter = str2[i];
+// 	if (str1.indexOf(letter) === -1) {
+// 	    return false;
+// 	}
+//     }
+    
+//     return true;
+// }
+// console.log(mutation(["hello", "hey"]));
