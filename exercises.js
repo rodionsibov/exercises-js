@@ -1524,8 +1524,18 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // console.log(findKeys(lessonMembers, 2))
 
 
-function confirmEnding(str, target) {
-    return str.slice(str.length - target.length) === target;
-}
+// function confirmEnding(str, target) {
+//     return str.slice(str.length - target.length) === target;
+// }
 
-console.log(confirmEnding("Adfdjf", "f"))
+// console.log(confirmEnding("Adfdjf", "f"))
+
+
+// function repeatStringNumTimes(str, num) {
+//     if (num < 0) return "";
+
+//     return new Array(num).fill(str).join('');
+// }
+
+// console.log(repeatStringNumTimes("abc", 3));
+
