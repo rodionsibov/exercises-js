@@ -1593,9 +1593,31 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // }
 // console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
 
-//freeCodeCamp. Basic Algorithm Scripting: Falsy Bouncer
-function bouncer(arr) {
-    return arr.filter(e => e)
+// //freeCodeCamp. Basic Algorithm Scripting: Falsy Bouncer
+// function bouncer(arr) {
+//     return arr.filter(e => e)
 
-}
-console.log(bouncer([7, "ate", "", false, 9]));
+// }
+// console.log(bouncer([7, "ate", "", false, 9]));
+
+//freeCodeCamp. Basic Algorithm Scripting: Where do I belong
+// function getIndexToIns(arr, num) {
+//     // let index = arr.sort((a, b) => a - b)
+//     // 	.findIndex(e => e >= num);
+
+//     // return index === -1 ? arr.length : index;
+
+//     let sortedArray = arr.sort((a, b) => a - b);
+//     let index = arr.length;
+//     for (let i = 0; i < sortedArray.length; i++) {
+// 	if (sortedArray[i] >= num) {
+// 	    index = i;
+// 	    break;
+// 	}
+//     }
+
+//     return index;
+// }
+// console.log(getIndexToIns([20, 3, 5, 4, 14, 1, 6], 50));
+
+
