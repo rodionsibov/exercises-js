@@ -1572,3 +1572,8 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // }
 // console.log(findElement([1, 2, 3, 4], num => num % 2 === 0));
 
+//freeCodeCamp. Basic Algorithm Scripting: Boo who
+function booWho(bool) {
+    return typeof bool === 'boolean';
+}
+booWho(null);
