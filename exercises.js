@@ -1676,5 +1676,9 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 
 //freeCodeCamp. Object Oriented Programming: Verify an Object's Constructor with instanceof
+function House(numBedrooms) {
+    this.numBedrooms = numBedrooms;
+}
 
-
+const myHouse = new House(1000);
+console.log(myHouse instanceof House);
