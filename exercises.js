@@ -1662,3 +1662,19 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 // console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
 
+// function Dog(name, color) {
+//     this.name = name;
+//     this.color = color;
+//     this.numLegs = 4;
+// }
+
+// const terrier = new Dog("Terrier", "blue");
+// const puppy = new Dog("Puppy", "yellow");
+// console.log(terrier, puppy);
+
+
+
+
+//freeCodeCamp. Object Oriented Programming: Verify an Object's Constructor with instanceof
+
+
