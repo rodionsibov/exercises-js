@@ -1736,17 +1736,26 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 
 //freeCodeCamp. Object Oriented Programming: Change the Prototype to a New Object
-function Dog(name) {
-    this.name = name;
+// function Dog(name) {
+//     this.name = name;
+// }
+
+// Dog.prototype = {
+//     numLegs: 2,
+//     eat: function () {
+// 	console.log("nom nom nom");
+//     },
+//     describe: function () {
+// 	console.log("My name is " + this.name);
+//     }
+// };
+
+//js challenges: regex palindrome
+function checkPalindrome(str) {
+    str = str.toLowerCase();
+    let first = str.split(' ').join('');
+    let second = first.split('').reverse().join('');
+    return first === second;
 }
 
-Dog.prototype = {
-    numLegs: 2,
-    eat: function () {
-	console.log("nom nom nom");
-    },
-    describe: function () {
-	console.log("My name is " + this.name);
-    }
-};
-
+console.log(checkPalindrome("Was it a car or a cat I saw"));
