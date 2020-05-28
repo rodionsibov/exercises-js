@@ -1713,25 +1713,40 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 
 //freeCodeCamp. Object Oriented Programming: Iterate Over All Properties
+// function Dog(name) {
+//     this.name = name;
+// }
+
+// Dog.prototype.numLegs = 4;
+// let beagle = new Dog("Snoopy");
+
+// let ownProps = [];
+// let prototypeProps = [];
+
+// for (let property in beagle) {
+//     if (beagle.hasOwnProperty(property)) {
+// 	ownProps.push(property);
+//     } else {
+// 	prototypeProps.push(property);
+//     }
+
+// }
+
+// console.log(beagle);
+
+
+//freeCodeCamp. Object Oriented Programming: Change the Prototype to a New Object
 function Dog(name) {
     this.name = name;
 }
 
-Dog.prototype.numLegs = 4;
-let beagle = new Dog("Snoopy");
-
-let ownProps = [];
-let prototypeProps = [];
-
-for (let property in beagle) {
-    if (beagle.hasOwnProperty(property)) {
-	ownProps.push(property);
-    } else {
-	prototypeProps.push(property);
+Dog.prototype = {
+    numLegs: 2,
+    eat: function () {
+	console.log("nom nom nom");
+    },
+    describe: function () {
+	console.log("My name is " + this.name);
     }
-
-}
-
-console.log(beagle);
-
+};
 
