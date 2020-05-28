@@ -1636,28 +1636,29 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // console.log(mutation(["hello", "hey"]));
 
 //freeCodeCamp. Basic Algorithm Scripting: Chunky Monkey
-function chunkArrayInGroups(arr, size) {
-    let index = 0;
-    let finalArray = [];
-    let innerArray = [];
+// function chunkArrayInGroups(arr, size) {
+//     let index = 0;
+//     let finalArray = [];
+//     let innerArray = [];
 
-    for (let i = 0; i < arr.length; i++) {
-	innerArray.push(arr[i]);
+//     for (let i = 0; i < arr.length; i++) {
+// 	innerArray.push(arr[i]);
 
-	index++;
+// 	index++;
 
-	if (index === size) {
-	    finalArray.push(innerArray);
-	    innerArray = [];
-	    index = 0;
-	}
-    }
+// 	if (index === size) {
+// 	    finalArray.push(innerArray);
+// 	    innerArray = [];
+// 	    index = 0;
+// 	}
+//     }
 
-    if (innerArray.length > 0) {
-	finalArray.push(innerArray);
-    }
+//     if (innerArray.length > 0) {
+// 	finalArray.push(innerArray);
+//     }
 
-    return finalArray;
-}
+//     return finalArray;
+// }
 
-console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
+// console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
+
