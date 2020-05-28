@@ -1684,18 +1684,31 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // console.log(myHouse instanceof House);
 
 //freeCodeCamp. Object Oriented Programming: Understand Own Properties
-function Bird(name) {
-    this.name = name;
-    this.numLegs = 2;
-}
+// function Bird(name) {
+//     this.name = name;
+//     this.numLegs = 2;
+// }
 
-let canary = new Bird("Tweety");
-let ownProps = [];
+// let canary = new Bird("Tweety");
+// let ownProps = [];
 
-for (let property in canary) {
-    if (canary.hasOwnProperty(property)) {
-	ownProps.push(property);
-    }
-}
+// for (let property in canary) {
+//     if (canary.hasOwnProperty(property)) {
+// 	ownProps.push(property);
+//     }
+// }
 
-console.log(ownProps);
+// console.log(ownProps);
+
+//freeCodeCamp. Object Oriented Programming: Use Prototype Properties to Reduce Duplicate Code
+// function Dog(name) {
+//     this.name = name;
+// }
+
+// Dog.prototype.numLegs = 4;
+
+// let beagle = new Dog("Snoopy");
+
+// console.log(beagle.numLegs);
+
+
