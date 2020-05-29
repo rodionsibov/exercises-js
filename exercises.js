@@ -1805,16 +1805,36 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // console.log(convertCelciusToFahrenheit(34));
 
 // //30DaysOfJavaScript. 7Day. Functions. Ex1-lv1.13
-function bmi(weight, height) {
-    let bmi = weight / (height * height);
-    let result = '';
+// function bmi(weight, height) {
+//     let bmi = weight / (height * height);
+//     let result = '';
 
-    if (bmi < 18.5) {result = 'Underweight'}
-    else if (bmi >= 18.5 && bmi < 24.9) {result = 'Normal weight'}
-    else if (bmi >= 25 && bmi < 29.9) {result = 'Overweight'}
-    else if (bmi > 30) {result = 'Obese'}
-    else result = 'Please, insert your weight and height.';
-    return result
+//     if (bmi < 18.5) {result = 'Underweight'}
+//     else if (bmi >= 18.5 && bmi < 24.9) {result = 'Normal weight'}
+//     else if (bmi >= 25 && bmi < 29.9) {result = 'Overweight'}
+//     else if (bmi > 30) {result = 'Obese'}
+//     else result = 'Please, insert your weight and height.';
+//     return result
+// }
+
+// console.log(bmi(65, 1.7));
+
+// //30DaysOfJavaScript. 7Day. Functions. Ex1-lv1.14
+// function findMax(x1, x2, x3) {
+//     return Math.max(x1, x2, x3)
+// }
+// console.log(findMax(1, 5, 8));
+
+// //30DaysOfJavaScript. 7Day. Functions. Ex1-lv2.2
+function solveQuadratic(a, b, c) {
+    //quadratic equation: ax2 + bx + c = 0
+
+    if (a === undefined || b === undefined || c === undefined) {
+	return 0;
+    }
+    let x1 = (-b + Math.sqrt(b ** 2 - 4 * a * c)) / 2 * a;
+    let x2 = (-b - Math.sqrt(b ** 2 - 4 * a * c)) / 2 * a;
+    return `${x1}, ${x2}`;
+    
 }
-
-console.log(bmi(65, 1.7));
+console.log(solveQuadratic()); 
