@@ -1846,8 +1846,26 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // console.log(printArray(["name", "company", "phone"]));
 
 // //30DaysOfJavaScript. 7Day. Functions. Ex1-lv2.4
-function showDateTime() {
-    let now = new Date();
-    return `${now.getDate()}/${now.getMonth()}/${now.getFullYear()} ${now.getHours()}:${now.getMinutes()}`
+// function showDateTime() {
+//     let now = new Date();
+//     return `${now.getDate()}/${now.getMonth()}/${now.getFullYear()} ${now.getHours()}:${now.getMinutes()}`
+// }
+// console.log(showDateTime());
+
+
+// function sumAllNums() {
+//  console.log(arguments)
+// }
+
+// sumAllNums(1, 2, 3, 4)
+
+function sumAllNums() {
+    let sum = 0;
+    for (a of arguments) {
+	sum += a;
+    }
+    return sum;
 }
-console.log(showDateTime());
+console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40))  // 173
+
+
