@@ -1751,15 +1751,16 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // };
 
 //js challenges: regex palindrome
-function checkPalindrome(str) {
-//     str = str.toLowerCase();
-//     let first = str.split(' ').join('');
+// function checkPalindrome(str) {
+// //     str = str.toLowerCase();
+// //     let first = str.split(' ').join('');
+// //     let second = first.split('').reverse().join('');
+
+//     let first = str.match(/[a-z0-9]+/ig).join('').toLowerCase();
 //     let second = first.split('').reverse().join('');
+//     return first === second;
+// }
 
-    let first = str.match(/[a-z0-9]+/ig).join('').toLowerCase();
-    let second = first.split('').reverse().join('');
-    return first === second;
-}
+// // console.log(checkPalindrome("Was it a car or a cat I saw"));
+// console.log(checkPalindrome("Red -rum-, sir,-is-murder"));
 
-// console.log(checkPalindrome("Was it a car or a cat I saw"));
-console.log(checkPalindrome("Red -rum-, sir,-is-murder"));
