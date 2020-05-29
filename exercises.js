@@ -1767,6 +1767,8 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 //30DaysOfJavaScript. 7Day. Functions. ex. lv 1.1
 
 function fullName() {
-    return "My name";
+    return "R S";
 }
 console.log(fullName());
+
+//30DaysOfJavaScript. 7Day. Functions. ex. lv 1.2
