@@ -1782,9 +1782,20 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // }
 // console.log(addNumbers(2, 5));
 
-//30DaysOfJavaScript. 7Day. Functions. ex. lv 1.4
-function areaOfRectangle(length, width) {
-    let area = length * width;
-    return `Area of rectangle is ${area}`
-}
-console.log(areaOfRectangle(4, 7));
+// //30DaysOfJavaScript. 7Day. Functions. ex. lv 1.4
+// function areaOfRectangle(length, width) {
+//     let area = length * width;
+//     return `Area of rectangle is ${area}`
+// }
+// console.log(areaOfRectangle(4, 7));
+
+// //30DaysOfJavaScript. 7Day. Functions. Ex1-lv1.5
+// function areaOfCircle(radius) {
+//     // const p = Math.PI;
+//     // let area = p * radius * radius;
+//     // return area;
+//     return Math.PI * radius ** 2;
+// }
+// console.log(areaOfCircle(7));
+
+// //30DaysOfJavaScript. 7Day. Functions. Ex1-lv1.4
