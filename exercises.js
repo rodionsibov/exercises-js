@@ -1859,13 +1859,23 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 // sumAllNums(1, 2, 3, 4)
 
-function sumAllNums() {
+// function sumAllNums() {
+//     let sum = 0;
+//     for (const a of arguments) {
+// 	sum += a;
+//     }
+//     return sum;
+// }
+// console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40))  // 173
+
+
+const sumAllNums = (...args) => {
     let sum = 0;
-    for (a of arguments) {
-	sum += a;
+    for (const element of args) {
+	sum += element
     }
     return sum;
 }
-console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40))  // 173
+console.log(sumAllNums(10, 20, 13, 40, 10))  // 93
 
 
