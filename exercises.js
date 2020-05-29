@@ -1764,3 +1764,9 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // // console.log(checkPalindrome("Was it a car or a cat I saw"));
 // console.log(checkPalindrome("Red -rum-, sir,-is-murder"));
 
+//30DaysOfJavaScript. 7Day. Functions. ex. lv 1.1
+
+function fullName() {
+    return "My name";
+}
+console.log(fullName());
