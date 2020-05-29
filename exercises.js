@@ -1900,3 +1900,8 @@ function reverseArray(arr) {
     return result;
 }
 console.log(reverseArray([1, 2, 3, 4, 5]));
+console.log(reverseArray(['A', 'B', 'C']))
+
+
+// //30DaysOfJavaScript. 7Day. Functions. Ex1-lv2.7
+
