@@ -1826,15 +1826,19 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // console.log(findMax(1, 5, 8));
 
 // //30DaysOfJavaScript. 7Day. Functions. Ex1-lv2.2
-function solveQuadratic(a, b, c) {
-    //quadratic equation: ax2 + bx + c = 0
+// function solveQuadratic(a, b, c) {
+//     //quadratic equation: ax2 + bx + c = 0
 
-    if (a === undefined || b === undefined || c === undefined) {
-	return 0;
-    }
-    let x1 = (-b + Math.sqrt(b ** 2 - 4 * a * c)) / 2 * a;
-    let x2 = (-b - Math.sqrt(b ** 2 - 4 * a * c)) / 2 * a;
-    return `${x1}, ${x2}`;
+//     if (a === undefined || b === undefined || c === undefined) {
+// 	return 0;
+//     }
+//     let x1 = (-b + Math.sqrt(b ** 2 - 4 * a * c)) / 2 * a;
+//     let x2 = (-b - Math.sqrt(b ** 2 - 4 * a * c)) / 2 * a;
+//     return `${x1}, ${x2}`;
     
-}
-console.log(solveQuadratic()); 
+// }
+// console.log(solveQuadratic()); 
+
+// //30DaysOfJavaScript. 7Day. Functions. Ex1-lv2.3
+
+
