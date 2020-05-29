@@ -1765,10 +1765,13 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // console.log(checkPalindrome("Red -rum-, sir,-is-murder"));
 
 //30DaysOfJavaScript. 7Day. Functions. ex. lv 1.1
-
-function fullName() {
-    return "R S";
-}
-console.log(fullName());
+// function fullName() {
+//     return "R S";
+// }
+// console.log(fullName());
 
 //30DaysOfJavaScript. 7Day. Functions. ex. lv 1.2
+function fullName(firsName, lastName) {
+    return firsName + ' ' + lastName;
+}
+console.log(fullName('R', 'S'));
