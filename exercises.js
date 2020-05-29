@@ -1840,8 +1840,14 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // console.log(solveQuadratic()); 
 
 // //30DaysOfJavaScript. 7Day. Functions. Ex1-lv2.3
-function printArray(arr) {
-    return arr
-}
-console.log(printArray(["name", "company", "phone"]));
+// function printArray(arr) {
+//     return arr
+// }
+// console.log(printArray(["name", "company", "phone"]));
 
+// //30DaysOfJavaScript. 7Day. Functions. Ex1-lv2.4
+function showDateTime() {
+    let now = new Date();
+    return `${now.getDate()}/${now.getMonth()}/${now.getFullYear()} ${now.getHours()}:${now.getMinutes()}`
+}
+console.log(showDateTime());
