@@ -1783,3 +1783,8 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // console.log(addNumbers(2, 5));
 
 //30DaysOfJavaScript. 7Day. Functions. ex. lv 1.4
+function areaOfRectangle(length, width) {
+    let area = length * width;
+    return `Area of rectangle is ${area}`
+}
+console.log(areaOfRectangle(4, 7));
