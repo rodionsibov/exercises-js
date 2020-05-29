@@ -1840,5 +1840,8 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // console.log(solveQuadratic()); 
 
 // //30DaysOfJavaScript. 7Day. Functions. Ex1-lv2.3
-
+function printArray(arr) {
+    return arr
+}
+console.log(printArray(["name", "company", "phone"]));
 
