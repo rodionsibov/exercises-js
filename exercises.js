@@ -1879,12 +1879,24 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 
 // //30DaysOfJavaScript. 7Day. Functions. Ex1-lv2.5
-function swapValues(x, y) {
-    let temp = x;
-    console.log(`Before: ${x}, ${y}`);
-    x = y;
-    y = temp;
+// function swapValues(x, y) {
+//     let temp = x;
+//     console.log(`Before: ${x}, ${y}`);
+//     x = y;
+//     y = temp;
 
-    return `After: ${x}, ${y}`
+//     return `After: ${x}, ${y}`
+// }
+// console.log(swapValues(3, 4));
+
+// //30DaysOfJavaScript. 7Day. Functions. Ex1-lv2.6
+function reverseArray(arr) {
+    let result = [];
+//    let sortedArr = arr.sort((a, b) => b - a);
+    
+    for (const e of arr) {
+	result.unshift(e)
+    }
+    return result;
 }
-console.log(swapValues(3, 4));
+console.log(reverseArray([1, 2, 3, 4, 5]));
