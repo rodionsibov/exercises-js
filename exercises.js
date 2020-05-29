@@ -1764,14 +1764,22 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // // console.log(checkPalindrome("Was it a car or a cat I saw"));
 // console.log(checkPalindrome("Red -rum-, sir,-is-murder"));
 
-//30DaysOfJavaScript. 7Day. Functions. ex. lv 1.1
+////30DaysOfJavaScript. 7Day. Functions. ex. lv 1.1
 // function fullName() {
 //     return "R S";
 // }
 // console.log(fullName());
 
-//30DaysOfJavaScript. 7Day. Functions. ex. lv 1.2
-function fullName(firsName, lastName) {
-    return firsName + ' ' + lastName;
-}
-console.log(fullName('R', 'S'));
+////30DaysOfJavaScript. 7Day. Functions. ex. lv 1.2
+// function fullName(firsName, lastName) {
+//     return firsName + ' ' + lastName;
+// }
+// console.log(fullName('R', 'S'));
+
+// //30DaysOfJavaScript. 7Day. Functions. ex. lv 1.3
+// function addNumbers(num1, num2) {
+//     return num1 + num2;
+// }
+// console.log(addNumbers(2, 5));
+
+//30DaysOfJavaScript. 7Day. Functions. ex. lv 1.4
