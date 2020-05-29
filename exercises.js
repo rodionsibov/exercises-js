@@ -1890,18 +1890,40 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // console.log(swapValues(3, 4));
 
 // //30DaysOfJavaScript. 7Day. Functions. Ex1-lv2.6
-function reverseArray(arr) {
-    let result = [];
-//    let sortedArr = arr.sort((a, b) => b - a);
+// function reverseArray(arr) {
+//     let result = [];
+// //    let sortedArr = arr.sort((a, b) => b - a);
     
-    for (const e of arr) {
-	result.unshift(e)
-    }
-    return result;
-}
-console.log(reverseArray([1, 2, 3, 4, 5]));
-console.log(reverseArray(['A', 'B', 'C']))
+//     for (const e of arr) {
+// 	result.unshift(e)
+//     }
+//     return result;
+// }
+// console.log(reverseArray([1, 2, 3, 4, 5]));
+// console.log(reverseArray(['A', 'B', 'C']))
 
 
 // //30DaysOfJavaScript. 7Day. Functions. Ex1-lv2.7
 
+// //Array methods - map / filter / reduce / find
+// const numbers = [0, 1, 2, 3, 4, 5, 6];
+// const doubledNumbers = numbers.map(n => n * 2); // [0, 2, 4, 6, 8, 10, 12]
+// const evenNumbers = numbers.filter(n => n % 2 === 0); // [0, 2, 4, 6]
+// const sum = numbers.reduce((prev, next) => prev + next, 0); // 21
+// const greaterThanFour = numbers.find((n) => n>4); // 5
+
+
+//freeCodeCamp. JavaScript Functional Programming
+const prepareTea = () => 'greenTea';
+
+const getTea = (numOfCaps) => {
+    const teaCups = [];
+
+    for (let cups = 1; cups <= numOfCaps; cups += 1) {
+	const teaCup = prepareTea();
+	teaCups.push(teaCup);
+    }
+
+    return teaCups;
+};
+console.log(getTea(5));
