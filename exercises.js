@@ -1789,7 +1789,7 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // }
 // console.log(areaOfRectangle(4, 7));
 
-// //30DaysOfJavaScript. 7Day. Functions. Ex1-lv1.5
+// //30DaysOfJavaScript. 7Day. Functions. Ex1-lv1.7
 // function areaOfCircle(radius) {
 //     // const p = Math.PI;
 //     // let area = p * radius * radius;
@@ -1798,4 +1798,8 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // }
 // console.log(areaOfCircle(7));
 
-// //30DaysOfJavaScript. 7Day. Functions. Ex1-lv1.4
+// //30DaysOfJavaScript. 7Day. Functions. Ex1-lv1.12
+function convertCelciusToFahrenheit(celcius) {
+    return (celcius * 9/5) + 32;
+}
+console.log(convertCelciusToFahrenheit(34));
