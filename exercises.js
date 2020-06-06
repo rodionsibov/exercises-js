@@ -1914,16 +1914,69 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 
 //freeCodeCamp. JavaScript Functional Programming
-const prepareTea = () => 'greenTea';
+// const prepareTea = () => 'greenTea';
 
-const getTea = (numOfCaps) => {
-    const teaCups = [];
+// const getTea = (numOfCaps) => {
+//     const teaCups = [];
 
-    for (let cups = 1; cups <= numOfCaps; cups += 1) {
-	const teaCup = prepareTea();
-	teaCups.push(teaCup);
-    }
+//     for (let cups = 1; cups <= numOfCaps; cups += 1) {
+// 	const teaCup = prepareTea();
+// 	teaCups.push(teaCup);
+//     }
 
-    return teaCups;
-};
-console.log(getTea(5));
+//     return teaCups;
+// };
+// console.log(getTea(5));
+
+
+
+// const modifyArray = (arr) => {
+//     if (arr.length < 5) {
+// 	return  'Not Found';
+//     }
+
+//     arr[4] = arr[4].toUpperCase()
+//     return arr
+// }
+
+// console.log(['Avocado', 'Tomato', 'Potato','Mango', 'Lemon','Carrot']);
+//console.log(modifyArray(['Avocado', 'Tomato', 'Potato','Mango', 'Lemon','Carrot']));
+//console.log(modifyArray(['Google', 'Facebook','Apple', 'Amazon']));
+
+
+
+
+// fetch('https://randomuser.me/api/?results=33')
+//     .then(res => res.json())
+//     .then(data => {
+
+// 	const results = data.results.map(item => {
+// 	    return `
+
+// <div class="col-md-3 mb-3">
+
+// <div class="card text-center h-100">
+// <img src="${item.picture.medium}" class="" alt="${item.login.username}" style="width: 100px; border-radius: 50%; margin: 20px auto 0; ">
+
+// <div class="card-body">
+// <h5 class="card-title">${item.name.title} ${item.name.first} ${item.name.last}</h5>
+// <p class="card-text">${item.email}</p>
+// </div>
+
+// <div class="card-footer">
+// <p class="card-text"><small class="text-muted">Last updated ${item.registered.date}</small></p>
+// </div>
+
+// </div>
+
+// </div>
+
+// `;
+// 	}).join('')
+
+// 	document.querySelector('#root').innerHTML = `<div class="row" id="cards"></div>`;
+// 	document.querySelector('#cards').innerHTML = results;
+// 	console.log(data.results)
+//     })
+
+
