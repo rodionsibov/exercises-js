@@ -1980,3 +1980,12 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 //     })
 
 
+// const sum = (...numbers) => {
+//     let result = 0;
+//     for (let num of numbers) {
+// 	result += num;
+//     }
+//     return numbers
+// };
+
+
