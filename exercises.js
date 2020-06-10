@@ -1988,4 +1988,201 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 //     return numbers
 // };
 
+// const union = (first, ...rest) => {
+//     const concated = first.concat(...rest);
+//     return [...new Set(concated)]
+// }
+
+// console.log(union(['a', 3, false], [true, false, 3], [false, 5, 8]))
+
+
+// const dog = {
+//     name: "",
+//     legs: "",
+//     color: "",
+//     bark: function () {
+// 	return `woof, woof`
+//     }
+// }
+
+// dog.breed = ""
+// dog.getDogInfo = function () {
+//     return `info`
+// }
+// console.log(dog.bark())
+
+
+// const users = {
+//   Alex: {
+//     email: 'alex@alex.com',
+//     skills: ['HTML', 'CSS', 'JavaScript'],
+//     age: 20,
+//     isLoggedIn: false,
+//     points: 30
+//   },
+//   Asab: {
+//     email: 'asab@asab.com',
+//     skills: ['HTML', 'CSS', 'JavaScript', 'Redux', 'MongoDB', 'Express', 'React', 'Node'],
+//     age: 25,
+//     isLoggedIn: false,
+//     points: 50
+//   },
+//   Brook: {
+//     email: 'daniel@daniel.com',
+//     skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux'],
+//     age: 30,
+//     isLoggedIn: true,
+//     points: 50
+//   },
+//   Daniel: {
+//     email: 'daniel@alex.com',
+//     skills: ['HTML', 'CSS', 'JavaScript', 'Python'],
+//     age: 20,
+//     isLoggedIn: false,
+//     points: 40
+//   },
+//   John: {
+//     email: 'john@john.com',
+//     skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Node.js'],
+//     age: 20,
+//     isLoggedIn: true,
+//     points: 50
+//   },
+//   Thomas: {
+//     email: 'thomas@thomas.com',
+//     skills: ['HTML', 'CSS', 'JavaScript', 'React'],
+//     age: 20,
+//     isLoggedIn: false,
+//     points: 40
+//   },
+//   Paul: {
+//     email: 'paul@paul.com',
+//     skills: ['HTML', 'CSS', 'JavaScript', 'MongoDB', 'Express', 'React', 'Node'],
+//     age: 20,
+//     isLoggedIn: false,
+//     points: 40
+//   }
+// }
+
+// const result = Object.keys(users).map((skills, name, names) => {
+//     return `${names[name]}: ${users[skills].skills.length}`
+// })
+
+
+
+
+// class Person {
+//     constructor(firstName, lastName, dob) {
+// 	this.firstName = firstName;
+// 	this.lastName = lastName;
+// 	this.dob = new Date(dob);
+//     }
+
+//     getBirthYear() {
+// 	return this.dob.getFullYear();
+//     }
+
+//     getFullName() {
+// 	return `${this.firstName} ${this.lastName}`;
+//     }
+// }
+
+//const person1 = new Person('John', 'Doe', '4-14-1980');
+//console.log(person1.getBirthYear());
+//console.log(person1, '\n', person1.getFullName())
+
+//document.querySelector('#root').innerHTML = `<button class="btn btn-primary">My button</button>`;
+//ul.remove();
+//ul.lastElementChild.remove();
+//ul.firstElementChild.textContent = 'Hello';
+// ul.children[1].style.color = 'red';
+// document.querySelector('.btn').addEventListener('click', (e) => {
+//     e.target.classList.toggle('btn-danger')
+//     console.log(e.target.className)
+// })
+
+
+// .document.createElement('li')
+// li.appendChild(document.createTextNode())
+
+// ((start, end) => {
+//     let result = 0;
+
+//     for (let i = start; i <= end; i++) {
+// 	result += i;
+//     }
+//     return console.log(result)
+
+// })(5, 4); //10
+
+const root = document.querySelector('#root')
+
+let liTag = '';
+
+for (let i = 0; i < 3; i++) {
+    liTag += `<li class="list-group-item">Item ${i + 1}<button class="btn btn-danger delete float-right btn-sm">X</button></li>`
+}
+root.innerHTML = `<form class="form-inline"><input type="text" class="form-control mb-3"></form><ul class="list-group">${liTag}</ul>`
+
+//add item
+const addItem = (e) => {
+    e.preventDefault()
+
+    //get input value
+    const input = document.querySelector('input')
+
+    //create new li element
+    const li = document.createElement('li')
+    //add class
+    li.className ="list-group-item"
+    //add text node with input value
+    li.appendChild(document.createTextNode(input.value))
+    document.querySelector('ul').appendChild(li)
+
+    //create delete button element
+    const deleteBtn = document.createElement('button')
+    //add class to del button
+    deleteBtn.className = 'btn btn-danger delete btn-sm float-right'
+    //append text node
+    deleteBtn.appendChild(document.createTextNode('X'))
+    li.appendChild(deleteBtn)
+}
+
+//form submit event
+document.querySelector('form').addEventListener('submit', addItem);
+
+//delete item
+document.querySelector('ul')
+
+// btn.id = 'btn'
+// btn.setAttribute('title', 'I am a button')
+
+//root.insertBefore(btn, document.querySelector('ul'))
+
+// document.querySelector('select').addEventListener('change', (e) => {
+//     console.log(e.target.textContent)
+    //document.querySelector('h1').textContent += e.key
+    //document.querySelector('input[type="text"]').value
+    //document.querySelector('h1').style.color = `rgb(${e.offsetY},${e.offsetX}, 44)`
+
+//})
+
+//diff two arrays
+// ((arr1, arr2) => {
+//     const result = []
+
+//     for (e1 of arr1) {
+// 	for (e2 of arr2) {
+// 	    if (e1 !== e2) {
+// 		result.push(e2)
+// 	    }
+// 	}
+//     }
+    
+//     console.log(result)
+// })(['a', 'b'],['a', 'b', 'c'])
+
+
+
+
 
