@@ -1946,38 +1946,6 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 
 
-// fetch('https://randomuser.me/api/?results=33')
-//     .then(res => res.json())
-//     .then(data => {
-
-// 	const results = data.results.map(item => {
-// 	    return `
-
-// <div class="col-md-3 mb-3">
-
-// <div class="card text-center h-100">
-// <img src="${item.picture.medium}" class="" alt="${item.login.username}" style="width: 100px; border-radius: 50%; margin: 20px auto 0; ">
-
-// <div class="card-body">
-// <h5 class="card-title">${item.name.title} ${item.name.first} ${item.name.last}</h5>
-// <p class="card-text">${item.email}</p>
-// </div>
-
-// <div class="card-footer">
-// <p class="card-text"><small class="text-muted">Last updated ${item.registered.date}</small></p>
-// </div>
-
-// </div>
-
-// </div>
-
-// `;
-// 	}).join('')
-
-// 	document.querySelector('#root').innerHTML = `<div class="row" id="cards"></div>`;
-// 	document.querySelector('#cards').innerHTML = results;
-// 	console.log(data.results)
-//     })
 
 
 // const sum = (...numbers) => {
@@ -2070,41 +2038,6 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 
 
-
-// class Person {
-//     constructor(firstName, lastName, dob) {
-// 	this.firstName = firstName;
-// 	this.lastName = lastName;
-// 	this.dob = new Date(dob);
-//     }
-
-//     getBirthYear() {
-// 	return this.dob.getFullYear();
-//     }
-
-//     getFullName() {
-// 	return `${this.firstName} ${this.lastName}`;
-//     }
-// }
-
-//const person1 = new Person('John', 'Doe', '4-14-1980');
-//console.log(person1.getBirthYear());
-//console.log(person1, '\n', person1.getFullName())
-
-//document.querySelector('#root').innerHTML = `<button class="btn btn-primary">My button</button>`;
-//ul.remove();
-//ul.lastElementChild.remove();
-//ul.firstElementChild.textContent = 'Hello';
-// ul.children[1].style.color = 'red';
-// document.querySelector('.btn').addEventListener('click', (e) => {
-//     e.target.classList.toggle('btn-danger')
-//     console.log(e.target.className)
-// })
-
-
-// .document.createElement('li')
-// li.appendChild(document.createTextNode())
-
 // ((start, end) => {
 //     let result = 0;
 
@@ -2115,57 +2048,6 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 // })(5, 4); //10
 
-const root = document.querySelector('#root')
-
-let liTag = '';
-
-for (let i = 0; i < 3; i++) {
-    liTag += `<li class="list-group-item">Item ${i + 1}<button class="btn btn-danger delete float-right btn-sm">X</button></li>`
-}
-root.innerHTML = `<form class="form-inline"><input type="text" class="form-control mb-3"></form><ul class="list-group">${liTag}</ul>`
-
-//add item
-const addItem = (e) => {
-    e.preventDefault()
-
-    //get input value
-    const input = document.querySelector('input')
-
-    //create new li element
-    const li = document.createElement('li')
-    //add class
-    li.className ="list-group-item"
-    //add text node with input value
-    li.appendChild(document.createTextNode(input.value))
-    document.querySelector('ul').appendChild(li)
-
-    //create delete button element
-    const deleteBtn = document.createElement('button')
-    //add class to del button
-    deleteBtn.className = 'btn btn-danger delete btn-sm float-right'
-    //append text node
-    deleteBtn.appendChild(document.createTextNode('X'))
-    li.appendChild(deleteBtn)
-}
-
-//form submit event
-document.querySelector('form').addEventListener('submit', addItem);
-
-//delete item
-document.querySelector('ul')
-
-// btn.id = 'btn'
-// btn.setAttribute('title', 'I am a button')
-
-//root.insertBefore(btn, document.querySelector('ul'))
-
-// document.querySelector('select').addEventListener('change', (e) => {
-//     console.log(e.target.textContent)
-    //document.querySelector('h1').textContent += e.key
-    //document.querySelector('input[type="text"]').value
-    //document.querySelector('h1').style.color = `rgb(${e.offsetY},${e.offsetX}, 44)`
-
-//})
 
 //diff two arrays
 // ((arr1, arr2) => {
