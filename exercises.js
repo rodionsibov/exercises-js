@@ -1944,6 +1944,407 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 //console.log(modifyArray(['Google', 'Facebook','Apple', 'Amazon']));
 
 
+//#######################################################
+// //RANDOM USER
+// fetch('https://randomuser.me/api/?results=33')
+//     .then(res => res.json())
+//     .then(data => {
+
+// 	const results = data.results.map(item => {
+// 	    return `
+
+// <div class="col-md-3 mb-3">
+
+// <div class="card text-center h-100">
+// <img src="${item.picture.medium}" class="" alt="${item.login.username}" style="width: 100px; border-radius: 50%; margin: 20px auto 0; ">
+
+// <div class="card-body">
+// <h5 class="card-title">${item.name.title} ${item.name.first} ${item.name.last}</h5>
+// <p class="card-text">${item.email}</p>
+// </div>
+
+// <div class="card-footer">
+// <p class="card-text"><small class="text-muted">Last updated ${item.registered.date}</small></p>
+// </div>
+
+// </div>
+
+// </div>
+
+// `;
+// 	}).join('')
+// document.querySelector('h1').innerHTML = `Random User`
+// document.querySelector('#root').innerHTML = `<div class="row" id="cards"></div>`;
+// document.querySelector('#cards').innerHTML = results;
+// console.log(data.results)
+// })
+
+//#######################################################
+
+
+
+
+
+// const fruits = ['apples', 'oranges', 'pears'];
+// fruits[3]
+// fruits.push('mangos')
+// fruits.unshift('strawberries')
+// fruits.pop()
+// console.log(fruits)
+// console.log(Array.isArray(fruits))
+// console.log(fruits.indexOf('oranges'))
+
+
+// const todos = [
+//     {
+// 	id: 1,
+// 	text: 'take out trash',
+// 	isCompleted: true
+//     },
+//     {
+// 	id: 2,
+// 	text: 'meeting with boss',
+// 	isCompleted: false
+//     }
+// ];
+
+//const todoJSON = JSON.stringify(todos)
+
+// for (const todo of todos) {
+//     console.log(todo)
+// }
+
+//todos.forEach(todo => console.log(todo.text))
+//const todoText = todos.map(todo => todo.text)
+//const todoCompleted = todos.filter(todo => todo.isCompleted === true).map(todo => todo.text)
+
+//console.log(todoCompleted)
+
+//OOP
+//Class
+// class Person {
+//     constructor(firstName, lastName, dob) {
+// 	this.firstName = firstName;
+// 	this.lastName = lastName;
+// 	this.dob = new Date(dob);
+//     }
+
+//     getBirthYear() {
+// 	return this.dob.getFullYear();
+//     }
+
+//     getFullName() {
+// 	return `${this.firstName} ${this.lastName}`;
+//     }
+// }
+
+//Instantiate object
+//const person1 = new Person('John', 'Doe', '4-14-1980');
+//console.log(person1.getBirthYear());
+//console.log(person1, '\n', person1.getFullName())
+
+
+//###################################################
+//JavaScript DOM
+
+//document.querySelector('h1').classList.add('text-black-50')
+// document.querySelector('h1').style.opacity = '0.3'
+// document.querySelector('#root').innerHTML = `
+// <section class="col-md-6 container">
+// <form class="" id="my-form">
+// <p class="h2 text-center text-primary mt-5">Add User</p>
+// <div class="msg"></div>
+// <div class="form-group">
+// <label for="name">Name:</label>
+// <input type="text" id="name" class="form-control">
+// </div>
+// <div class="form-group">
+// <label for="email">Email:</label>
+// <input type="text" id="email" class="form-control">
+// </div>
+// <input class="btn btn-block btn-primary" type="submit" value="Submit">
+// </form>
+// <ul class="list-group mt-3" id="users"></ul>
+// `;
+
+
+//ul.remove();
+//ul.lastElementChild.remove();
+//ul.firstElementChild.textContent = 'Hello';
+//ul.children[1].style.color = 'red';
+//ul.lastElementChild.innerHTML = '<h1>Hello</h1>'
+// document.querySelector('.btn').addEventListener('click', (e) => {
+//     e.preventDefault()
+//     e.target.classList.toggle('btn-danger')
+//     console.log(e.target.className)
+// })
+
+// const myForm = document.querySelector('#my-form')
+// const nameInput = document.querySelector('#name')
+// const emailInput = document.querySelector('#email')
+// const msg = document.querySelector('.msg')
+// const userList = document.querySelector('#users')
+
+// myForm.addEventListener('submit', (e) => {
+//     e.preventDefault()
+//     if (nameInput.value === '' || emailInput.value === '') {
+// 	//	alert('Please enter fields')
+// 	msg.className = 'p-3 mb-2 bg-danger text-white'
+// 	msg.innerHTML = 'Please enter all fields'
+// 	setTimeout(() => msg.remove(), 3000)
+//     } else {
+// 	console.log('succes')
+// 	const li = document.createElement('li')
+// 	li.className = 'list-group-item'
+// 	li.appendChild(document.createTextNode(`${nameInput.value}: ${emailInput.value}`))
+// 	userList.appendChild(li)
+// 	//clear fields
+// 	nameInput.value = '';
+// 	emailInput.value = '';
+
+//     }
+// })
+
+//###################################################
+//document.querySelector('h1').style.color = 'whitesmoke'
+// document.querySelector('h1').remove()
+// document.querySelector('#root').innerHTML = `
+// <header id="main-header" class="bg-success text-white p-4 m-3">
+// <div class="container">
+// <h1 id="header-title">Item Lister</h1>
+// </div>
+// </header>
+// <div class="container">
+// <div class="card card-body" id="main">
+// <h2 class="title">Add Items</h2>
+// <form class="form-inline mb-3">
+// <input type="text" class="form-control mr-2">
+// <input type="submit" class="btn btn-dark" value="Submit">
+// </form>
+// <h2 class="title">Items</h2>
+// <ul id="items" class="list-group"><li class="list-group-item">Item 1</li>
+// <li class="list-group-item">Item 2</li>
+// <li class="list-group-item">Item 3</li>
+// <li class="list-group-item">Item 4</li>
+// </ul>
+// <br>
+// <div id="output"></div>
+// <button class="btn btn-dark btn-block" id="button">Click Here</button>
+// </div>
+// </div>
+// `;
+
+
+//console.dir(document.all);
+//let input = document.querySelector('input[type="submit"]').value = 'SEND'
+//console.log(input)
+
+// const btn = document.createElement('button')
+// document.querySelector('#root').insertBefore(btn, document.querySelector('#main-header'))
+// btn.id = 'btn'
+// btn.setAttribute('title', 'I am a button')
+// btn.className = 'btn btn-danger btn-block'
+// btn.appendChild(document.createTextNode('button'))
+// console.log(btn)
+
+// document.querySelector('body').addEventListener('mousemove', (e) => {
+// console.log(e.target)
+// document.querySelector('h1').style.color = `rgb(${e.offsetY},${e.offsetX}, 44)`
+// })
+
+// const item = document.querySelectorAll('li:nth-child(odd)')
+// const itemTwo = document.getElementsByTagName('li')
+// item.forEach(i => i.style.color = 'red')
+// //console.log(itemTwo[3].innerText)
+
+// console.log(itemTwo)
+// for (let i = 0; i < itemTwo.length; i++) {
+//     console.log(itemTwo[i])
+// }
+
+
+//traversing the dom
+//const itemList = document.querySelector('#items')
+//parentNode
+//console.log(itemList.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode)
+//itemList.parentNode.style.background = '#f4f4f4';
+
+//parentElement
+//console.log(itemList.parentElement)
+
+//childNodes
+//console.log(itemList.childNodes)
+//console.log(itemList.children)
+//itemList.children[2].style.background = 'gold'
+//children
+//firstChild
+//console.log(itemList.lastElementChild)
+//firstElementChild
+//lastChild
+//lastElementChild
+
+//nextSibling
+//console.log(itemList.nextSibling)
+//nextElementSibling
+//previousSibling
+//previousElementSibling
+//console.log(itemList.previousElementSibling)
+
+//createElement
+
+// //create a div
+// const newDiv = document.createElement('div')
+// document.querySelector('.container').insertBefore(newDiv, document.querySelector('hr'))
+
+// //add class
+// newDiv.className = 'hello'
+// //add id
+// newDiv.id = 'hello1'
+// //add attr
+// newDiv.setAttribute('title', 'hello Div')
+// //create text node
+// const newDivText = document.createTextNode('hello World')
+// //set text to div
+// newDiv.appendChild(newDivText)
+// newDiv.style.fontSize = '33px'
+// //newDiv.className = 'text-center'
+// newDiv.classList.add('text-center')
+// console.log(newDiv)
+
+// document.querySelector('#button').addEventListener('click', (e) => {
+//     const box = document.createElement('div')
+//     // box.style.width = '300px'
+//     // box.style.height = '200px'
+//     // box.style.background = '#eee'
+//     // box.style.margin = '20px auto'
+//     box.setAttribute('style', 'width: 300px; height: 200px; margin: 20px auto; background: #eee;')
+//     // box.className = 'container mt-3'
+//     document.querySelector('#main').appendChild(box)
+//     //document.querySelector('#header-title').textContent = 'Changed'
+//     // console.log(e)
+//     // console.log(e.target)
+//     // console.log(e.target.id)
+//     // console.log(e.target.className)
+//     // console.log(e.target.classList)
+//     // document.querySelector('#output').innerHTML = `<p class="text-center h1">${e.target.className}</p>`
+//     // document.querySelector('#output').innerHTML = `<p class="text-center h1">${e.clientX}</p>`
+//     //console.log(e.type)
+//     // console.log(e.clientX)
+//     // console.log(e.offsetX)
+//     // console.log(e.altKey)
+//     // console.log(e.ctrlKey)
+//     // console.log(e.shiftKey)
+//     box.addEventListener('mousemove', (e) => {
+// 	document.querySelector('#output').innerHTML = `<p class="text-center h1">${e.offsetX}, ${e.offsetY}</p>`
+// 	let title = `x:${e.offsetX}, y:${e.offsetY}`
+// 	box.setAttribute('title', title)
+
+// 	console.log(title)
+// 	document.body.style.background = `rgb(${e.offsetX}, ${e.offsetY}, 0)`
+// //	console.log(e.type)
+//     })
+
+// });
+
+
+// const itemInput = document.querySelector('input[type="text"]')
+// const form = document.querySelector('form')
+// document.querySelector('#output').className = 'text-center h2'
+
+// //events: click, dblclick, mousedown, mouseup, mouseenter, mouseleave, keydown, keyup, keypress, cut, paste, focus, blur, input, change, submit
+
+// itemInput.addEventListener('input', (e) => {
+//     document.querySelector('#output').textContent = e.type
+
+//     console.log(e.type)
+// })
+
+
+
+
+
+
+
+// const root = document.querySelector('#root')
+
+// let liTag = '';
+
+// for (let i = 0; i < 3; i++) {
+//     liTag += `<li class="list-group-item">Item ${i + 1}<button class="btn btn-danger delete float-right btn-sm">X</button></li>`
+// }
+// root.innerHTML = `<form class="form-inline"><input type="text" class="form-control mb-3"><input type="text" class="form-control mb-3 ml-3" placeholder="filter ..." id="filter"></form><ul class="list-group"></ul>`
+
+// //add item
+// const addItem = (e) => {
+//     e.preventDefault()
+
+//     //get input value
+//     const input = document.querySelector('input')
+
+//     //create new li element
+//     const li = document.createElement('li')
+//     //add class
+//     li.className ="list-group-item"
+//     //add text node with input value
+//     li.appendChild(document.createTextNode(input.value))
+//     document.querySelector('ul').appendChild(li)
+
+//     //create delete button element
+//     const deleteBtn = document.createElement('button')
+//     //add class to del button
+//     deleteBtn.className = 'btn btn-danger delete btn-sm float-right'
+//     //append text node
+//     deleteBtn.appendChild(document.createTextNode('X'))
+//     li.appendChild(deleteBtn)
+// }
+
+// const removeItem = (e) => {
+//     if (e.target.classList.contains('delete')) {
+// 	document.querySelector('ul').removeChild(e.target.parentElement)
+
+//     }
+// }
+
+//form submit event
+//document.querySelector('form').addEventListener('submit', addItem);
+
+//delete item
+//document.querySelector('ul').addEventListener('click', removeItem)
+
+//#######################################################
+
+//Random User
+// fetch('https://randomuser.me/api/?results=5')
+//     .then(res => res.json())
+//     .then(data => {
+// 	console.log(data)
+// //	const genders = data.results.map(user => user.gender)
+// 	const genders = data.results.map(({ gender }) => gender)
+// 	console.log(genders)
+
+//     })
+
+
+
+
+// export default (users) => users.flatMap(({ children }) => children);
+//console.clear()
+//console.assert(3 > 4)
+//console.debug()
+// console.count()
+// console.countReset()
+//console.dir()
+//console.error()
+//console.info()
+//console.log()
+//console.table()
+//console.time()
+//console.timeStamp() 
+//console.timeLog()
+//console.timeEnd()
+//console.warn()
+//console.trace()
+
 
 
 
@@ -2046,25 +2447,100 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 //     }
 //     return console.log(result)
 
-// })(5, 4); //10
+// })(1, 4);
 
 
-//diff two arrays
+//##### diff two arrays
+
 // ((arr1, arr2) => {
-//     const result = []
+//     // const intersection = arr1.filter(x => arr2.includes(x))
+//     //    const difference = arr1.filter(x => !arr2.includes(x))
 
-//     for (e1 of arr1) {
-// 	for (e2 of arr2) {
-// 	    if (e1 !== e2) {
-// 		result.push(e2)
-// 	    }
-// 	}
-//     }
+//     //symmetric difference
+//     const difference = arr1.filter(x => !arr2.includes(x)).concat(arr2.filter(x => !arr1.includes(x)))
+
     
-//     console.log(result)
-// })(['a', 'b'],['a', 'b', 'c'])
+//     console.log(difference)
+// //    console.log(intersection)
+// })([1, 'calf', 3, 'piglet'], [7, 'filly'])
 
 
+//##### Async JS - Callbacks, Promises, Async Await #####
+//callbacks
+// const posts = [
+//     { title: 'Post One', body: 'This is post one' },
+//     { title: 'Post Two', body: 'This is post two' },
+// ];
 
+// const getPosts = () => setTimeout(() => {
+//     let output = '';
+//     posts.forEach(post => output += `<li>${post.title}</li>`)
+//     document.querySelector('#root').innerHTML = output;
+// }, 1000)
 
+// const createPosts = (post, callback) => setTimeout(() => {
+//     posts.push(post)
+//     callback()
+
+// }, 2000)
+
+// createPosts({ title: 'Post Three', body: 'This is post three' }, getPosts);
+// console.log(posts)
+
+//promises
+// const posts = [
+//     { title: 'Post One', body: 'This is post one' },
+//     { title: 'Post Two', body: 'This is post two' },
+// ];
+
+// const getPosts = () => setTimeout(() => {
+//     let output = '';
+//     posts.forEach(post => output += `
+
+// <li class="list-group-item">
+// <div class="d-flex justify-content-between">
+// ${post.title}
+// <small>3 days ago</small>
+// </div>
+// </li>`
+// 		 )
+
+//     document.querySelector('#root').innerHTML = '<ul class="list-group list-group-flush"></ul>';
+//     document.querySelector('ul').innerHTML = output
+// }, 1000)
+
+// const createPosts = (post) => {
+//     return new Promise((resolve, reject) => {
+// 	setTimeout(() => {
+// 	    posts.push(post)
+
+// 	    const error = false;
+
+// 	    if (!error) {
+// 		resolve();
+// 	    } else {
+// 		reject('Error: Something went wrong')
+// 	    }
+// 	}, 2000)
+//     })
+// }
+
+// // createPosts({ title: 'Post Three', body: 'This is post three' })
+// //     .then(getPosts)
+// //     .catch(err => console.log(err))
+
+// //Promise.all
+// // const promise1 = Promise.resolve('Hello World');
+// // const promise2 = 10;
+// // const promise3 = new Promise((resolve, reject) => setTimeout(resolve, 2000, 'Goodbye'));
+
+// // Promise.all([promise1, promise2, promise3]).then((values) => console.log(values));
+
+// ##### IAS: seek and destroy #####
+const destroyer = (arr, ...arg) => {
+    const result = arr.filter(x => !arg.includes(x))
+
+    console.log(result)
+}
+destroyer([2, 3, 2, 3], 2, 3)
 
