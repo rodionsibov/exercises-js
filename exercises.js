@@ -2536,11 +2536,58 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 
 // // Promise.all([promise1, promise2, promise3]).then((values) => console.log(values));
 
-// ##### IAS: seek and destroy #####
-const destroyer = (arr, ...arg) => {
-    const result = arr.filter(x => !arg.includes(x))
+// // ##### IAS: seek and destroy #####
+// const destroyer = (arr, ...arg) => {
+//     const result = arr.filter(x => !arg.includes(x))
+//// const result = arr.filter(item => arg.indexOf(item) === -1)
+//     console.log(result)
+// }
+// destroyer([2, 3, 2, 3], 2, 3)
 
-    console.log(result)
-}
-destroyer([2, 3, 2, 3], 2, 3)
+// // ##### IAS: wherefore art thou
+// const whatIsInAName = (collection, source) => {
+//     const result = collection.filter(x => Object.values(x).includes(...Object.values(source))).map(x => x.first).join()
+    
+//     console.log(result)
+//     }
+// whatIsInAName([{first: 'Romeo', last: 'Montaque'}, {first: 'Mercutio', last: null}, {first: 'Tybalt', last: 'Capulet'}], {last: 'Tybalt'})
 
+// Binary search
+// const binarySearch = (list, item) => {
+//     let low = 0;
+//     let high = list.length - 1;
+
+//     while (low <= high) {
+// 	let mid = Math.floor((low + high) / 2)
+// 	let guess = list[mid]
+
+// 	if (guess === item) {
+// 	    return mid;
+// 	} else if (guess > item) {
+// 	    high = mid - 1;
+// 	} else {
+// 	    low = mid + 1;
+// 	}
+
+//     }	return null;
+// }
+// const myList = [1, 3, 5, 7, 9]
+// console.log(binarySearch(myList, 3))
+
+// IAS: spinal tap case
+// const spinalCase = (str) => {
+//     const result = str
+//     console.log(result)
+// }
+// spinalCase('AllThe-small Things') // all-the-small-things
+
+const getDividers = (num) => {
+  const dividers = [];
+  for (let i = 1; i <= num; i += 1) {
+    if (num % i === 0) {
+      dividers.push(i);
+    }
+  }
+  return dividers;
+};
+console.log(getDividers(33))
