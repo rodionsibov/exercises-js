@@ -2581,6 +2581,8 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // }
 // spinalCase('AllThe-small Things') // all-the-small-things
 
+
+let assert = require('assert')
 const getDividers = (num) => {
   const dividers = [];
   for (let i = 1; i <= num; i += 1) {
@@ -2590,4 +2592,7 @@ const getDividers = (num) => {
   }
   return dividers;
 };
-console.log(getDividers(33))
+
+const actual = getDividers(9);
+const expected = [1, 3, 8];
+assert(actual, expected)
