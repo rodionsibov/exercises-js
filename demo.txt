@@ -1,0 +1,15 @@
+foo.txt
+bar.txt
+foo1.txt
+bar1.doc
+foobar.txt
+foo.doc
+bar.doc
+dataset.txt
+purchase.db
+purchase1.db
+purchase2.db
+purchase3.db
+purchase.idx
+foo2.txt
+bar.txt

@@ -2574,25 +2574,52 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // const myList = [1, 3, 5, 7, 9]
 // console.log(binarySearch(myList, 3))
 
-// IAS: spinal tap case
+
+
+// let assert = require('assert')
+// const getDividers = (num) => {
+//   const dividers = [];
+//   for (let i = 1; i <= num; i += 1) {
+//     if (num % i === 0) {
+//       dividers.push(i);
+//     }
+//   }
+//   return dividers;
+// };
+
+// const actual = getDividers(9);
+// const expected = [1, 3, 8];
+// assert(actual, expected)
+
+
+
+// //IAS: spinal tap case
 // const spinalCase = (str) => {
 //     const result = str
-//     console.log(result)
+// 	  .replace(/([A-Z])/g, ' $1')
+// 	  .trim()
+// 	  .split(/[\W_]/)
+// 	  .filter(item => item !== '')
+// 	  .map(item => item.toLowerCase())
+// 	  .join('-')
+//     //    console.log(result)
+    
 // }
-// spinalCase('AllThe-small Things') // all-the-small-things
+// spinalCase('AllThe-small T3hings2') // all-the-small-things
 
 
-let assert = require('assert')
-const getDividers = (num) => {
-  const dividers = [];
-  for (let i = 1; i <= num; i += 1) {
-    if (num % i === 0) {
-      dividers.push(i);
-    }
-  }
-  return dividers;
-};
+// STRING METHODS
 
-const actual = getDividers(9);
-const expected = [1, 3, 8];
-assert(actual, expected)
+// includes(), length, toUpperCase(), toLowerCase(), substr(),
+// substring(), split(), trim(), replace(), charAt(), charCodeAt(),
+// indexOf(), concat(), search(), match(), repeat()
+
+//console.log('%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching'.replace(/[%$;@&#]/g, ''))
+
+// console.log('He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'.match(/\d+/g).reduce((a, b) => {
+//     return parseInt(a) + parseInt(b)
+// }))
+
+//console.log(new Date().toLocaleString(navigator.language, {month: 'long'}))
+
+//console.log(Math.trunc(1.6))
