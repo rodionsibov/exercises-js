@@ -2623,3 +2623,282 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 //console.log(new Date().toLocaleString(navigator.language, {month: 'long'}))
 
 //console.log(Math.trunc(1.6))
+
+
+// ARRAY METHODS
+
+// Array, length, concat, indexOf, slice, splice, join, toString, includes, lastIndexOf, isArray, fill, push, pop, shift, unshift, reverse, sort
+
+// array constructor
+//const arr = Array(6).fill('x')
+
+//const text = 'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.'
+//const result = text.replace(/[,]/g, '').split(' ').length
+//console.log(result)
+
+// const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+// const backEnd = ['Node','Express', 'MongoDB']
+// const fullstack = frontEnd.concat(backEnd)
+// console.log(fullstack.sort().join(', '))
+
+
+// const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+// const result = ages.reduce((a,b) => a+b) % 2 === 0 ? 'even' : 'not even'
+// console.log(result)
+
+// const countries = [
+//   'Afghanistan',
+//   'Albania',
+//   'Algeria',
+//   'Andorra',
+//   'Angola',
+//   'Antigua and Barbuda',
+//   'Argentina',
+//   'Armenia',
+//   'Australia',
+//   'Austria',
+//   'Azerbaijan',
+//   'Bahamas',
+//   'Bahrain',
+//   'Bangladesh',
+//   'Barbados',
+//   'Belarus',
+//   'Belgium',
+//   'Belize',
+//   'Benin',
+//   'Bhutan',
+//   'Bolivia',
+//   'Bosnia and Herzegovina',
+//   'Botswana',
+//   'Brazil',
+//   'Brunei',
+//   'Bulgaria',
+//   'Burkina Faso',
+//   'Burundi',
+//   'Cambodia',
+//   'Cameroon',
+//   'Canada',
+//   'Cape Verde',
+//   'Central African Republic',
+//   'Chad',
+//   'Chile',
+//   'China',
+//   'Colombi',
+//   'Comoros',
+//   'Congo (Brazzaville)',
+//   'Congo',
+//   'Costa Rica',
+//   "Cote d'Ivoire",
+//   'Croatia',
+//   'Cuba',
+//   'Cyprus',
+//   'Czech Republic',
+//   'Denmark',
+//   'Djibouti',
+//   'Dominica',
+//   'Dominican Republic',
+//   'East Timor (Timor Timur)',
+//   'Ecuador',
+//   'Egypt',
+//   'El Salvador',
+//   'Equatorial Guinea',
+//   'Eritrea',
+//   'Estonia',
+//   'Ethiopia',
+//   'Fiji',
+//   'Finland',
+//   'France',
+//   'Gabon',
+//   'Gambia, The',
+//   'Georgia',
+//   'Germany',
+//   'Ghana',
+//   'Greece',
+//   'Grenada',
+//   'Guatemala',
+//   'Guinea',
+//   'Guinea-Bissau',
+//   'Guyana',
+//   'Haiti',
+//   'Honduras',
+//   'Hungary',
+//   'Iceland',
+//   'India',
+//   'Indonesia',
+//   'Iran',
+//   'Iraq',
+//   'Ireland',
+//   'Israel',
+//   'Italy',
+//   'Jamaica',
+//   'Japan',
+//   'Jordan',
+//   'Kazakhstan',
+//   'Kenya',
+//   'Kiribati',
+//   'Korea, North',
+//   'Korea, South',
+//   'Kuwait',
+//   'Kyrgyzstan',
+//   'Laos',
+//   'Latvia',
+//   'Lebanon',
+//   'Lesotho',
+//   'Liberia',
+//   'Libya',
+//   'Liechtenstein',
+//   'Lithuania',
+//   'Luxembourg',
+//   'Macedonia',
+//   'Madagascar',
+//   'Malawi',
+//   'Malaysia',
+//   'Maldives',
+//   'Mali',
+//   'Malta',
+//   'Marshall Islands',
+//   'Mauritania',
+//   'Mauritius',
+//   'Mexico',
+//   'Micronesia',
+//   'Moldova',
+//   'Monaco',
+//   'Mongolia',
+//   'Morocco',
+//   'Mozambique',
+//   'Myanmar',
+//   'Namibia',
+//   'Nauru',
+//   'Nepal',
+//   'Netherlands',
+//   'New Zealand',
+//   'Nicaragua',
+//   'Niger',
+//   'Nigeria',
+//   'Norway',
+//   'Oman',
+//   'Pakistan',
+//   'Palau',
+//   'Panama',
+//   'Papua New Guinea',
+//   'Paraguay',
+//   'Peru',
+//   'Philippines',
+//   'Poland',
+//   'Portugal',
+//   'Qatar',
+//   'Romania',
+//   'Russia',
+//   'Rwanda',
+//   'Saint Kitts and Nevis',
+//   'Saint Lucia',
+//   'Saint Vincent',
+//   'Samoa',
+//   'San Marino',
+//   'Sao Tome and Principe',
+//   'Saudi Arabia',
+//   'Senegal',
+//   'Serbia and Montenegro',
+//   'Seychelles',
+//   'Sierra Leone',
+//   'Singapore',
+//   'Slovakia',
+//   'Slovenia',
+//   'Solomon Islands',
+//   'Somalia',
+//   'South Africa',
+//   'Spain',
+//   'Sri Lanka',
+//   'Sudan',
+//   'Suriname',
+//   'Swaziland',
+//   'Sweden',
+//   'Switzerland',
+//   'Syria',
+//   'Taiwan',
+//   'Tajikistan',
+//   'Tanzania',
+//   'Thailand',
+//   'Togo',
+//   'Tonga',
+//   'Trinidad and Tobago',
+//   'Tunisia',
+//   'Turkey',
+//   'Turkmenistan',
+//   'Tuvalu',
+//   'Uganda',
+//   'Ukraine',
+//   'United Arab Emirates',
+//   'United Kingdom',
+//   'United States',
+//   'Uruguay',
+//   'Uzbekistan',
+//   'Vanuatu',
+//   'Vatican City',
+//   'Venezuela',
+//   'Vietnam',
+//   'Yemen',
+//   'Zambia',
+//   'Zimbabwe'
+// ]
+
+
+// const sentence = '%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching'
+// console.log(sentence.replace(/[#%$@&]/g, ''))
+
+
+//const itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon']
+// //console.log(itCompanies.filter(item => item.includes('oo')))
+// const result = []
+// itCompanies.forEach(item => {
+//     if(item.includes('oo')) {
+// 	result.push(item) 	
+//     }
+// })
+// console.log(result)
+
+// const middleName = itCompanies[Math.floor(itCompanies.length / 2)]
+// console.log(itCompanies, itCompanies.splice(1,2,'aaaa'))
+// console.log(middleName)
+
+
+// let text = 'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.'
+// const words = text.replace(/[.,]/g, '').split(' ')
+// console.log(words)
+// console.log(words.length)
+
+// const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey']
+// const addToCart = (item1, item2) => {
+//     shoppingCart.includes(item1) ? shoppingCart[shoppingCart.indexOf(item1)] = item2 : console.log(`${item1} does not exist`)
+//     console.log(shoppingCart) 
+// }
+// addToCart('Tea', 'Green Tea')
+
+// const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+// const backEnd = ['Node','Express', 'MongoDB']
+// const fullStack = [...backEnd, frontEnd]
+// console.log(fullStack)
+
+const ages = [9, 22, 19, 24, 20, 25, 16, 24, 25, 24]
+// const min = () => {
+//     const [ min, ...rest ] = ages
+//     let result = min
+//     for (item of rest) {
+// 	if (item < min) {
+// 	    result = item
+// 	}
+//     }
+//     console.log(result)
+// }
+// min()
+
+// const sum = () => {
+//     let result = 0
+//     ages.forEach(item => {
+// 	console.log(typeof item)
+// 	result += item
+//     })
+//     console.log(result / ages.length)
+// }
+// sum()
+
