@@ -2879,7 +2879,7 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // const fullStack = [...backEnd, frontEnd]
 // console.log(fullStack)
 
-const ages = [9, 22, 19, 24, 20, 25, 16, 24, 25, 24]
+// const ages = [9, 22, 19, 24, 20, 25, 16, 24, 25, 24]
 // const min = () => {
 //     const [ min, ...rest ] = ages
 //     let result = min
@@ -2902,3 +2902,6 @@ const ages = [9, 22, 19, 24, 20, 25, 16, 24, 25, 24]
 // }
 // sum()
 
+
+const isEven = num => num % 2 === 0;
+console.log(isEven(32));
