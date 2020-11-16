@@ -2903,5 +2903,87 @@ console.log(nextInLine('1, 2, 3, 4, 5,', 6))
 // sum()
 
 
-const isEven = num => num % 2 === 0;
-console.log(isEven(32));
+// const isEven = num => num % 2 === 0;
+// console.log(isEven(32));
+
+// const factorial = (n) => {
+//     if (n === 0) {
+// 	return 1;
+//     }
+//     return n * factorial(n - 1);
+// }
+
+// const answer = factorial(4);
+// console.log(answer);
+
+// const surfaceAreaCalculator = (radius) => {
+//   return 4 * 3.14 * square(radius);
+// }
+
+// const square = (num) => {
+//   return num * num;
+// }
+
+//console.log(surfaceAreaCalculator(3))
+
+// const factorial = (n) => {
+//   if (n === 0) {
+//     return 1;
+//   }
+
+//   const iter = (counter, acc) => {
+//     if (counter === 1) {
+//       return acc;
+//     }
+//     return iter(counter - 1, counter * acc);
+//   };
+
+//   return iter(n, 1);
+// };
+
+
+
+
+// const sequenceSum = (begin, end) => {
+//     if (begin > end) {
+// 	return NaN;
+//     } else if (end === begin) {
+// 	return end;
+//     }
+//     const result = begin + sequenceSum(begin + 1, end);
+//     return result
+// };
+
+// console.log(sequenceSum(1, 5));
+
+// const smallestDivisor = (num) => {
+//     const iter = (acc) => {
+// 	if (acc > num / 2) {
+// 	    return num;
+// 	} else if (num % acc === 0) {
+// 	    return acc;
+// 	}
+// 	return iter(acc + 1);
+//     };
+
+//     return iter(2);
+// };
+// console.log(smallestDivisor(15))
+
+const smallestDivisor = (num) => {
+    if (num < 1) {
+	return NaN;
+    }
+    if (num === 1) {
+	return num;
+    }
+    
+    let divisor = 2;
+    
+    while (num % divisor !== 0) {
+	divisor = divisor + 1;
+    }
+    
+    console.log(divisor);
+};
+smallestDivisor(72)
