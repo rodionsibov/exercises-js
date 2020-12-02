@@ -1,22 +1,28 @@
-const sumDigits = (num) => {
-    const str = String(num);
-    let result = 0;
+// const sumDigits = (num) => {
+//     const str = String(num);
+//     let result = 0;
 
-    for (let i = 0; i < str.length; i++) {
-	result += Number(str[i]);
-    }
+//     for (let i = 0; i < str.length; i++) {
+// 	result += Number(str[i]);
+//     }
 
-    return result;
-}
+//     return result;
+// }
 
-const addDigits = (num) => {
-    let result = num;
+// const addDigits = (num) => {
+//     let result = num;
 
-    while (result >= 10) {
-	result = sumDigits(result);
-    }
+//     while (result >= 10) {
+// 	result = sumDigits(result);
+//     }
 
-    return result;
-}
+//     return result;
+// }
 
-console.log(addDigits(598997686567));
+// console.log(addDigits(598997686567));
+
+
+const arr = [1, 2,3,4,5];
+
+console.log(JSON.stringify(arr))
+console.log(arr)
