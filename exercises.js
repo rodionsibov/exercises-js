@@ -22,7 +22,17 @@
 // console.log(addDigits(598997686567));
 
 
-const arr = [1, 2,3,4,5];
+// array reduce
+// let numbers = [1, 2, 3, 4, 5];
+// let total = numbers.reduce((accumulator, n) => accumulator + n);
+// console.log(total);
 
-console.log(JSON.stringify(arr))
-console.log(arr)
+// array filter
+// let numbers = [1, 2, 3, 4, 5, 6];
+// let evenNumbers = numbers.filter(n => n % 2 === 0);
+// console.log(evenNumbers);
+
+// array map
+// let numbers = [1, 2, 3, 4, 5];
+// let newNumbers = numbers.map(n => n * 2);
+// console.log(newNumbers);
