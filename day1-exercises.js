@@ -1,3 +1,5 @@
+// Introduction
+
 // Comments can make code readable
 // Welcome to 30DaysOfJavaScript
 

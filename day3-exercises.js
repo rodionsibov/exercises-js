@@ -1,3 +1,5 @@
+// Booleans, Operators, Date
+
 // const birthYear = prompt('Enter birth year: ');
 // const now = new Date();
 // const yearsOld = now.getFullYear() - birthYear;
