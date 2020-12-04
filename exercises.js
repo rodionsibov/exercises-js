@@ -38,14 +38,25 @@
 // console.log(newNumbers);
 
 // object destructuring
-const person = {
-    name: 'Ros',
-    age: 33,
-    gender: 'Male',
-};
+// const person = {
+//     name: 'Ros',
+//     age: 33,
+//     gender: 'Male',
+// };
 
-function printDetails({ name, age }) {
-    console.log(`The name is ${name} and they are ${age}`);
+// function printDetails({ name, age }) {
+//     console.log(`The name is ${name} and they are ${age}`);
+// }
+
+// printDetails(person);
+
+
+// array destructuring
+function bottle() {
+    return ['bottle', 'water'];
 }
 
-printDetails(person);
+let [red, blue] = bottle();
+
+console.log(red);
+console.log(blue);
