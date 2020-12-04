@@ -36,3 +36,16 @@
 // let numbers = [1, 2, 3, 4, 5];
 // let newNumbers = numbers.map(n => n * 2);
 // console.log(newNumbers);
+
+// object destructuring
+const person = {
+    name: 'Ros',
+    age: 33,
+    gender: 'Male',
+};
+
+function printDetails({ name, age }) {
+    console.log(`The name is ${name} and they are ${age}`);
+}
+
+printDetails(person);
