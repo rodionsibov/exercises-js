@@ -61,3 +61,7 @@
 // console.log(red);
 // console.log(blue);
 
+
+// short circuit evaluation
+const result = 0 || 'string' || 60;
+console.log(result);
