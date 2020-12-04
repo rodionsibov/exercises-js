@@ -52,11 +52,12 @@
 
 
 // array destructuring
-function bottle() {
-    return ['bottle', 'water'];
-}
+// function bottle() {
+//     return ['bottle', 'water'];
+// }
 
-let [red, blue] = bottle();
+// let [red, blue] = bottle();
 
-console.log(red);
-console.log(blue);
+// console.log(red);
+// console.log(blue);
+
