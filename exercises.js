@@ -66,3 +66,17 @@
 // const result = 0 || 'string' || 60;
 // console.log(result);
 
+// const findKeys = (obj, expectedValue) => {
+//     const result = [];
+
+//     const entries = Object.entries(obj);
+//     for (const [key, value] of entries) {
+// 	if (value === expectedValue) {
+// 	    result.push(key);
+// 	}
+//     }
+
+//     return result;
+// }
+
+// console.log(findKeys({a: 2, b: 3}, 3));
