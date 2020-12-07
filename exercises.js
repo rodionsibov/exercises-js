@@ -80,3 +80,37 @@
 // }
 
 // console.log(findKeys({a: 2, b: 3}, 3));
+
+// console.time('time');
+
+// let total = 0;
+
+// for (n = 1; n < 1000; n++) {
+//     total += n;
+// }
+
+// console.timeEnd('time');
+
+// const myList = document.createElement('ul');
+// document.querySelector('#root').appendChild(myList);
+
+// const fruitList = ['Banana', 'Orange', 'Mango', 'Lemon'];
+
+// for (let fruit of fruitList) {
+//     let newListItem = document.createElement('li');
+//     newListItem.textContent = fruit;
+
+//     myList.appendChild(newListItem);
+// }
+
+// hash change event
+window.addEventListener('hashchange', () => {
+    hashUpdate.textContent = window.location.hash.substring(1);
+})
+
+const p = document.createElement('p')
+p.setAttribute('id', 'hash-update');
+document.querySelector('#root').appendChild(p)
+
+const hashUpdate = document.querySelector('#hash-update')
+console.log(hashUpdate)
