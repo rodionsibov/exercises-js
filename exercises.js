@@ -104,13 +104,36 @@
 // }
 
 // hash change event
-window.addEventListener('hashchange', () => {
-    hashUpdate.textContent = window.location.hash.substring(1);
-})
+// window.addEventListener('hashchange', () => {
+//     hashUpdate.textContent = window.location.hash.substring(1);
+// })
 
-const p = document.createElement('p')
-p.setAttribute('id', 'hash-update');
-document.querySelector('#root').appendChild(p)
+// const p = document.createElement('p')
+// p.setAttribute('id', 'hash-update');
+// document.querySelector('#root').appendChild(p)
 
-const hashUpdate = document.querySelector('#hash-update')
-console.log(hashUpdate)
+// const hashUpdate = document.querySelector('#hash-update')
+// console.log(hashUpdate)
+
+
+// const data = {
+//     user: 'ubuntu',
+//     cores: 4,
+//     os: 'linux',
+// };
+
+// const pick = (data, keys) => {
+//     const result = {}
+
+//     for (const key of keys) {
+// 	if (data.hasOwnProperty(key)) {
+// 	    result[key] = data[key]
+// 	}
+	
+//     }
+
+//     return result;
+// }
+
+// console.log(pick(data, ['user', 'os']))
+
