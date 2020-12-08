@@ -137,3 +137,15 @@
 
 // console.log(pick(data, ['user', 'os']))
 
+
+//Node insert before method - JS DOM
+// const myList = document.createElement('ul');
+// document.querySelector('#root').appendChild(myList);
+
+// const orangesItem = document.createElement('li');
+// orangesItem.textContent = 'Oranges';
+// myList.appendChild(orangesItem);
+// const applesItem = document.createElement('li');
+// applesItem.textContent = 'Apples';
+// myList.insertBefore(applesItem, orangesItem)
+
