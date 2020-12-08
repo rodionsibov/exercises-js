@@ -149,3 +149,7 @@
 // applesItem.textContent = 'Apples';
 // myList.insertBefore(applesItem, orangesItem)
 
+// import d from './day5-exercises.js'
+// console.log(d)
+
+
