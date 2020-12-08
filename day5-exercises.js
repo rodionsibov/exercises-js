@@ -34,3 +34,14 @@
 // export
 // const date = new Date().toLocaleString();
 // export default date
+
+// let text = 'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.';
+
+// const words = text
+//       .replace('.', '')
+//       .replace(',', '')
+//       .split(' ')
+
+// console.log(words);
+// console.log(words.length);
+
