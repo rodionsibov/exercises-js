@@ -45,3 +45,26 @@
 // console.log(words);
 // console.log(words.length);
 
+// const webTechs = [
+//   'HTML',
+//   'CSS',
+//   'JavaScript',
+//   'React',
+//   'Redux',
+//   'Node',
+//   'MongoDB'
+// ]
+
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+ages.sort();
+console.log(JSON.stringify(ages));
+// console.log('Min:', ages[0], 'Max:', ages[ages.length - 1]);
+
+//const medianAge = (ages[0] + ages[ages.length - 1]) / 2;
+//console.log(medianAge);
+let sum = 0;
+for (const item of ages) {
+    sum += item;
+}
+const result = sum / ages.length;
+console.log(result);
