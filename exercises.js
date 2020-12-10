@@ -182,3 +182,8 @@
 // }
 
 // squareList(realNumberArray)
+
+// const numberArray = [4, 42, 6, 8.34, -2];
+// const result = numberArray.reduce((a, b) => a + b, 0);
+// console.log(result)
+
