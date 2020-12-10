@@ -173,3 +173,12 @@
 
 // const randomRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 // console.log(randomRange(3,5))
+
+// const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+
+// const squareList = (arr) => {
+//     const squaredIntegers = arr.filter(num => Number.isInteger(num) && num > 0).map(x => x * x)
+//     console.log(squaredIntegers)
+// }
+
+// squareList(realNumberArray)
