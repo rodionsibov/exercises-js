@@ -187,3 +187,5 @@
 // const result = numberArray.reduce((a, b) => a + b, 0);
 // console.log(result)
 
+// const sum = (...num) => num.reduce((a, b) => a + b, 0);}
+// console.log(sum(2,4,5))
