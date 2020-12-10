@@ -171,4 +171,5 @@
 //     console.log(n.toString().padStart(2, "0"));
 // })
 
-
+// const randomRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+// console.log(randomRange(3,5))
