@@ -20,4 +20,3 @@ Good luck!
 - https://coderbyte.com/information/First%20Reverse:JavaScript
 - https://coderbyte.com/editor/frontend:React%20Button%20Toggle
 - https://coderbyte.com/information/SQL%20Member%20Count
-
