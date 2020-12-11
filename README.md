@@ -20,13 +20,15 @@ Good luck!
 
 ### Min Window Substring
 
-Have the function **MinWindowSubstring(strArr)** take the array of strings stored in **strArr**, which will contain only two strings, the first parameter being the string **N** and the second parameter being a string **K** of some characters, and your goal is to determine the smallest substring of **N** that contains all the characters in **K**. For example: if **strArr** is **["aaabaaddae", "aed"]** then the smallest substring of **N** that contains the characters **a, e, and d** is **"dae"** located at the end of the string. So for this example your program should return the string **dae**.
+Have the function **minWindowSubstring(strArr)** take the array of strings stored in **strArr**, which will contain only two strings, the first parameter being the string **N** and the second parameter being a string **K** of some characters, and your goal is to determine the smallest substring of **N** that contains all the characters in **K**.
 
-Another example: if strArr is **["aabdccdbcacd", "aad"]** then the smallest substring of **N** that contains all of the characters in **K** is "aabd" which is located at the beginning of the string. Both parameters will be strings ranging in length from 1 to 50 characters and all of K's characters will exist somewhere in the string N. Both strings will only contains lowercase alphabetic characters.
+For example: if **strArr** is **["aaabaaddae", "aed"]** then the smallest substring of **N** that contains the characters **a, e**, and **d** is **"dae"** located at the end of the string. So for this example your program should return the string **dae**.
+
+Another example: if **strArr** is **["aabdccdbcacd", "aad"]** then the smallest substring of **N** that contains all of the characters in **K** is **"aabd"** which is located at the beginning of the string. Both parameters will be strings ranging in length from 1 to 50 characters and all of K's characters will exist somewhere in the string **N**. Both strings will only contains lowercase alphabetic characters.
 
 **Examples**
 
-```js
+```
 Input: ["ahffaksfajeeubsne", "jefaa"]
 Output: aksfaje
 
@@ -41,25 +43,34 @@ Have the function ```TreeConstructor(strArr)``` take the array of strings stored
 ![](https://i.imgur.com/NMRdSO1.png)
 
 which you can see forms a proper binary tree. Your program should, in this case, return the string true because a valid binary tree can be formed. If a proper binary tree cannot be formed with the integer pairs, then return the string false. All of the integers within the tree will be unique, which means there can only be one node in the tree with the given integer value.
-Examples
+
+**Examples**
+
 ```
 Input: ["(1,2)", "(2,4)", "(5,7)", "(7,2)", "(9,5)"]
 Output: true
+
 Input: ["(1,2)", "(3,2)", "(2,12)", "(5,2)"]
 Output: false
 ```
 
-Bracket Matcher
-Have the function BracketMatcher(str) take the str parameter being passed and return 1 if the brackets are correctly matched and each one is accounted for. Otherwise return 0. For example: if str is "(hello (world))", then the output should be 1, but if str is "((hello (world))" the the output should be 0 because the brackets do not correctly match up. Only "(" and ")" will be used as brackets. If str contains no brackets return 1.
-Examples
+### Bracket Matcher
+
+Have the function **bracketMatcher(str)** take the str parameter being passed and return 1 if the brackets are correctly matched and each one is accounted for. Otherwise return 0. For example: if str is "(hello (world))", then the output should be 1, but if str is "((hello (world))" the the output should be 0 because the brackets do not correctly match up. Only "(" and ")" will be used as brackets. If str contains no brackets return 1.
+
+**Examples**
+
+```
 Input: "(coder)(byte))"
 Output: 0
+
 Input: "(c(oder)) b(yte)"
 Output: 1
+```
 
 
+### Codeland Username Validation
 
-Codeland Username Validation
 Have the function CodelandUsernameValidation(str) take the str parameter being passed and determine if the string is a valid username according to the following rules:
 
 1. The username is between 4 and 25 characters.
@@ -68,22 +79,28 @@ Have the function CodelandUsernameValidation(str) take the str parameter being p
 4. It cannot end with an underscore character.
 
 If the username is valid then your program should return the string true, otherwise return the string false.
-Examples
-Input: "aa_"
+
+**Examples**
+
+```Input: "aa_"
 Output: false
+
 Input: "u__hello_world123"
 Output: true
+```
 
+### Find Intersection
 
-
-Find Intersection
 Have the function FindIntersection(strArr) read the array of strings stored in strArr which will contain 2 elements: the first element will represent a list of comma-separated numbers sorted in ascending order, the second element will represent a second list of comma-separated numbers (also sorted). Your goal is to return a comma-separated string containing the numbers that occur in elements of strArr in sorted order. If there is no intersection, return the string false.
-Examples
-Input: ["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"]
+
+**Examples**
+
+```Input: ["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"]
 Output: 1,4,13
+
 Input: ["1, 3, 9, 10, 17, 18", "1, 4, 9, 10"]
 Output: 1,9,10
-
+```
 
 Questions Marks
 Have the function QuestionsMarks(str) take the str string parameter, which will contain single digit numbers, letters, and question marks, and check if there are exactly 3 question marks between every pair of two numbers that add up to 10. If so, then your program should return the string true, otherwise it should return the string false. If there aren't any two numbers that add up to 10 in the string, then your program should return false as well.
