@@ -16,8 +16,6 @@ Good luck!
 - https://www.jschallenger.com/
 - https://github.com/topics/javascript-exercises
 
-
-
 ### Min Window Substring
 
 Have the function **minWindowSubstring(strArr)** take the array of strings stored in **strArr**, which will contain only two strings, the first parameter being the string **N** and the second parameter being a string **K** of some characters, and your goal is to determine the smallest substring of **N** that contains all the characters in **K**.
@@ -102,48 +100,64 @@ Input: ["1, 3, 9, 10, 17, 18", "1, 4, 9, 10"]
 Output: 1,9,10
 ```
 
-Questions Marks
+### Questions Marks
+
 Have the function QuestionsMarks(str) take the str string parameter, which will contain single digit numbers, letters, and question marks, and check if there are exactly 3 question marks between every pair of two numbers that add up to 10. If so, then your program should return the string true, otherwise it should return the string false. If there aren't any two numbers that add up to 10 in the string, then your program should return false as well.
 
 For example: if str is "arrb6???4xxbl5???eee5" then your program should return true because there are exactly 3 question marks between 6 and 4, and 3 question marks between 5 and 5 at the end of the string.
-Examples
+
+**Examples**
+
+```
 Input: "aa6?9"
 Output: false
+
 Input: "acc?7??sss?3rr1??????5"
 Output: true
+```
 
+###Longest Word
 
-Longest Word
 Have the function LongestWord(sen) take the sen parameter being passed and return the largest word in the string. If there are two or more words that are the same length, return the first word from the string with that length. Ignore punctuation and assume sen will not be empty.
-Examples
+
+**Examples**
+
+```
 Input: "fun&!! time"
 Output: time
+
 Input: "I love dogs"
 Output: love
+```
 
+### First Factorial
 
-First Factorial
 Have the function FirstFactorial(num) take the num parameter being passed and return the factorial of it. For example: if num = 4, then your program should return (4 * 3 * 2 * 1) = 24. For the test cases, the range will be between 1 and 18 and the input will always be an integer.
-Examples
+
+**Examples**
+
+```
 Input: 4
 Output: 24
+
 Input: 8
 Output: 40320
+```
 
+### First Reverse
 
-First Reverse
 Have the function FirstReverse(str) take the str parameter being passed and return the string in reversed order. For example: if the input string is "Hello World and Coders" then your program should return the string sredoC dna dlroW olleH.
-Examples
+
+**Examples**
+
+```
 Input: "coderbyte"
 Output: etybredoc
+
 Input: "I Love Code"
 Output: edoC evoL I
-
-
-
-
-
-
+```
+---
 
 ## Learn
 
