@@ -25,6 +25,7 @@ Have the function **MinWindowSubstring(strArr)** take the array of strings store
 Another example: if strArr is **["aabdccdbcacd", "aad"]** then the smallest substring of **N** that contains all of the characters in **K** is "aabd" which is located at the beginning of the string. Both parameters will be strings ranging in length from 1 to 50 characters and all of K's characters will exist somewhere in the string N. Both strings will only contains lowercase alphabetic characters.
 
 **Examples**
+
 ```js
 Input: ["ahffaksfajeeubsne", "jefaa"]
 Output: aksfaje
