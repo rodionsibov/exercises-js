@@ -13,8 +13,8 @@ Good luck!
 - https://www.codewars.com/kata/search/javascript?q=&&beta=false
 - https://leetcode.com/problemset/all/
 - https://exercism.io/tracks/javascript/exercises
+- https://www.jschallenger.com/
 - https://github.com/topics/javascript-exercises
-
 
 
 
