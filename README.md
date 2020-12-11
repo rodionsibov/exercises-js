@@ -12,12 +12,6 @@ Good luck!
 - https://codebattle.hexlet.io/
 
 
-## Learn
-
-- https://eloquentjavascript.net/
-- https://github.com/Asabeneh/30DaysOfJavaScript
-- https://www.freecodecamp.org/news/best-javascript-tutorial/
-
 
 
 
@@ -123,4 +117,10 @@ Output: edoC evoL I
 
 
 
+
+## Learn
+
+- https://eloquentjavascript.net/
+- https://github.com/Asabeneh/30DaysOfJavaScript
+- https://www.freecodecamp.org/news/best-javascript-tutorial/
 
