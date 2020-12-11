@@ -28,6 +28,7 @@ Another example: if strArr is **["aabdccdbcacd", "aad"]** then the smallest subs
 ```js
 Input: ["ahffaksfajeeubsne", "jefaa"]
 Output: aksfaje
+
 Input: ["aaffhkksemckelloe", "fhea"]
 Output: affhkkse
 ```
