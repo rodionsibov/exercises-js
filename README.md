@@ -171,7 +171,7 @@ gcd(6, 15) should return 3
 
 ### Roman numerals
 
-Write a ```function **arabic**``` that converts a Roman number (up to 1000) into an Arabic.
+Write a js```function **arabic**``` that converts a Roman number (up to 1000) into an Arabic.
 
 **Examples**
 
