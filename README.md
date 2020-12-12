@@ -168,6 +168,27 @@ The counterpart to the least common multiple is the greatest common divisor (gcd
 gcd(6, 15) should return 3
 ```
 
+### Roman numerals
+
+Write a function **arabic** that converts a Roman number (up to 1000) into an Arabic.
+
+Examples**
+
+```arabic('CDLXXXIII') should return 483
+```
+
+### Project Euler
+
+> The following task is taken from Project Euler. It's the first task there. Project Euler is a series of challenging mathematical and computer programming problems.
+
+Write a function **sumMultiples** taking a natural number **n** and returning the sum of all multiples of 3 and of 5 that are truly less than **n**. All multiples of 3 and 5 less than 20 are 3, 5, 6, 9, 10, 12, 15 and 18. Their sum is 78.
+
+**Examples**
+
+```
+sumMultiples(20) should return 78
+```
+
 ---
 
 ## Learn
