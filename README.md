@@ -160,7 +160,7 @@ Output: edoC evoL I
 
 ### GCD
 
-The counterpart to the least common multiple is the greatest common divisor (GCD). The greatest common divisor of two natural numbers **a** and **b** is the largest natural numbers that divides **a and **b**. Write a function **gcd** that takes two natural numbers and calculates their GCD.
+The counterpart to the least common multiple is the greatest common divisor (GCD). The greatest common divisor of two natural numbers **a** and **b** is the largest natural numbers that divides **a** and **b**. Write a function **gcd** that takes two natural numbers and calculates their GCD.
 
 **Examples**
 
