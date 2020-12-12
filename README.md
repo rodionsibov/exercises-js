@@ -36,7 +36,7 @@ Output: affhkkse
 
 ### Tree Constructor
 
-Have the function **TreeConstructor(strArr)** take the array of strings stored in **strArr**, which will contain pairs of integers in the following format: **(i1,i2)**, where **i1** represents a child node in a tree and the second integer **i2** signifies that it is the parent of **i1**. For example: if **strArr** is **["(1,2)", "(2,4)", "(7,2)"]**, then this forms the following tree:
+Have the function **treeConstructor(strArr)** take the array of strings stored in **strArr**, which will contain pairs of integers in the following format: **(i1,i2)**, where **i1** represents a child node in a tree and the second integer **i2** signifies that it is the parent of **i1**. For example: if **strArr** is **["(1,2)", "(2,4)", "(7,2)"]**, then this forms the following tree:
 
 ![](https://i.imgur.com/NMRdSO1.png)
 
@@ -68,7 +68,7 @@ Output: 1
 
 ### Codeland Username Validation
 
-Have the function **CodelandUsernameValidation(str)** take the str parameter being passed and determine if the string is a valid username according to the following rules:
+Have the function **codelandUsernameValidation(str)** take the str parameter being passed and determine if the string is a valid username according to the following rules:
 
 1. The username is between 4 and 25 characters.
 2. It must start with a letter.
@@ -89,7 +89,7 @@ Output: true
 
 ### Find Intersection
 
-Have the function **FindIntersection(strArr)** read the array of strings stored in **strArr** which will contain 2 elements: the first element will represent a list of comma-separated numbers sorted in ascending order, the second element will represent a second list of comma-separated numbers (also sorted). Your goal is to return a comma-separated string containing the numbers that occur in elements of **strArr** in sorted order. If there is no intersection, return the string false.
+Have the function **findIntersection(strArr)** read the array of strings stored in **strArr** which will contain 2 elements: the first element will represent a list of comma-separated numbers sorted in ascending order, the second element will represent a second list of comma-separated numbers (also sorted). Your goal is to return a comma-separated string containing the numbers that occur in elements of **strArr** in sorted order. If there is no intersection, return the string false.
 
 **Examples**
 
@@ -103,7 +103,7 @@ Output: 1,9,10
 
 ### Questions Marks
 
-Have the function **QuestionsMarks(str)** take the **str** string parameter, which will contain single digit numbers, letters, and question marks, and check if there are exactly 3 question marks between every pair of two numbers that add up to 10. If so, then your program should return the string **true**, otherwise it should return the string **false**. If there aren't any two numbers that add up to 10 in the string, then your program should return **false** as well.
+Have the function **questionsMarks(str)** take the **str** string parameter, which will contain single digit numbers, letters, and question marks, and check if there are exactly 3 question marks between every pair of two numbers that add up to 10. If so, then your program should return the string **true**, otherwise it should return the string **false**. If there aren't any two numbers that add up to 10 in the string, then your program should return **false** as well.
 
 For example: if **str** is "arrb6???4xxbl5???eee5" then your program should return **true** because there are exactly 3 question marks between 6 and 4, and 3 question marks between 5 and 5 at the end of the string.
 
@@ -119,7 +119,7 @@ Output: true
 
 ### Longest Word
 
-Have the function **LongestWord(sen)** take the sen parameter being passed and return the largest word in the string. If there are two or more words that are the same length, return the first word from the string with that length. Ignore punctuation and assume **sen** will not be empty.
+Have the function **longestWord(sen)** take the sen parameter being passed and return the largest word in the string. If there are two or more words that are the same length, return the first word from the string with that length. Ignore punctuation and assume **sen** will not be empty.
 
 **Examples**
 
@@ -133,7 +133,7 @@ Output: love
 
 ### First Factorial
 
-Have the function **FirstFactorial(num)** take the **num** parameter being passed and return the factorial of it. For example: if **num** = 4, then your program should return (4 * 3 * 2 * 1) = 24. For the test cases, the range will be between 1 and 18 and the input will always be an integer.
+Have the function **firstFactorial(num)** take the **num** parameter being passed and return the factorial of it. For example: if **num** = 4, then your program should return (4 * 3 * 2 * 1) = 24. For the test cases, the range will be between 1 and 18 and the input will always be an integer.
 
 **Examples**
 
@@ -147,7 +147,7 @@ Output: 40320
 
 ### First Reverse
 
-Have the function **FirstReverse(str)** take the **str** parameter being passed and return the string in reversed order. For example: if the input string is "Hello World and Coders" then your program should return the string "sredoC dna dlroW olleH".
+Have the function **firstReverse(str)** take the **str** parameter being passed and return the string in reversed order. For example: if the input string is "Hello World and Coders" then your program should return the string "sredoC dna dlroW olleH".
 
 **Examples**
 
@@ -183,7 +183,7 @@ arabic('CDLXXXIII') should return 483
 
 > The following task is taken from Project Euler. It's the first task there. Project Euler is a series of challenging mathematical and computer programming problems.
 
-Write a function **sumMultiples** taking a natural number **n** and returning the sum of all multiples of 3 and of 5 that are truly less than **n**. All multiples of 3 and 5 less than 20 are 3, 5, 6, 9, 10, 12, 15 and 18. Their sum is 78.
+Write a function **sumMultiples()** taking a natural number **n** and returning the sum of all multiples of 3 and of 5 that are truly less than **n**. All multiples of 3 and 5 less than 20 are 3, 5, 6, 9, 10, 12, 15 and 18. Their sum is 78.
 
 **Examples**
 
