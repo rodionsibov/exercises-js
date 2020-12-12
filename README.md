@@ -174,7 +174,8 @@ Write a function **arabic** that converts a Roman number (up to 1000) into an Ar
 
 Examples**
 
-```arabic('CDLXXXIII') should return 483
+```
+arabic('CDLXXXIII') should return 483
 ```
 
 ### Project Euler
