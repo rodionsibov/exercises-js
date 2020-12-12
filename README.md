@@ -24,7 +24,7 @@ For example: if **strArr** is **["aaabaaddae", "aed"]** then the smallest substr
 
 Another example: if **strArr** is **["aabdccdbcacd", "aad"]** then the smallest substring of **N** that contains all of the characters in **K** is **"aabd"** which is located at the beginning of the string. Both parameters will be strings ranging in length from 1 to 50 characters and all of K's characters will exist somewhere in the string **N**. Both strings will only contains lowercase alphabetic characters.
 
-**Examples**
+**Examples:**
 
 ```
 Input: ["ahffaksfajeeubsne", "jefaa"]
@@ -42,7 +42,7 @@ Have the function **treeConstructor(strArr)** take the array of strings stored i
 
 which you can see forms a proper binary tree. Your program should, in this case, return the string **true** because a valid binary tree can be formed. If a proper binary tree cannot be formed with the integer pairs, then return the string **false**. All of the integers within the tree will be unique, which means there can only be one node in the tree with the given integer value.
 
-**Examples**
+**Examples:**
 
 ```
 Input: ["(1,2)", "(2,4)", "(5,7)", "(7,2)", "(9,5)"]
@@ -56,7 +56,7 @@ Output: false
 
 Have the function **bracketMatcher(str)** take the **str** parameter being passed and return **1** if the brackets are correctly matched and each one is accounted for. Otherwise return **0**. For example: if **str** is "(hello (world))", then the output should be **1**, but if **str** is "((hello (world))" the the output should be **0** because the brackets do not correctly match up. Only "(" and ")" will be used as brackets. If **str** contains no brackets return **1**.
 
-**Examples**
+**Examples:**
 
 ```
 Input: "(coder)(byte))"
@@ -77,7 +77,7 @@ Have the function **codelandUsernameValidation(str)** take the str parameter bei
 
 If the username is valid then your program should return the string **true**, otherwise return the string **false**.
 
-**Examples**
+**Examples:**
 
 ```
 Input: "aa_"
@@ -91,7 +91,7 @@ Output: true
 
 Have the function **findIntersection(strArr)** read the array of strings stored in **strArr** which will contain 2 elements: the first element will represent a list of comma-separated numbers sorted in ascending order, the second element will represent a second list of comma-separated numbers (also sorted). Your goal is to return a comma-separated string containing the numbers that occur in elements of **strArr** in sorted order. If there is no intersection, return the string false.
 
-**Examples**
+**Examples:**
 
 ```
 Input: ["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"]
@@ -107,7 +107,7 @@ Have the function **questionsMarks(str)** take the **str** string parameter, whi
 
 For example: if **str** is "arrb6???4xxbl5???eee5" then your program should return **true** because there are exactly 3 question marks between 6 and 4, and 3 question marks between 5 and 5 at the end of the string.
 
-**Examples**
+**Examples:**
 
 ```
 Input: "aa6?9"
@@ -121,7 +121,7 @@ Output: true
 
 Have the function **longestWord(sen)** take the sen parameter being passed and return the largest word in the string. If there are two or more words that are the same length, return the first word from the string with that length. Ignore punctuation and assume **sen** will not be empty.
 
-**Examples**
+**Examples:**
 
 ```
 Input: "fun&!! time"
@@ -135,7 +135,7 @@ Output: love
 
 Have the function **firstFactorial(num)** take the **num** parameter being passed and return the factorial of it. For example: if **num** = 4, then your program should return (4 * 3 * 2 * 1) = 24. For the test cases, the range will be between 1 and 18 and the input will always be an integer.
 
-**Examples**
+**Examples:**
 
 ```
 Input: 4
@@ -149,7 +149,7 @@ Output: 40320
 
 Have the function **firstReverse(str)** take the **str** parameter being passed and return the string in reversed order. For example: if the input string is "Hello World and Coders" then your program should return the string "sredoC dna dlroW olleH".
 
-**Examples**
+**Examples:**
 
 ```
 Input: "coderbyte"
@@ -163,7 +163,7 @@ Output: edoC evoL I
 
 The counterpart to the least common multiple is the greatest common divisor (gcd). The greatest common divisor of two natural numbers **a** and **b** is the largest natural numbers that divides **a** and **b**. Write a function **gcd** that takes two natural numbers and calculates their gcd.
 
-**Examples**
+**Examples:**
 
 ```
 gcd(6, 15) should return 3
@@ -173,7 +173,7 @@ gcd(6, 15) should return 3
 
 Write a function **arabic()** that converts a Roman number (up to 1000) into an Arabic.
 
-**Examples**
+**Examples:**
 
 ```
 arabic('CDLXXXIII') should return 483
