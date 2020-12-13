@@ -232,6 +232,4 @@
 // export { isValidEmail, isValidPhone, isEmpty };
 
 
-const baseURL = "https://raw.githubusercontent.com/abrochard/emacs-survey/main/2020/Emacs-User-Survey-2020-raw.csv"
-//https://emacssurvey.org/2020/
 
