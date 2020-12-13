@@ -231,5 +231,25 @@
 
 // export { isValidEmail, isValidPhone, isEmpty };
 
+// RECURSION
+// const countup = (n) => {
+//     if (n < 1) {
+// 	return []
+//     } else {
+// 	const countArray = countup(n - 1);
+// 	countArray.unshift(n);
+// 	console.log(countArray)
+// 	return countArray;
+//     }
+// }
+// console.log(countup(5));
 
-
+const rangeOfNumbers = (start, end) => {
+    let result = 0;
+    for (; start <= end; start++) {
+	result += start;
+	console.log(start);
+    }
+    return result;
+}
+console.log(rangeOfNumbers(1, 5));
