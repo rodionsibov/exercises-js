@@ -244,12 +244,17 @@
 // }
 // console.log(countup(5));
 
-const rangeOfNumbers = (start, end) => {
-    let result = 0;
-    for (; start <= end; start++) {
-	result += start;
-	console.log(start);
-    }
-    return result;
-}
-console.log(rangeOfNumbers(1, 5));
+// const rangeOfNumbers = (start, end) => {
+//     let result = 0;
+//     for (; start <= end; start++) {
+// 	result += start;
+// 	console.log(start);
+//     }
+//     return result;
+// }
+// console.log(rangeOfNumbers(4, 15));
+
+// const rangeOfNumbers2 = (start, end) => start > end ? 0 : start + rangeOfNumbers(start + 1, end);
+// console.log(rangeOfNumbers2(4, 15));
+
+
