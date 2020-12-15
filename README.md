@@ -209,9 +209,28 @@ isHappyTicket('054702'); // true
 isHappyTicket('00');     // true
 ```
 
+### Invert Case (Инвертированный регистр)
 
+Реализуйте и экспортируйте по умолчанию функцию, которая меняет в строке регистр каждой буквы на противоположный.
+> 'welcome'.length; // 7; 'foo'.toUpperCase(); // 'FOO'; 'f'.toUpperCase();   // 'F'; 'BAR'.toLowerCase(); // 'bar'; 'b'.toLowerCase();   // 'b';
+**Примеры:**
 
+```
+invertCase('Hello, World!'); // hELLO, wORLD!
+invertCase('I loVe JS');     // i LOvE js
+```
 
+### Reverse Integer (Переворот числа)
+
+Реализуйте и экспортируйте по умолчанию функцию, которая переворачивает цифры в переданном числе и возвращает новое число.
+
+**Примеры:**
+
+```
+reverseInt(13); // 31
+reverseInt(-123); // -321
+reverseInt(8900); // 98
+```
 
 
 
