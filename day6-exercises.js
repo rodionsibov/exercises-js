@@ -95,3 +95,13 @@
 // }
 // console.log(result);
 
+const arrayRandomNumbers = num => {
+    const arr = []
+
+    for (i = 1; i <= num; i++) {
+	arr.push(Math.floor(Math.random() * 100))
+    }
+    return arr;
+}
+console.log(arrayRandomNumbers(5))
+
