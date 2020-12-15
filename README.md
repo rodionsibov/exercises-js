@@ -213,7 +213,10 @@ isHappyTicket('00');     // true
 
 Реализуйте и экспортируйте по умолчанию функцию, которая меняет в строке регистр каждой буквы на противоположный.
 > 'welcome'.length; // 7;
-'foo'.toUpperCase(); // 'FOO'; 'f'.toUpperCase();   // 'F'; 'BAR'.toLowerCase(); // 'bar'; 'b'.toLowerCase();   // 'b';
+'foo'.toUpperCase(); // 'FOO';
+'f'.toUpperCase();   // 'F';
+'BAR'.toLowerCase(); // 'bar';
+'b'.toLowerCase();   // 'b';
 
 **Примеры:**
 
