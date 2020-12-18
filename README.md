@@ -1197,7 +1197,7 @@ tree.getLeft().getRight().getKey(); // 6
 
 Двоичное дерево поиска состоит из узлов, каждый из которых содержит значение ключа и два поддерева (левое и правое), которые в свою очередь также являются двоичными деревьями. Правильное дерево не содержит повторяющихся ключей, и для каждого узла гарантируется, что в левом поддереве все значения меньше текущего, а в правом — больше.
 
-![](https://cdn2.hexlet.io/derivations/image/original/eyJpZCI6IjE1NDI0MWFiZjQ4ZDIxMDU1MTQwM2NhMjk2NDQxMjAwLnBuZyIsInN0b3JhZ2UiOiJjYWNoZSJ9?signature=ed03242e5a9b387359f758fe3e9ecbba927dd08e2e997c65b5cbc2bdec241e57)
+<img src="https://cdn2.hexlet.io/derivations/image/original/eyJpZCI6IjE1NDI0MWFiZjQ4ZDIxMDU1MTQwM2NhMjk2NDQxMjAwLnBuZyIsInN0b3JhZ2UiOiJjYWNoZSJ9?signature=ed03242e5a9b387359f758fe3e9ecbba927dd08e2e997c65b5cbc2bdec241e57">
 
 Реализуйте и экспортируйте по умолчанию класс, который реализует представление узла. Конструктор класса принимает на вход значение ключа (число), и двух детей, которые в свою очередь также являются узлами. Дерево может быть создано пустым.
 
