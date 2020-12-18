@@ -95,13 +95,49 @@
 // }
 // console.log(result);
 
-const arrayRandomNumbers = num => {
-    const arr = []
+// const arrayRandomNumbers = num => {
+//     const arr = []
+//     for (i = 1; i <= num; i++) {
+// 	arr.push(Math.floor(Math.random() * 100))
+//     }
+//     return arr;
+// }
+// console.log(arrayRandomNumbers(5))
 
-    for (i = 1; i <= num; i++) {
-	arr.push(Math.floor(Math.random() * 100))
-    }
-    return arr;
-}
-console.log(arrayRandomNumbers(5))
+const webTechs = [
+  'HTML',
+  'CSS',
+  'JavaScript',
+  'React',
+  'Redux',
+  'Node',
+  'MongoDB'
+]
+
+// const longestWord = (data) => {
+//     data.sort((a,b) => b.length - a.length)
+//     return data[0]
+// }
+// console.log(longestWord(webTechs))
+
+// const longestWord = (data) => {
+//     let max = data[0].length;
+//     for (el of data) {
+// 	if (el.length > max) {
+// 	    max = el;
+// 	}
+//     }
+//     return max;
+// }
+// console.log(webTechs, longestWord(webTechs))
+
+// const createNewArray = (data) => {
+//     const result = [];
+//     for (const i of data) {
+// 	result.push([i, i.length])
+//     }
+//     return result;
+// }
+// console.log(createNewArray(webTechs));
+
 
