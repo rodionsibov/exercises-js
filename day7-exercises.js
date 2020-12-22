@@ -8,6 +8,13 @@
 // }
 // console.log(swapValues(1, 7));
 
+// const swapValues = (a, b) => {
+//     console.log({a, b});
+//     [a, b] = [b, a];
+//     return {a, b};
+// }
+// console.log(swapValues(1, 7));
+
 // const reverseArray = (...args) => {
 //     const result = [];
 //     for (const el of args) {
@@ -49,3 +56,4 @@
 //     return result;
 // }
 // console.log(sumOfOdds(3, 8));
+
