@@ -17,4 +17,13 @@
 // }
 // console.log(reverseArray("A", "B", 3, [2234, 2342, {c: "C", d: "D"}, 4234]));
 
+// const removeItem = (arr, item) => {
+//     for (const el of arr) {
+// 	if (el === item) {
+// 	    arr.splice(arr.indexOf(el), 1);
+// 	}
+//     }
+//     return arr;
+// }
+// console.log(removeItem(["A", "B", "C", "D"], "C"));
 

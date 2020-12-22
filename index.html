@@ -6,6 +6,24 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Hello world!</title>
+    <style>
+
+
+      canvas {
+	  background: #eee;
+	  border: 1px solid #ccc;
+	  margin: 10px;
+      }
+      
+      button {
+	  width: 100px;
+	  height: 50px;
+	  margin: 5px;
+	  border: none;
+      }
+    </style>
+
+
   </head>
   <body>
     <div class="container">
@@ -22,5 +40,118 @@
     </div>
 
     <script src="./exercises.js"></script>
+
+    <script>
+
+      function startGame() {
+	  myGamePiece = new component(30, 30, "red", 10, 120);
+	  myObstacle = new component(10, 200, "green", 300, 120);
+	  myGameArea.start();
+      }
+
+      const myGameArea = {
+	  canvas: document.createElement("canvas"),
+	  start: function() {
+	      this.canvas.width = 480;
+	      this.canvas.height = 270;
+	      this.context = this.canvas.getContext("2d");
+	      document.body.insertBefore(this.canvas, document.body.childNodes[2]);
+	      this.interval = setInterval(updateGameArea, 20);
+	      window.addEventListener('keydown', function (e) {
+		  myGameArea.key = e.keyCode;
+	      })
+	      window.addEventListener('keyup', function (e) {
+		  myGameArea.key = false;
+	      })
+
+	  },
+	  clear: function() {
+	      this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+	  },
+	  stop: function() {
+	      clearInterval(this.interval);
+	  }
+      }
+
+      function component(width, height, color, x, y) {
+	  this.width = width;
+	  this.height = height;
+	  this.speedX = 0;
+	  this.speedY = 0;
+	  this.x = x;
+	  this.y = y;
+	  this.update = function() {
+	      ctx = myGameArea.context;
+	      ctx.fillStyle = color;
+	      ctx.fillRect(this.x, this.y, this.width, this.height);
+	  }
+	  this.newPos = function() {
+	      this.x += this.speedX;
+	      this.y += this.speedY;
+	  }
+	  this.crashWith = function(otherObj) {
+	      let myLeft = this.x,
+		  myRight = this.x + (this.width),
+		  myTop = this.y,
+		  myBottom = this.y + (this.height),
+		  otherLeft = otherObj.x,
+		  otherRight = otherObj.x + (otherObj.width),
+		  otherTop = otherObj.y,
+		  otherBottom = otherObj.y + (otherObj.height),
+		  crash = true;
+	      if ((myBottom < otherTop) ||
+		  (myTop > otherBottom) ||
+		  (myRight < otherLeft) ||
+		  (myLeft > otherRight)) {
+		  crash = false;
+	      }
+	      return crash;
+	  }
+      }
+      
+      function updateGameArea() {
+	  if (myGamePiece.crashWith(myObstacle)) {
+	      myGameArea.stop();
+	  } else {
+	      myGameArea.clear();
+	      myObstacle.x += -1;
+	      myObstacle.update();
+	      myGamePiece.speedX = 0;
+	      myGamePiece.speedY = 0;
+	      if (myGameArea.key && myGameArea.key == 37) {myGamePiece.speedX = -1; }
+	      if (myGameArea.key && myGameArea.key == 39) {myGamePiece.speedX = 1; }
+	      if (myGameArea.key && myGameArea.key == 38) {myGamePiece.speedY = -1; }
+	      if (myGameArea.key && myGameArea.key == 40) {myGamePiece.speedY = 1; }
+	      myGamePiece.newPos();
+	      myGamePiece.update();
+	  }
+      }
+
+      function moveUp() {
+	  myGamePiece.speedY -= 1;
+      }
+
+      function moveDown() {
+	  myGamePiece.speedY += 1;
+      }
+
+      function moveLeft() {
+	  myGamePiece.speedX -= 1;
+      }
+
+      function moveRight() {
+	  myGamePiece.speedX += 1;
+      }
+      
+      function stopMove() {
+	  myGamePiece.speedX = 0;
+	  myGamePiece.speedY = 0;
+      }
+      
+      window.addEventListener("load", startGame);
+      
+
+    </script>
+
   </body>
 </html>
