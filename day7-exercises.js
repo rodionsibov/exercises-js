@@ -27,3 +27,14 @@
 // }
 // console.log(removeItem(["A", "B", "C", "D"], "C"));
 
+// const sumOfNumbers = (start, end) => {
+//     let arr  = [];
+//     for (let i = start; i <= end; i++) {
+// 	arr.push(i);
+//     }
+//     result = arr.reduce((a, b) => a + b, 0);
+//     console.log(arr);
+//     return `Sum of numbers is: ${result}`;
+// }
+// console.log(sumOfNumbers(3, 7));
+
