@@ -38,3 +38,14 @@
 // }
 // console.log(sumOfNumbers(3, 7));
 
+// const sumOfOdds = (start, end) => {
+//     let result = 0;
+//     for (let i = start; i <= end; i++) {
+// 	if (i % 2 === 1) {
+// 	    result += i;
+// 	    console.log(i)
+// 	}
+//     }
+//     return result;
+// }
+// console.log(sumOfOdds(3, 8));
