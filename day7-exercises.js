@@ -71,3 +71,23 @@
 // }
 // console.log(evensAndOdds(100))
 
+// const sum = (...arg) => {
+//     let result = 0;
+//     for (const el of arg) {
+// 	result += el;
+//     }
+//     return result;
+// }
+// console.log(sum(1, 3, 55, 1, 40));
+
+// const shuffleArray = array => {
+//     for (let i = array.length - 1; i > 0; i--) {
+//         let j = Math.floor(Math.random() * (i + 1));
+//         let temp = array[i];
+//         array[i] = array[j];
+//         array[j] = temp;
+//     }
+//     return array;
+// }
+// console.log(shuffleArray([1,3,4]))
+
