@@ -57,3 +57,17 @@
 // }
 // console.log(sumOfOdds(3, 8));
 
+// const evensAndOdds = num => {
+//     let evens = 0;
+//     let odds = 0;
+//     for (let i = 0; i <= num; i++) {
+// 	if (i % 2 === 0) {
+// 	    evens += 1;
+// 	} else {
+// 	    odds += 1;
+// 	}
+//     }
+//     return `The number of odds are ${odds}. The number of evens are ${evens}`
+// }
+// console.log(evensAndOdds(100))
+
