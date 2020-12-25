@@ -121,3 +121,29 @@
 // }
 // console.log(sumOfArrayItems([2,3,4]))
 
+// const modifyArray = arr => {
+//     if (arr.length < 5) {
+// 	return "Item not found";
+//     }
+//     arr.splice(4, 1, arr[4].toUpperCase())
+//     return arr;
+// }
+// console.log(modifyArray(['Avocado', 'Tomato', 'Potato','Mango', 'Lemon','Carrot']));
+// console.log(modifyArray(['Google', 'Facebook','Apple', 'Amazon','Microsoft',  'IBM']));
+// console.log(modifyArray(['Google', 'Facebook','Apple', 'Amazon']));
+
+// const isPrime = num => {
+//     for (let i = 2; i < num; i++) {
+// 	if(num % i === 0) {
+// 	    return false;
+// 	}
+//     }
+//     return num > 1;
+// }
+// console.log(isPrime(37));
+
+
+// const isUnique = arr => {
+//     return arr.length === new Set(arr).size;
+// }
+// console.log(isUnique([1,2,4,3]));
