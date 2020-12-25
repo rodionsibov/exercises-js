@@ -147,3 +147,14 @@
 //     return arr.length === new Set(arr).size;
 // }
 // console.log(isUnique([1,2,4,3]));
+
+
+// const isSameDataType = arr => {
+//     return arr.every(item => typeof item === "string")
+// }
+// console.log(isSameDataType(["a", "b"]));
+
+// const reverseCountries = arr =>  arr.reverse();
+// console.log(reverseCountries(["A", "B", "C"]));
+
+
