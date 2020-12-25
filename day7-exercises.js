@@ -91,3 +91,11 @@
 // }
 // console.log(shuffleArray([1,3,4]))
 
+// const factorial = num => {
+//     if (num === 1) {
+// 	return 1;
+//     }
+//     return factorial(num - 1) * num;
+// }
+// console.log(factorial(5));
+
