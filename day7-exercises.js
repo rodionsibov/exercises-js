@@ -158,3 +158,21 @@
 // console.log(reverseCountries(["A", "B", "C"]));
 
 
+// const isValidVariable = name => {
+//     const regEx = /[w][d]$_/;
+//     if (name.has(regEx)) {
+// 	return true;
+//     } else {
+// 	return false;
+//     }
+// }
+// console.log(isValidVariable("a"))
+
+const sevenRandomNumbers = () => {
+    const result = new Set();
+    while (result.size < 7) {
+	result.add(Math.floor(Math.random() * 10))	
+    }
+    return [...result];
+}
+console.log(sevenRandomNumbers());
