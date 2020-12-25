@@ -99,3 +99,25 @@
 // }
 // console.log(factorial(5));
 
+// const isEmpty = param => {
+//     return (param === undefined);
+// }
+// console.log(isEmpty())
+
+
+// const sumOfArrayItems = arr => {
+//     let result = 0;
+//     if (!Array.isArray(arr)) {
+// 	return "There is not an array, try again please"
+//     }
+//     for (item of arr) {
+// 	if (typeof item === "number") {
+// 	    result += item;
+// 	} else {
+// 	    return "The array items are not number types"
+// 	}
+//     }
+//     return result;
+// }
+// console.log(sumOfArrayItems([2,3,4]))
+
