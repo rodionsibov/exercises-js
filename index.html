@@ -43,12 +43,22 @@
 
     <script>
 
-      let myScore;
+      let myScore,
+	  myObstacle,
+	  myGamePiece,
+	  myBackground,
+	  mySound,
+	  myMusic;
 
       const myObstacles = [];
+      
 
       function startGame() {
-	  myGamePiece = new component(30, 30, "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/271/helicopter_1f681.png", 10, 120, "image");
+	  myGamePiece = new component(70, 70, "https://www.flaticon.com/svg/static/icons/svg/1042/1042640.svg", 10, 120, "image");
+	  mySound = new sound("https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-kedr-sfx/kedr_sfx_ui_computer_complex_lowend_11.mp3?_=1");
+	  myMusic = new sound("https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-14566/zapsplat_nature_thunderstorm_approach_insects_night_blustery_winds_at_end_17244.mp3?_=7");
+	  myMusic.play();
+	  myBackground = new component(656, 270, "https://picsum.photos/400/200", 0, 0, "background");
 	  myObstacle = new component(10, 200, "green", 300, 120);
 	  myScore = new component("30px", "Consolas", "black", 280, 40, "text");
 	  myGameArea.start();
@@ -87,7 +97,7 @@
 
       function component(width, height, color, x, y, type) {
 	  this.type = type;
-	  if (type == "image") {
+	  if (type == "image" || type == "background") {
 	      this.image = new Image();
 	      this.image.src = color;
 	  }
@@ -99,13 +109,16 @@
 	  this.y = y;
 	  this.update = function() {
 	      ctx = myGameArea.context;
-	      if (type == "image") {
-		  ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
-	      }
 	      if (this.type == "text") {
 		  ctx.font = this.width + " " + this.height;
 		  ctx.fillStyle = color;
 		  ctx.fillText(this.text, this.x, this.y);
+	      }
+	      if (type == "image" || type == "background") {
+		  ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+		  if (type == "background") {
+		      ctx.drawImage(this.image, this.x + this.width, this.y, this.width, this.height);
+		  }
 	      } else {
 		  ctx.fillStyle = color;
 		  ctx.fillRect(this.x, this.y, this.width, this.height);
@@ -114,6 +127,11 @@
 	  this.newPos = function() {
 	      this.x += this.speedX;
 	      this.y += this.speedY;
+	      if (this.type == "background") {
+		  if (this.x == - (this.width)) {
+		      this.x = 0;
+		  }
+	      }
 	  }
 	  this.crashWith = function(otherObj) {
 	      let myLeft = this.x,
@@ -139,11 +157,16 @@
 	  let x, height, gap, minHeight, maxHeight, minGap, maxGap;
 	  for (i = 0; i < myObstacles.length; i += 1) {
 	      if (myGamePiece.crashWith(myObstacles[i])) {
+		  mySound.play();
+		  myMusic.stop();
 		  myGameArea.stop();
 		  return;
 	      }
 	  } 
 	  myGameArea.clear();
+	  myBackground.speedX = -1;
+	  myBackground.newPos();
+	  myBackground.update();
 	  myGameArea.frameNo += 1;
 	  if (myGameArea.frameNo == 1 || everyInterval(150)) {
 	      x = myGameArea.canvas.width;
@@ -193,6 +216,21 @@
       function stopMove() {
 	  myGamePiece.speedX = 0;
 	  myGamePiece.speedY = 0;
+      }
+
+      function sound(src) {
+	  this.sound = document.createElement("audio");
+	  this.sound.src = src;
+	  this.sound.setAttribute("preload", "auto");
+	  this.sound.setAttribute("controls", "none");
+	  this.sound.style.display = "none";
+	  document.body.appendChild(this.sound);
+	  this.play = function() {
+	      this.sound.play();
+	  }
+	  this.stop = function() {
+	      this.sound.pause();
+	  }
       }
 
       window.addEventListener("load", startGame);
