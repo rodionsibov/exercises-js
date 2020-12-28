@@ -20,3 +20,5 @@
 // }
 // console.log(sumArray(numbers));
 
+const callBack = () => console.log(Math.random());
+setInterval(callBack, 2000);
