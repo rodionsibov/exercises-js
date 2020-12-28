@@ -258,3 +258,10 @@
 // console.log(rangeOfNumbers2(4, 15));
 
 
+// const result = "<h1>Winter is coming. 2020</h1>".match(/\w/g).join("");
+// console.log(result)
+
+let username = "Zsa@38";
+let userCheck = /[A-aZ-z]{3}@[0-9]{2}$/;
+const result = userCheck.test(username);
+console.log(result);
