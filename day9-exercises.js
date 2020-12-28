@@ -20,5 +20,11 @@
 // }
 // console.log(sumArray(numbers));
 
-const callBack = () => console.log(Math.random());
-setInterval(callBack, 2000);
+console.log("Start")
+const interval = setInterval(() => {
+    console.log(Math.random().toString(2).slice(2));
+}, 1000);
+setTimeout(() => {
+    clearInterval(interval)
+    console.log("Stop")
+}, 5000);
