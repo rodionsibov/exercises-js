@@ -170,39 +170,56 @@ const users = [
         createdAt:'08/01/2020 10:00 AM',
         isLoggedIn: false
     }
-    ];
+];
 
-    const products = [
-  {
-    _id: 'eedfcf',
-    name: 'mobile phone',
-    description: 'Huawei Honor',
-    price: 200,
-    ratings: [
-      { userId: 'fg12cy', rate: 5 },
-      { userId: 'zwf8md', rate: 4.5 }
-    ],
-    likes: []
-  },
-  {
-    _id: 'aegfal',
-    name: 'Laptop',
-    description: 'MacPro: System Darwin',
-    price: 2500,
-    ratings: [],
-    likes: ['fg12cy']
-  },
-  {
-    _id: 'hedfcg',
-    name: 'TV',
-    description: 'Smart TV:Procaster',
-    price: 400,
-    ratings: [{ userId: 'fg12cy', rate: 5 }],
-    likes: ['fg12cy']
-  }
+const products = [
+    {
+	_id: 'eedfcf',
+	name: 'mobile phone',
+	description: 'Huawei Honor',
+	price: 200,
+	ratings: [
+	    { userId: 'fg12cy', rate: 5 },
+	    { userId: 'zwf8md', rate: 4.5 }
+	],
+	likes: []
+    },
+    {
+	_id: 'aegfal',
+	name: 'Laptop',
+	description: 'MacPro: System Darwin',
+	price: 2500,
+	ratings: [],
+	likes: ['fg12cy']
+    },
+    {
+	_id: 'hedfcg',
+	name: 'TV',
+	description: 'Smart TV:Procaster',
+	price: 400,
+	ratings: [{ userId: 'fg12cy', rate: 5 }],
+	likes: ['fg12cy']
+    }
 ]
 
-const signUp = (user) => {
-    return Object.values(users)
-}
-console.log(signUp("Thomas"))
+// const signUp = (name) => {
+//     for (user of users) {
+// 	if (user.username === name) {
+// 	    return "User has already an account. Please insert a new name."
+// 	}
+//     }
+//     users.push({username: name})
+//     return `Wellcome ${name}. How are you?`;
+// }
+// console.log(signUp("Alexa"), users)
+
+// const signIn = name => {
+//     for (user of users) {
+// 	if (user.username === name) {
+// 	    return `Hey ${name}. You are logged ${user.isLoggedIn ? "in" : "out"}`
+// 	}
+//     }
+//     return `Please insert your name`
+// }
+// console.log(signIn("Alex"))
+
