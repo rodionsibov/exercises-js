@@ -223,3 +223,15 @@ const products = [
 // }
 // console.log(signIn("Alex"))
 
+// const rateProduct = (products) => {
+//     return products
+// 	.map(({name, ratings}) => [name, ratings.
+// 				   map(el => el.rate)
+// 				   .reduce((a,b) => {
+// 				       return a + b
+// 				   }, 0) / ratings.length])
+// 	.flat()
+// }
+// console.log(rateProduct(products))
+
+const 
