@@ -55,10 +55,10 @@
 
       function startGame() {
 	  myGamePiece = new component(70, 70, "https://www.flaticon.com/svg/static/icons/svg/1042/1042640.svg", 10, 120, "image");
-	  mySound = new sound("https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-kedr-sfx/kedr_sfx_ui_computer_complex_lowend_11.mp3?_=1");
-	  myMusic = new sound("https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-14566/zapsplat_nature_thunderstorm_approach_insects_night_blustery_winds_at_end_17244.mp3?_=7");
-	  myMusic.play();
-	  myBackground = new component(656, 270, "https://picsum.photos/400/200", 0, 0, "background");
+	  // mySound = new sound("https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-kedr-sfx/kedr_sfx_ui_computer_complex_lowend_11.mp3?_=1");
+	  // myMusic = new sound("https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-14566/zapsplat_nature_thunderstorm_approach_insects_night_blustery_winds_at_end_17244.mp3?_=7");
+	  // myMusic.play();
+	  // myBackground = new component(656, 270, "https://picsum.photos/400/200", 0, 0, "background");
 	  myObstacle = new component(10, 200, "green", 300, 120);
 	  myScore = new component("30px", "Consolas", "black", 280, 40, "text");
 	  myGameArea.start();
@@ -67,8 +67,8 @@
       const myGameArea = {
 	  canvas: document.createElement("canvas"),
 	  start: function() {
-	      this.canvas.width = 480;
-	      this.canvas.height = 270;
+	      this.canvas.width = 800;
+	      this.canvas.height = 400;
 	      this.context = this.canvas.getContext("2d");
 	      document.body.insertBefore(this.canvas, document.body.childNodes[2]);
 	      this.frameNo = 0;
@@ -107,6 +107,8 @@
 	  this.speedY = 0;
 	  this.x = x;
 	  this.y = y;
+	  this.gravity = 0.05;
+	  this.gravitySpeed = 0;
 	  this.update = function() {
 	      ctx = myGameArea.context;
 	      if (this.type == "text") {
@@ -125,12 +127,20 @@
 	      }
 	  }
 	  this.newPos = function() {
+	      this.gravitySpeed += this.gravity;
 	      this.x += this.speedX;
-	      this.y += this.speedY;
+	      this.y += this.speedY + this.gravitySpeed;
+	      this.hitBottom();
 	      if (this.type == "background") {
 		  if (this.x == - (this.width)) {
 		      this.x = 0;
 		  }
+	      }
+	  }
+	  this.hitBottom = function() {
+	      let rockbottom = myGameArea.canvas.height - this.height;
+	      if (this.y > rockbottom) {
+		  this.y = rockbottom
 	      }
 	  }
 	  this.crashWith = function(otherObj) {
@@ -157,16 +167,16 @@
 	  let x, height, gap, minHeight, maxHeight, minGap, maxGap;
 	  for (i = 0; i < myObstacles.length; i += 1) {
 	      if (myGamePiece.crashWith(myObstacles[i])) {
-		  mySound.play();
-		  myMusic.stop();
+		  // mySound.play();
+		  // myMusic.stop();
 		  myGameArea.stop();
 		  return;
 	      }
 	  } 
 	  myGameArea.clear();
-	  myBackground.speedX = -1;
-	  myBackground.newPos();
-	  myBackground.update();
+	  // myBackground.speedX = -1;
+	  // myBackground.newPos();
+	  // myBackground.update();
 	  myGameArea.frameNo += 1;
 	  if (myGameArea.frameNo == 1 || everyInterval(150)) {
 	      x = myGameArea.canvas.width;
@@ -233,6 +243,10 @@
 	  }
       }
 
+      function accelerate(n) {
+	  myGamePiece.gravity = n;
+      }
+      
       window.addEventListener("load", startGame);
 
 
