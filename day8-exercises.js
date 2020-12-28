@@ -234,4 +234,19 @@ const products = [
 // }
 // console.log(rateProduct(products))
 
-const 
+const product = {
+    isLike: true,
+}
+const likeProduct = () => {
+    if (product.isLike) {
+	product.isLike = false
+	return "Like"
+    } else {
+	product.isLike = true
+	return "Unlike"
+    }
+}
+console.log(product.isLike)
+console.log(likeProduct())
+console.log(product.isLike)
+console.log(likeProduct())
