@@ -20,11 +20,18 @@
 // }
 // console.log(sumArray(numbers));
 
-console.log("Start")
-const interval = setInterval(() => {
-    console.log(Math.random().toString(2).slice(2));
-}, 1000);
-setTimeout(() => {
-    clearInterval(interval)
-    console.log("Stop")
-}, 5000);
+// console.log("Start")
+// const interval = setInterval(() => {
+//     console.log(Math.random().toString(2).slice(2));
+// }, 1000);
+// setTimeout(() => {
+//     clearInterval(interval)
+//     console.log("Stop")
+// }, 5000);
+
+// const numbers = [10, 20, 52, 105, 56, 89, 96];
+// const max = numbers.reduce(
+//   (acc, number) => number > acc ? number : acc,
+//   numbers[0],
+// );
+// console.log(max);
