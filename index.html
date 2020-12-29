@@ -45,15 +45,15 @@
       const gameHeight = 600;
 
       class Paddle {
-	  constructor(gameWidth, gameHeight) {
-	      this.gameWidth = gameWidth;
+	  constructor(game) {
+	      this.gameWidth = game.gameWidth;
 	      this.width = 150;
 	      this.height = 20;
 	      this.maxSpeed = 7;
 	      this.speed = 0;
 	      this.position = {
-		  x: gameWidth / 2 - this.width / 2,
-		  y: gameHeight - this.height - 10,
+		  x: game.gameWidth / 2 - this.width / 2,
+		  y: game.gameHeight - this.height - 10,
 	      }
 	  }
 
@@ -110,14 +110,18 @@
       }
 
       class Ball {
-	  constructor(gameWidth, gameHeight) {
+	  constructor(game) {
+	      this.gameWidth = game.gameWidth;
+	      this.gameHeight = game.gameHeight;
 	      this.image = document.querySelector("#img-ball");
+
+	      this.game = game;
 	      this.position = {
 		  x: 10,
 		  y: 10,
 	      };
 	      this.speed = {
-		  x: 2,
+		  x: 4,
 		  y: 2,
 	      };
 	      this.size = 30;
@@ -130,27 +134,63 @@
 	  update(deltaTime) {
 	      this.position.x += this.speed.x;
 	      this.position.y += this.speed.y;
+	      // wall on left or right
+	      if (this.position.x > this.gameWidth - this.size || this.position.x < 0) {
+		  this.speed.x = -this.speed.x;
+	      }
+	      // wall on top or bottom
+	      if (this.position.y > this.gameHeight - this.size || this.position.y < 0) {
+		  this.speed.y = -this.speed.y;
+	      }
+	      // check collision with paddle
+	      let bottomOfBall = this.position.y + this.size;
+	      let topOfPaddle = this.game.paddle.position.y;
+	      if (bottomOfBall >= topOfPaddle)
+	      
+	  }
+      }
+      
+      class Game {
+	  constructor(gameWidth, gameHeight) {
+	      this.gameWidth = gameWidth;
+	      this.gameHeight = gameHeight;
+	      
+	  }
+	  
+	  start() {
+	      this.paddle = new Paddle(this);
+	      this.ball = new Ball(this);
+	      new InputHandler(this.paddle);
+	      
+	      this.gameObjects = [
+		  this.ball,
+		  this.paddle,
+	      ];
+
+	  }
+
+	  update(deltaTime) {
+	      this.gameObjects.forEach(object => object.update(deltaTime));
+	  }
+
+	  draw(ctx) {
+	      this.gameObjects.forEach(object => object.draw(ctx));
+
 	  }
       }
 
 
+      let game = new Game(gameWidth, gameHeight);
+      game.start();
 
-
-      
-      let paddle = new Paddle(gameWidth, gameHeight);
-      let ball = new Ball();
-      new InputHandler(paddle);
-      
       let lastTime = 0;
 
       function gameLoop(timestamp) {
 	  let deltaTime = timestamp - lastTime;
 	  lastTime = timestamp;
 	  ctx.clearRect(0, 0, gameWidth, gameHeight);
-	  paddle.update(deltaTime);
-	  paddle.draw(ctx);
-	  ball.draw(ctx);
-	  ball.update(deltaTime);
+	  game.update(deltaTime);
+	  game.draw(ctx);
 
 	  
 	  requestAnimationFrame(gameLoop);
