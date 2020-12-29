@@ -3,251 +3,161 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
     <title>Hello world!</title>
     <style>
 
-
-      canvas {
-	  background: #eee;
-	  border: 1px solid #ccc;
+      #gameScreen {
+	  border: 2px solid #222;
 	  margin: 10px;
       }
 
-      button {
-	  width: 100px;
-	  height: 50px;
-	  margin: 5px;
-	  border: none;
+      img {
+	  display: none;
       }
+      
     </style>
 
 
   </head>
   <body>
-    <div class="container">
-      <h1 class="text-center mt-5">Exercises JS</h1>
-      <hr>
-    </div>
+    <!-- <div class="container"> -->
+    <!--   <h1 class="text-center mt-5">Exercises JS</h1> -->
+    <!-- </div> -->
 
     <div id="root" class="container">
 
       <!-- <form> -->
-	<!-- <input type="url" name="website" placeholder="http://johndoe.com" required pattern="(http|https)://.+" /> -->
-	<!-- </form> -->
+      <!-- 	<input type="url" name="website" placeholder="http://johndoe.com" required pattern="(http|https)://.+" /> -->
+      <!-- 	</form> -->
       
     </div>
-
-    <script src="./exercises.js"></script>
-
+    <img id="img-ball" src="https://www.flaticon.com/svg/static/icons/svg/1165/1165187.svg">
+    <canvas id="gameScreen" width="800" height="600"></canvas>
     <script>
-
-      let myScore,
-	  myObstacle,
-	  myGamePiece,
-	  myBackground,
-	  mySound,
-	  myMusic;
-
-      const myObstacles = [];
       
+      const canvas = document.querySelector("#gameScreen");
+      const ctx = canvas.getContext("2d");
 
-      function startGame() {
-	  myGamePiece = new component(70, 70, "https://www.flaticon.com/svg/static/icons/svg/1042/1042640.svg", 10, 120, "image");
-	  // mySound = new sound("https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-kedr-sfx/kedr_sfx_ui_computer_complex_lowend_11.mp3?_=1");
-	  // myMusic = new sound("https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-14566/zapsplat_nature_thunderstorm_approach_insects_night_blustery_winds_at_end_17244.mp3?_=7");
-	  // myMusic.play();
-	  // myBackground = new component(656, 270, "https://picsum.photos/400/200", 0, 0, "background");
-	  myObstacle = new component(10, 200, "green", 300, 120);
-	  myScore = new component("30px", "Consolas", "black", 280, 40, "text");
-	  myGameArea.start();
-      }
+      const gameWidth = 800;
+      const gameHeight = 600;
 
-      const myGameArea = {
-	  canvas: document.createElement("canvas"),
-	  start: function() {
-	      this.canvas.width = 800;
-	      this.canvas.height = 400;
-	      this.context = this.canvas.getContext("2d");
-	      document.body.insertBefore(this.canvas, document.body.childNodes[2]);
-	      this.frameNo = 0;
-	      this.interval = setInterval(updateGameArea, 20);
-	      window.addEventListener("keydown", function (e) {
-		  myGameArea.key = e.keyCode;
-	      })
-	      window.addEventListener("keyup", function (e) {
-		  myGameArea.key = false;
-	      })
-	  },
-	  clear: function() {
-	      this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-	  },
-	  stop: function() {
-	      clearInterval(this.interval);
-	  }
-      }
-
-      function everyInterval(n) {
-	  if ((myGameArea.frameNo / n) %  1 == 0) {
-	      return true;
-	  }
-	  return false;
-      }
-
-      function component(width, height, color, x, y, type) {
-	  this.type = type;
-	  if (type == "image" || type == "background") {
-	      this.image = new Image();
-	      this.image.src = color;
-	  }
-	  this.width = width;
-	  this.height = height;
-	  this.speedX = 0;
-	  this.speedY = 0;
-	  this.x = x;
-	  this.y = y;
-	  this.gravity = 0.05;
-	  this.gravitySpeed = 0;
-	  this.update = function() {
-	      ctx = myGameArea.context;
-	      if (this.type == "text") {
-		  ctx.font = this.width + " " + this.height;
-		  ctx.fillStyle = color;
-		  ctx.fillText(this.text, this.x, this.y);
+      class Paddle {
+	  constructor(gameWidth, gameHeight) {
+	      this.gameWidth = gameWidth;
+	      this.width = 150;
+	      this.height = 20;
+	      this.maxSpeed = 7;
+	      this.speed = 0;
+	      this.position = {
+		  x: gameWidth / 2 - this.width / 2,
+		  y: gameHeight - this.height - 10,
 	      }
-	      if (type == "image" || type == "background") {
-		  ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
-		  if (type == "background") {
-		      ctx.drawImage(this.image, this.x + this.width, this.y, this.width, this.height);
+	  }
+
+	  draw(ctx) {
+	      ctx.fillStyle = "#333"
+	      ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
+	  }
+	  
+	  update(deltaTime) {
+	      this.position.x += this.speed;
+	      if (this.position.x < 0) this.position.x = 0;
+	      if (this.position.x + this.width > this.gameWidth) this.position.x = this.gameWidth - this.width;
+	  }
+
+	  moveLeft() {
+	      this.speed = -this.maxSpeed;
+	  }
+
+	  moveRight() {
+	      this.speed = this.maxSpeed;
+	  }
+	  
+	  stop() {
+	      this.speed = 0;
+	  }
+      }
+
+      class InputHandler {
+	  constructor(paddle) {
+	      document.addEventListener("keydown", (event) => {
+		  switch (event.keyCode) {
+		  case 37:
+		      paddle.moveLeft();
+		      break;
+		  case 39:
+		      paddle.moveRight();
+		      break;
 		  }
-	      } else {
-		  ctx.fillStyle = color;
-		  ctx.fillRect(this.x, this.y, this.width, this.height);
-	      }
-	  }
-	  this.newPos = function() {
-	      this.gravitySpeed += this.gravity;
-	      this.x += this.speedX;
-	      this.y += this.speedY + this.gravitySpeed;
-	      this.hitBottom();
-	      if (this.type == "background") {
-		  if (this.x == - (this.width)) {
-		      this.x = 0;
-		  }
-	      }
-	  }
-	  this.hitBottom = function() {
-	      let rockbottom = myGameArea.canvas.height - this.height;
-	      if (this.y > rockbottom) {
-		  this.y = rockbottom
-	      }
-	  }
-	  this.crashWith = function(otherObj) {
-	      let myLeft = this.x,
-		  myRight = this.x + (this.width),
-		  myTop = this.y,
-		  myBottom = this.y + (this.height),
-		  otherLeft = otherObj.x,
-		  otherRight = otherObj.x + (otherObj.width),
-		  otherTop = otherObj.y,
-		  otherBottom = otherObj.y + (otherObj.height),
-		  crash = true;
-	      if ((myBottom < otherTop) ||
-		  (myTop > otherBottom) ||
-		  (myRight < otherLeft) ||
-		  (myLeft > otherRight)) {
-		  crash = false;
-	      }
-	      return crash;
-	  }
-      }
+	      });
 
-      function updateGameArea() {
-	  let x, height, gap, minHeight, maxHeight, minGap, maxGap;
-	  for (i = 0; i < myObstacles.length; i += 1) {
-	      if (myGamePiece.crashWith(myObstacles[i])) {
-		  // mySound.play();
-		  // myMusic.stop();
-		  myGameArea.stop();
-		  return;
-	      }
-	  } 
-	  myGameArea.clear();
-	  // myBackground.speedX = -1;
-	  // myBackground.newPos();
-	  // myBackground.update();
-	  myGameArea.frameNo += 1;
-	  if (myGameArea.frameNo == 1 || everyInterval(150)) {
-	      x = myGameArea.canvas.width;
-	      minHeight = 20;
-	      maxHeight = 200;
-	      height = Math.floor(Math.random() * (maxHeight - minHeight + 1) + minHeight);
-	      minGap = 50;
-	      maxGap = 200;
-	      gap = Math.floor(Math.random() * (maxGap - minGap + 1) + minGap);
-	      myObstacles.push(new component(10, height, "green", x, 0));
-	      myObstacles.push(new component(10, x - height - gap, "green", x, height + gap));
+	      document.addEventListener("keyup", (event) => {
+		  switch (event.keyCode) {
+		  case 37:
+		      if (paddle.speed < 0) paddle.stop();
+		      break;
+		  case 39:
+		      if (paddle.speed > 0) paddle.stop();
+		      break;
+		  }
+	      });
 	  }
-	  for (i = 0; i < myObstacles.length; i += 1) {
-	      myObstacles[i].speedX = -1;
-	      myObstacles[i].newPos();
-	      myObstacles[i].update();
-	  }
-	  myScore.text = "SCORE: " + myGameArea.frameNo;
-	  myScore.update();
-	  myGamePiece.speedX = 0;
-	  myGamePiece.speedY = 0;
-	  if (myGameArea.key && myGameArea.key == 37) {myGamePiece.speedX = -1; }
-	  if (myGameArea.key && myGameArea.key == 39) {myGamePiece.speedX = 1; }
-	  if (myGameArea.key && myGameArea.key == 38) {myGamePiece.speedY = -1; }
-	  if (myGameArea.key && myGameArea.key == 40) {myGamePiece.speedY = 1; }
-	  myGamePiece.newPos();
-	  myGamePiece.update();
+
 	  
       }
 
-      function moveUp() {
-	  myGamePiece.speedY -= 1;
-      }
-
-      function moveDown() {
-	  myGamePiece.speedY += 1;
-      }
-
-      function moveLeft() {
-	  myGamePiece.speedX -= 1;
-      }
-
-      function moveRight() {
-	  myGamePiece.speedX += 1;
-      }
-
-      function stopMove() {
-	  myGamePiece.speedX = 0;
-	  myGamePiece.speedY = 0;
-      }
-
-      function sound(src) {
-	  this.sound = document.createElement("audio");
-	  this.sound.src = src;
-	  this.sound.setAttribute("preload", "auto");
-	  this.sound.setAttribute("controls", "none");
-	  this.sound.style.display = "none";
-	  document.body.appendChild(this.sound);
-	  this.play = function() {
-	      this.sound.play();
+      class Ball {
+	  constructor(gameWidth, gameHeight) {
+	      this.image = document.querySelector("#img-ball");
+	      this.position = {
+		  x: 10,
+		  y: 10,
+	      };
+	      this.speed = {
+		  x: 2,
+		  y: 2,
+	      };
+	      this.size = 30;
 	  }
-	  this.stop = function() {
-	      this.sound.pause();
+
+	  draw(ctx) {
+	      ctx.drawImage(this.image, this.position.x, this.position.y, this.size, this.size);
+	  }
+
+	  update(deltaTime) {
+	      this.position.x += this.speed.x;
+	      this.position.y += this.speed.y;
 	  }
       }
 
-      function accelerate(n) {
-	  myGamePiece.gravity = n;
-      }
+
+
+
       
-      window.addEventListener("load", startGame);
+      let paddle = new Paddle(gameWidth, gameHeight);
+      let ball = new Ball();
+      new InputHandler(paddle);
+      
+      let lastTime = 0;
+
+      function gameLoop(timestamp) {
+	  let deltaTime = timestamp - lastTime;
+	  lastTime = timestamp;
+	  ctx.clearRect(0, 0, gameWidth, gameHeight);
+	  paddle.update(deltaTime);
+	  paddle.draw(ctx);
+	  ball.draw(ctx);
+	  ball.update(deltaTime);
+
+	  
+	  requestAnimationFrame(gameLoop);
+      }
+
+      requestAnimationFrame(gameLoop);
+
 
 
     </script>
