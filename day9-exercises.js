@@ -35,3 +35,15 @@
 //   numbers[0],
 // );
 // console.log(max);
+
+// const isEven = (number) => (number % 2 === 0);
+// const check = (number) => {
+//     const result = isEven(number) ? "yes" : "no";;
+//     return result;
+// };
+// console.log(check(32));
+
+const numbers = [1, 2, 3, 4, 5]
+const result = numbers.map((num) => console.log(num * num))
+console.log(result)
+
