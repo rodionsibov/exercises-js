@@ -117,3 +117,30 @@ const products = [
 //     throw new Error("The function works incorrectly")
 // }
 
+// console.log(products
+// 	    .map(product => product.price)
+// 	    .filter(product => typeof product === "number" )
+// 	    .reduce((acc, cur) => acc + cur, 0)
+// 	   );
+// console.log(products)
+
+// const categorizeCountries = (arr, pattern) => {
+//     return arr.filter(el => el.includes(pattern))
+// }
+// console.log(categorizeCountries(countries, "way"))
+
+// const getFirstNCountries = (arr, n) => {
+//     return arr.slice(0, n)
+// }
+// const getFirstNCountries = (arr, n) => {
+//     return arr.filter(el => arr.indexOf(el) < n)
+// }
+// const getLastNCountries = (arr, n) => {
+//     return arr.slice(-n)
+// }
+// const getLastNCountries = (arr, n) => {
+//     return arr.filter(el => arr.indexOf(el) > n)
+// }
+// console.log(countries)
+// console.log(getLastNCountries(countries, 2))
+
