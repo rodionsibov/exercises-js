@@ -2165,15 +2165,15 @@ const countries = [
 // const result = countries.slice(100, 105).map(el => el.name)
 // console.log(result)
 
-const mostSpokenLanguages = (arr, n) => {
-    return arr
-	.map(li => {
-	    return ({country: li.name, population: li.population})
-	})
-	.sort((a,b) => b.population-a.population)
-	.slice(0, n)
-}
-console.log(mostSpokenLanguages(countries, 10))
+// const mostPopulatedCountries = (arr, n) => {
+//     return arr
+// 	.map(li => {
+// 	    return ({country: li.name, population: li.population})
+// 	})
+// 	.sort((a,b) => b.population-a.population)
+// 	.slice(0, n)
+// }
+// console.log(mostSpokenLanguages(countries, 10))
 
 // const dates = [
 //     '2019/06/01',
@@ -2183,3 +2183,26 @@ console.log(mostSpokenLanguages(countries, 10))
 // ].map(v => new Date(v))
 // console.log(dates.reduce((max, d) => d > max ? d : max, dates[0]))
 
+const ages = [31, 26, 34, 37, 27, 26, 32, 32, 26, 27, 27, 24, 32, 33, 27, 25, 26, 38, 37, 31, 34, 24, 33, 29, 26];
+
+const statistics = {
+    count: function() {
+	return ages.length
+    },
+    sum: function() {
+	return ages.reduce((a,b) => a+b)
+    },
+    min: function() {
+	return ages.reduce((a,b) => a < b ? a : b)
+    },
+    max: function() {
+	return ages.reduce((a,b) => a > b ? a : b)
+    },
+    describe: function() {
+	return `Count: ${this.count()}
+Sum: ${this.sum()}
+`;
+    }
+}
+console.log(ages)
+console.log(statistics.describe())
