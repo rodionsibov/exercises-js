@@ -2162,6 +2162,7 @@ const countries = [
     }
 ]
 
+
 // const result = countries.slice(100, 105).map(el => el.name)
 // console.log(result)
 
@@ -2183,26 +2184,28 @@ const countries = [
 // ].map(v => new Date(v))
 // console.log(dates.reduce((max, d) => d > max ? d : max, dates[0]))
 
-const ages = [31, 26, 34, 37, 27, 26, 32, 32, 26, 27, 27, 24, 32, 33, 27, 25, 26, 38, 37, 31, 34, 24, 33, 29, 26];
+// const ages = [31, 26, 34, 37, 27, 26, 32, 32, 26, 27, 27, 24, 32, 33, 27, 25, 26, 38, 37, 31, 34, 24, 33, 29, 26];
 
-const statistics = {
-    count: function() {
-	return ages.length
-    },
-    sum: function() {
-	return ages.reduce((a,b) => a+b)
-    },
-    min: function() {
-	return ages.reduce((a,b) => a < b ? a : b)
-    },
-    max: function() {
-	return ages.reduce((a,b) => a > b ? a : b)
-    },
-    describe: function() {
-	return `Count: ${this.count()}
-Sum: ${this.sum()}
-`;
-    }
-}
-console.log(ages)
-console.log(statistics.describe())
+// const statistics = {
+//     count: function() {
+// 	return ages.length
+//     },
+//     sum: function() {
+// 	return ages.reduce((a,b) => a+b)
+//     },
+//     min: function() {
+// 	return ages.reduce((a,b) => a < b ? a : b)
+//     },
+//     max: function() {
+// 	return ages.reduce((a,b) => a > b ? a : b)
+//     },
+//     describe: function() {
+// 	return `Count: ${this.count()}
+// Sum: ${this.sum()}
+// `;
+//     }
+// }
+// console.log(ages)
+// console.log(statistics.describe())
+
+// export { countries }
