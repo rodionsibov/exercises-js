@@ -265,3 +265,5 @@ let username = "Zsdcvb@38";
 let userCheck = /\b[A-aZ-z]{3,5}@[0-9]{2}$/;
 const result = userCheck.test(username);
 console.log(result);
+
+
