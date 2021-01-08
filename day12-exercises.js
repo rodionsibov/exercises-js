@@ -38,7 +38,9 @@
 // console.log(result)
 
 const points = ['-1', '2', '-4', '-3', '-1', '0', '4', '8']
-const matches = points.join().match(/-\d+/g);
+//const matches = points.join().match(/-\d+/g);
 const sortedPoints = points.map(e=>+e).sort((a,b) => a-b);
-const distance = 3
-console.log(matches)
+const [firstPoint,,,,,,,lastPoint] = sortedPoints
+//const distance = Math.abs(sortedPoints[0]) + sortedPoints[sortedPoints.length-1]
+const distance = Math.abs(firstPoint) + lastPoint
+console.log(distance);
