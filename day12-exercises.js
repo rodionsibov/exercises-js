@@ -37,10 +37,52 @@
 // const result = matches.map(e=>+e).reduce((a,b) => a+b);
 // console.log(result)
 
-const points = ['-1', '2', '-4', '-3', '-1', '0', '4', '8']
-//const matches = points.join().match(/-\d+/g);
-const sortedPoints = points.map(e=>+e).sort((a,b) => a-b);
-const [firstPoint,,,,,,,lastPoint] = sortedPoints
-//const distance = Math.abs(sortedPoints[0]) + sortedPoints[sortedPoints.length-1]
-const distance = Math.abs(firstPoint) + lastPoint
-console.log(distance);
+// const points = ['-1', '2', '-4', '-3', '-1', '0', '4', '8']
+// //const matches = points.join().match(/-\d+/g);
+// const sortedPoints = points.map(e=>+e).sort((a,b) => a-b);
+// const [firstPoint,,,,,,,lastPoint] = sortedPoints
+// //const distance = Math.abs(sortedPoints[0]) + sortedPoints[sortedPoints.length-1]
+// const distance = Math.abs(firstPoint) + lastPoint
+// console.log(distance);
+
+// const isValidVariable = (str) => {
+//     return /^[^1]+_/.test(str);
+// }
+// console.log(isValidVariable("first_name"))
+// console.log(isValidVariable("first-name"))
+// console.log(isValidVariable("1first_name"))
+// console.log(isValidVariable("firstname"))
+
+// const words = [
+//     {word:'love', count:6},
+//     {word:'you', count:5},
+//     {word:'can', count:3},
+//     {word:'what', count:2},
+//     {word:'teaching', count:2},
+//     {word:'not', count:2},
+//     {word:'else', count:2},
+//     {word:'do', count:2},
+//     {word:'I', count:2},
+//     {word:'which', count:1},
+//     {word:'to', count:1},
+//     {word:'the', count:1},
+//     {word:'something', count:1},
+//     {word:'if', count:1},
+//     {word:'give', count:1},
+//     {word:'develop',count:1},
+//     {word:'capabilities',count:1},
+//     {word:'application', count:1},
+//     {word:'an',count:1},
+//     {word:'all',count:1},
+//     {word:'Python',count:1},
+//     {word:'If',count:1}
+// ]
+// const tenMostFrequentWords = (words) => {
+//     return words.slice(0, 10);
+// }
+// console.log(tenMostFrequentWords(words));
+
+
+sentence = `%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?`
+const result = sentence.replace(/[%$&;#@]/g, "");
+console.log(result)
