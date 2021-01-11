@@ -261,9 +261,37 @@
 // const result = "<h1>Winter is coming. 2020</h1>".match(/\w/g).join("");
 // console.log(result)
 
-let username = "Zsdcvb@38";
-let userCheck = /\b[A-aZ-z]{3,5}@[0-9]{2}$/;
-const result = userCheck.test(username);
-console.log(result);
+// let username = "Zsdcvb@38";
+// let userCheck = /\b[A-aZ-z]{3,5}@[0-9]{2}$/;
+// const result = userCheck.test(username);
+// console.log(result);
+
+// if (convertToF(-30) !== -22) {
+//     throw new Error();
+// }
+
+// function convertToF(celsius) {
+//     return celsius * 9 / 5 + 32;;
+// }
+// console.log(convertToF(0));
 
 
+// function reverseString(str) {
+    //    return str.split("").reverse().join("")
+    // let result = [];
+    // for (let i = 0; i < str.length; i++) {
+    // 	result.unshift(str[i])
+    // }
+    // return result.join("");
+// }
+// console.log(reverseString("hello"))
+
+
+
+
+
+
+
+if (reverseString("hello") !== "olleh") {
+    throw new Error("boom")
+}
