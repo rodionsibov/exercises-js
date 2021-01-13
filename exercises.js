@@ -354,8 +354,25 @@
 // }
 // console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8))
 
+function findElement(arr, func) {
+    // let result = []
+    // arr.forEach(num => {
+    // 	if (func(num)) {
+    // 	    result.push(num)
+    // 	} else {
+    // 	    return undefined;
+    // 	}
+    // })
+    
+    // return result.shift()
+    return arr.filter(func)[0];
+} 
+console.log(findElement([1,3,5,8,9,10], num => num % 2 === 0));
 
 
-if (truncateString("A-tisket a-tasket A green and yellow basket", 8) !== "A-tisket...") {
+
+
+
+if (findElement([1,3,5,8,9,10], num => num % 2 === 0) !== 8) {
     throw new Error("boom")
 }
