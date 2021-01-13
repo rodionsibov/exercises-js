@@ -286,12 +286,76 @@
 // }
 // console.log(reverseString("hello"))
 
+// function factorialize(num) {
+//     if (num === 1) {
+// 	return 1;
+//     }
+//     return num * factorialize(num - 1);
+    // let result = 1;
+    // for (let i = 1; i <= num; i++) {
+    // 	result *= i;
+    // }
+    // return result;
+    
+// }
+// console.log(factorialize(5))
+
+
+// function findLongestWordLength(str) {
+//     // return parseInt(str.split(" ").map(el=>el.length).sort().slice(-1).join())
+
+//     let max = -Infinity;
+//     str.split(" ").forEach(el => {
+// 	if (el.length > max) {
+// 	    max = el.length;
+// 	}
+//     })
+//     return max;
+// }
+// console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"))
+
+//function largestOfFour(arr) {
+    // const result = [];
+    // let max = -Infinity;
+    // arr.forEach(el => {
+    // 	max = 0;
+    // 	el.forEach(i => {
+    // 	    if (i > max) {
+    // 		max = i;
+    // 	    }
+    // 	})
+    // 	result.push(max)
+    // })
+    // return result;
+//     return arr.map(el => el.reduce((a, b) => a > b ? a : b));
+// }
+// console.log(largestOfFour([[13,27,18,26],[4,5,1,3],[32,35,37,39],[1000,1001,857,1]]))
+
+
+// function confirmEnding(str, target) {
+//     //    return str.endsWith(target)
+//     return str.slice(-target.length) === target
+// }
+// console.log(confirmEnding("Congratulation", "on"))
+
+// function repeatStringNumTimes(str, num) {
+//     //    return str.repeat(3)
+//     let result = "";
+//     for (let i = 0; i < num; i++) {
+// 	result += str;
+//     }
+//     return result;
+// }
+// console.log(repeatStringNumTimes("abc", 3))
+
+// function truncateString(str, num) {
+//     //    return str.slice(0, num).concat("...")
+//     //return `${str.slice(0, num)}...`;
+// }
+// console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8))
 
 
 
-
-
-
-if (reverseString("hello") !== "olleh") {
+if (truncateString("A-tisket a-tasket A green and yellow basket", 8) !== "A-tisket...") {
     throw new Error("boom")
 }
