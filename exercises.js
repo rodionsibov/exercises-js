@@ -354,25 +354,33 @@
 // }
 // console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8))
 
-function findElement(arr, func) {
-    // let result = []
-    // arr.forEach(num => {
-    // 	if (func(num)) {
-    // 	    result.push(num)
-    // 	} else {
-    // 	    return undefined;
-    // 	}
-    // })
+// function findElement(arr, func) {
+//     // let result = []
+//     // arr.forEach(num => {
+//     // 	if (func(num)) {
+//     // 	    result.push(num)
+//     // 	} else {
+//     // 	    return undefined;
+//     // 	}
+//     // })
     
-    // return result.shift()
-    return arr.filter(func)[0];
-} 
-console.log(findElement([1,3,5,8,9,10], num => num % 2 === 0));
+//     // return result.shift()
+//     return arr.filter(func)[0];
+// } 
+// console.log(findElement([1,3,5,8,9,10], num => num % 2 === 0));
 
 
+// function booWho(bool = null) {
+//     return typeof bool === "boolean" ? `${bool} is boolean` : `${bool} is not boolean`
+// }
+// console.log(booWho(33))
+
+function titleCase(str) {
+    return str.split(" ").map(el => el[0].toUpperCase() + el.slice(1).toLowerCase()).join(" ")
+}
+console.log(titleCase("I,m a little tea POT"))
 
 
-
-if (findElement([1,3,5,8,9,10], num => num % 2 === 0) !== 8) {
+if (titleCase("I,m a little tea poT") !== "I,m A Little Tea Pot") {
     throw new Error("boom")
 }
