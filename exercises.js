@@ -402,8 +402,6 @@
 
 
 
-
-
 if (getIndexToIns([10, 20, 30, 40, 50], 35) !== 3) {
     throw new Error("boom")
 }
