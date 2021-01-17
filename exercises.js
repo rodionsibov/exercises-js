@@ -375,12 +375,35 @@
 // }
 // console.log(booWho(33))
 
-function titleCase(str) {
-    return str.split(" ").map(el => el[0].toUpperCase() + el.slice(1).toLowerCase()).join(" ")
-}
-console.log(titleCase("I,m a little tea POT"))
+// function titleCase(str) {
+//     return str.split(" ").map(el => el[0].toUpperCase() + el.slice(1).toLowerCase()).join(" ")
+// }
+// console.log(titleCase("I,m a little tea POT"))
+
+// function frankenSplice(arr1, arr2, index) {
+//     arr2.splice(index, 0, arr1);
+//     return arr2.join();
+// }
+// console.log(frankenSplice([10,2], ["a","b","c"], 1))
+
+// function bouncer(arr) {
+//     return arr.filter(el => el).join()
+// }
+// console.log(bouncer([null, NaN, 1, 2, undefined]))
+
+// function getIndexToIns(arr, n) {
+//     arr.sort((a,b) => a - b);
+//     let index = arr.findIndex(el => el >= n);
+
+//     return index === -1 ? arr.length : index;
+// }
+// //console.log(getIndexToIns([10, 20, 50, 40, 30], 35))
+// console.log(getIndexToIns([3, 10, 5], 3))
 
 
-if (titleCase("I,m a little tea poT") !== "I,m A Little Tea Pot") {
+
+
+
+if (getIndexToIns([10, 20, 30, 40, 50], 35) !== 3) {
     throw new Error("boom")
 }
