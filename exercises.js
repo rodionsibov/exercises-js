@@ -401,7 +401,26 @@
 // console.log(getIndexToIns([3, 10, 5], 3))
 
 
+// function fizzBuzz() {
+//     for (let i = 1; i < 16; i++) {
+// 	if (i % 3 === 0) {
+// 	    console.log("Fizz") 
+// 	}
+// 	if (i % 5 === 0) {
+// 	    console.log("Buzz") 
+// 	}
+// 	if (i % 15 === 0) {
+// 	    console.log("FizzBuzz") 
+// 	}
+// 	console.log(i)
+//     }
 
-if (getIndexToIns([10, 20, 30, 40, 50], 35) !== 3) {
-    throw new Error("boom")
-}
+// }
+// fizzBuzz()
+
+
+
+
+// if (getIndexToIns([10, 20, 30, 40, 50], 35) !== 3) {
+//     throw new Error("boom")
+// }
