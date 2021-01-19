@@ -2365,38 +2365,214 @@ const challenges2020 = {
 }
 
 
+
+document.head.innerHTML += `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />`
+
+document.head.innerHTML += `<style>
+
+.container {
+text-align: center;
+}
+
+.container p, 
+.container h1 {
+margin: 0;
+}
+
+.container p {
+opacity: 0.4;
+text-decoration: underline;
+}
+
+body {
+padding: 20px;
+font-family: sans;
+}
+
+.challenges {
+margin-bottom: 20px;
+}
+
+.challenges ul {
+display: flex;
+list-style: none;
+padding: 10px;
+
+margin: 5px 0;
+background: tomato;
+color: white;
+}
+
+.name,
+details {
+width: 300px;
+}
+
+summary {
+cursor: pointer;
+}
+
+.description {
+line-height: 25px;
+}
+
+.info {
+line-height: 30px;
+font-size: 14px;
+padding: 20px;
+display: flex;
+margin: 40px 0;
+justify-content: space-around;
+}
+
+.keywords {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.keywords div {
+padding: 5px;
+margin: 5px;
+border-radius: 5px;
+border: 1px solid #ddd;
+font-weight: bold;
+color: white;
+cursor: pointer;
+}
+
+.keywords div:hover {
+opacity: 0.5;
+}
+
+.year {
+font-size: 2em;
+color: ${Math.random().toString(16).slice(2, 8).padStart(7, "#")};
+}
+
+.date {
+padding: 10px 20px;;
+display: inline-block;
+}
+
+.author {
+font-size: 2em;
+text-align: center;
+margin: 10px;
+}
+
+.social-links {
+text-align: center;
+}
+
+.social-links a {
+color: black;
+font-size: 2em;
+margin: 5px;
+}
+
+.social-links a:hover {
+opacity: 0.5;
+}
+
+</style>`
+
 document.querySelector(".container").innerHTML = `
-<h1>${challenges2020.challengeTitle} in <span>${challenges2020.challengeYear}</span></h1>
+<h1>${challenges2020.challengeTitle} in <span class="year">${challenges2020.challengeYear}</span></h1>
 <p>${challenges2020.challengeSubtitle}</p>
 <h2 class="date"></h2>
 `
 
+
 setInterval(() => {
     document.querySelector(".date").innerHTML = `${new Date().toLocaleString()}`
 }, 1000)
+
+setInterval(() => {
+    document.querySelector(".date").style.background = `${Math.random().toString(16).slice(2, 8).padStart(7, "#")}20`;
+    
+}, 3000)
 
 console.log(challenges2020)
 
 const divEl = document.createElement("div");
 
 divEl.innerHTML = `
-<div>
-<details>
-<summary></summary>
-<p>
+<div class="challenges">
+</div>
+<div class="author">
+${challenges2020.author.firstName} ${challenges2020.author.lastName}
+</div>
+<div class="social-links">
+</div>
+<p class="description">
+${challenges2020.author.bio}
 </p>
-</details>
+<div class="info">
+<div class="titles">
+</div>
+<div class="skills">
+</div>
+<div class="qualifications">
+</div>
+</div>
+<div class="keywords">
 </div>
 `
 
+
+
+document.querySelector("#root").removeAttribute("class")
+
 document.querySelector("#root").appendChild(divEl);
 
-
-document.head.innerHTML = `<style>
-
-
-body {
-padding: 20px;
+for (const el of challenges2020.challenges) {
+    document.querySelector(".challenges").innerHTML += `
+<ul>
+<li class="name">${el.name}</li>
+<li class="details"><details>
+<summary>${el.topics[0]}</summary>
+<p>
+${el.topics.join("<br>")}
+</p>
+</details></li>
+<li class="status">${el.status}</li>
+`
+    
+    
 }
 
-</style>`
+
+document.querySelectorAll(".status").forEach(el => {
+    if (el.textContent === "Done") {
+	el.parentNode.style.background = "green"
+    }
+    if (el.textContent === "Ongoing") {
+	el.parentNode.style.background = "orange"
+    }
+})
+
+
+for (const el of challenges2020.author.socialLinks) {
+    document.querySelector(".social-links").innerHTML += `<a href="${el.url}">${el.fontawesomeIcon}</a>`
+}
+for (const el of challenges2020.author.titles) {
+    document.querySelector(".titles").innerHTML += `<div>${el[0]} ${el[1]}</div>`
+}
+for (const el of challenges2020.author.skills) {
+    document.querySelector(".skills").innerHTML += `<div><i style="color: lime"class="fas fa-check-square"></i> ${el}</div>`
+}
+for (const el of challenges2020.author.qualifications) {
+    document.querySelector(".qualifications").innerHTML += `<div>${el}</div>`
+}
+for (const el of challenges2020.keywords) {
+    document.querySelector(".keywords").innerHTML += `<div>${el}</div>`
+}
+
+document.querySelectorAll(".keywords div").forEach(el => {
+    el.style.background = `hsl(${Math.round(Math.random() * 360)}, 50%, 50%)`
+
+})
+
+
+
