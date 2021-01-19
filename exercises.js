@@ -418,6 +418,20 @@
 // }
 // fizzBuzz()
 
+// const farenheit = [23, 140, 212, 41]
+// function getCelcius() {
+//     return farenheit.map(num => (num - 32) * 5 / 9)
+// }
+// console.log(getCelcius())
+
+// const arr = [11, NaN, [], 'Angels']
+// function checkForFalsey() {
+//     return arr.some(el => !el)
+// }
+
+// console.log(checkForFalsey())
+
+
 
 
 
