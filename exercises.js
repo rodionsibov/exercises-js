@@ -431,8 +431,11 @@
 
 // console.log(checkForFalsey())
 
-
-
+const arr = ['Rabbit', 'Football', 'Cracking']
+function getTotal() {
+    return arr.reduce((a,b) => a + b.length, 0)
+}
+console.log(getTotal())
 
 
 // if (getIndexToIns([10, 20, 30, 40, 50], 35) !== 3) {
