@@ -443,11 +443,33 @@
 // }
 // console.log(checkSquares())
 
-const arr = ['Florida', 'dog', 'phone']
-function getWords(arr, num) {
-    return arr.filter(el => el.length >= num)
-}
-console.log(getWords(arr, 3))
+// const arr = ['Florida', 'dog', 'phone']
+// function getWords(arr, num) {
+//     return arr.filter(el => el.length >= num)
+// }
+// console.log(getWords(arr, 3))
+
+// const arr = ['23cm', '5.6cm', '1000cm']
+// function getValues() {
+//     // return arr.map(el => Number(el.slice(0, -2)))
+//     return arr.map(el=> parseFloat(el))
+// }
+// console.log(getValues())
+
+// const string = 'In West Philadelphia, born and raised'
+// function getVowelCount() {
+// //    return string.split('').filter(el => el.match(/[aeoiyu]/i)).length 
+//     return string.split('').filter(el => ['a', 'e', 'o', 'i', 'y', 'u', 'I'].includes(el)).length
+// }
+// console.log(getVowelCount())
+
+// function capitalize(str) {
+//     return str.split(' ').map(el => el[0].toUpperCase() + el.slice(1)).join(' ')
+// }
+// console.log(capitalize('the queens gambit'))
+
+
+
 
 // if (getIndexToIns([10, 20, 30, 40, 50], 35) !== 3) {
 //     throw new Error("boom")
