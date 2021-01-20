@@ -420,7 +420,7 @@
 
 // const farenheit = [23, 140, 212, 41]
 // function getCelcius() {
-//     return farenheit.map(num => (num - 32) * 5 / 9)
+//     return farenheit.map(num => ((num - 32) * 5) / 9)
 // }
 // console.log(getCelcius())
 
@@ -431,12 +431,23 @@
 
 // console.log(checkForFalsey())
 
-const arr = ['Rabbit', 'Football', 'Cracking']
-function getTotal() {
-    return arr.reduce((a,b) => a + b.length, 0)
-}
-console.log(getTotal())
+// const arr = ['Rabbit', 'Football', 'Cracking']
+// function getTotal() {
+//     return arr.reduce((a,b) => a + b.length, 0)
+// }
+// console.log(getTotal())
 
+// const arr = [9, 16, 81]
+// function checkSquares() {
+//     return arr.every(el => Math.sqrt(el) % 1 === 0)
+// }
+// console.log(checkSquares())
+
+const arr = ['Florida', 'dog', 'phone']
+function getWords(arr, num) {
+    return arr.filter(el => el.length >= num)
+}
+console.log(getWords(arr, 3))
 
 // if (getIndexToIns([10, 20, 30, 40, 50], 35) !== 3) {
 //     throw new Error("boom")
