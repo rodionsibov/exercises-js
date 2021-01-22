@@ -9,24 +9,100 @@
     <title>Hello world!</title>
     <style>
       
+      .container {
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  margin-top: 100px;
+	  flex-direction: column;
+      }
+
+      h1 {
+	  font-size: 3em;
+      }
+
+      h2 {
+	  background: #aaa;
+	  padding: 10px 20px;
+	  border-radius: 5px;
+	  color: white;
+	  font-family: sans-serif;
+      }
+      
+      h1,
+      h2 {
+	  margin: 0;
+	  margin-bottom: 5px;
+      }
+
+      p {
+	  margin-bottom: 20px;
+      }
+      
+      .message {
+	  display: none;
+      }
+      
+
+      input,
+      button {
+	  margin-bottom: 10px;
+	  font-size: 1em;
+	  padding: 5px;
+      }
+      
     </style>
-
-
   </head>
   <body>
-    <div class="container">
-      <h1 class="text-center mt-5">Exercises JS</h1>
-    </div>
 
-    <div id="root" class="container">
+    <!-- <div class="container"> -->
+    <!--   <h1 class="text-center mt-5">Exercises JS</h1> -->
+    <!-- </div> -->
 
-      <!-- <form> -->
-      <!-- 	<input type="url" name="website" placeholder="http://johndoe.com" required pattern="(http|https)://.+" /> -->
-      <!-- 	</form> -->
+    <!-- <div id="root" class="container"> -->
+
+    <!--   <form> -->
+    <!-- 	<input type="url" name="website" placeholder="http://johndoe.com" required pattern="(http|https)://.+" /> -->
+    <!-- 	</form> -->
       
-    </div>
+    <!-- </div> -->
 
+    <div class="container">
+      
+      <h1>Number Generator</h1>
+      <h2>30DayOfJavaScript:DOM Day 3</h2>
+      <p>Author: AY</p>
+
+      <input type="text" id="inputNumber" placeholder="Generate more numbers...">
+      <div class="message info">Enter number value on the input field to generate numbers</div>
+      <div class="message error">Input value must be a number</div>
+      <button type="button">Generate numbers</button>
+
+      <div id="numbers"></div>
+    </div>
+    
     <script>
+
+      const inputNumber = document.querySelector("#inputNumber");
+      const button = document.querySelector("button");
+      const numbers = document.querySelector("#numbers");
+
+      button.addEventListener("click", () => {
+	  let html = "";
+	  for (let i = 1; i <= inputNumber.value; i++) {
+	      const numbersEl = document.createElement("div");
+
+	      numbersEl.innerHTML = `${i}`;
+	      numbers.appendChild(numbersEl);
+	  }
+	  numbers.innerHTML += html;
+      })
+
+      inputNumber.addEventListener("input", () => {
+	  if (inputNumber.value !== "") {
+	      console.log("go")
+	  }
+      })
       
     </script>
   </body>

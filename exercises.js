@@ -468,28 +468,36 @@
 // }
 // console.log(capitalize('the queens gambit'))
 
-const arr = ['hey', 'Hello']
-function mutation(arr) {
-    // const partOne = arr[0]
-    // const partTwo = arr[1]
-    const [str1, str2] = arr.map(el => el.toLowerCase())
+// const arr = ['hey', 'Hello']
+// function mutation(arr) {
+//     // const partOne = arr[0]
+//     // const partTwo = arr[1]
+//     const [str1, str2] = arr.map(el => el.toLowerCase())
     
-    // for (let i = 0; i < str2.length; i++) {
-    // 	const letter = str2[i]
-    // 	if (str1.indexOf(letter) === -1) {
-    // 	    return false
-    // 	}
-    // }
-    // return true
+//     for (let i = 0; i < str2.length; i++) {
+// 	const letter = str2[i]
+// 	if (str1.indexOf(letter) === -1) {
+// 	    return false
+// 	}
+//     }
+//     return true
 
-    str2.split('').forEach(el => {
-	if (str1.indexOf(el) === -1) {
-	    return false
-	}
-    })
-    return true
+// }
+// console.log(mutation(arr))
+
+
+
+function chunkArrayInGroup(arr, size) {
+    const result = []
+    while (arr.length > 0) {
+	result.push(arr.splice(0, size))
+    }
+    return result
 }
-console.log(mutation(arr))
+console.log(chunkArrayInGroup([0, 1, 2, 3, 4, 5], 3))
+console.log(chunkArrayInGroup([0, 1, 2, 3, 4, 5, 6], 3))
+console.log(chunkArrayInGroup([0, 1, 2, 3, 4, 5], 4))
+
 
 // if (getIndexToIns([10, 20, 30, 40, 50], 35) !== 3) {
 //     throw new Error("boom")
