@@ -487,16 +487,27 @@
 
 
 
-function chunkArrayInGroup(arr, size) {
-    const result = []
-    while (arr.length > 0) {
-	result.push(arr.splice(0, size))
-    }
-    return result
-}
-console.log(chunkArrayInGroup([0, 1, 2, 3, 4, 5], 3))
-console.log(chunkArrayInGroup([0, 1, 2, 3, 4, 5, 6], 3))
-console.log(chunkArrayInGroup([0, 1, 2, 3, 4, 5], 4))
+// function chunkArrayInGroup(arr, size) {
+//     const result = []
+//     while (arr.length > 0) {
+// 	result.push(arr.splice(0, size))
+//     }
+//     return result
+// }
+// console.log(chunkArrayInGroup([0, 1, 2, 3, 4, 5], 3))
+// console.log(chunkArrayInGroup([0, 1, 2, 3, 4, 5, 6], 3))
+// console.log(chunkArrayInGroup([0, 1, 2, 3, 4, 5], 4))
+
+
+// function extractData(root) {
+//     const children = Array.from(root.parentNode.body.children);
+//     return children
+// 	.filter(element => element.tagName === "P")
+// 	.map(element => element.innerHTML.trim());
+// }
+// console.log(extractData(document.documentElement))
+
+
 
 
 // if (getIndexToIns([10, 20, 30, 40, 50], 35) !== 3) {
