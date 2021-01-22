@@ -39,11 +39,20 @@
 	  margin-bottom: 20px;
       }
       
-      .message {
+      .info,
+      .error {
 	  display: none;
       }
       
-
+      .show {
+	  display: block;
+	  margin-bottom: 10px;
+	  font-weight: bold;
+	  color: coral;
+	  font-size: 0.9em;
+	  font-family: sans-serif;
+      }
+      
       input,
       button {
 	  margin-bottom: 10px;
@@ -62,12 +71,13 @@
 
       #numbers div {
 	  margin: 5px;
-	  border: 1px solid black;
 	  width: 100px;
 	  height: 50px;
 	  display: flex;
 	  align-items: center;
 	  justify-content: center;
+	  font-weight: bold;
+	  font-size: 1.5em;
       }
 
     </style>
@@ -93,8 +103,8 @@
       <p>Author: AY</p>
 
       <input type="text" id="inputNumber" placeholder="Generate more numbers...">
-      <div class="message info">Enter number value on the input field to generate numbers</div>
-      <div class="message error">Input value must be a number</div>
+      <div class="info">Enter number value on the input field to generate numbers</div>
+      <div class="error">Input value must be a number</div>
       <button type="button">Generate numbers</button>
 
       <div id="numbers"></div>
@@ -106,21 +116,24 @@
       const button = document.querySelector("button");
       const numbers = document.querySelector("#numbers");
 
+
       button.addEventListener("click", () => {
-	  for (let i = 1; i <= inputNumber.value; i++) {
+      let num = parseInt(inputNumber.value);
+
+	  for (let i = 1; i <= num; i++) {
 	      const numbersEl = document.createElement("div");
 	      numbersEl.innerHTML = i;
 	      numbers.appendChild(numbersEl);
 	      
-	      if (i % 2 === 0) {
-		  numbersEl.style.background = "green";
-	      }
 	      if (i % 1 === 0) {
 		  numbersEl.style.background = "gold";
 	      }
-	      
 	      if (isPrime(i)) {
 	       	  numbersEl.style.background = "red";
+	       	  numbersEl.style.color = "white";	
+	      }
+	      if (i % 2 === 0) {
+		  numbersEl.style.background = "green";
 	       	  numbersEl.style.color = "white";	
 	      }
 
@@ -128,12 +141,31 @@
 
       })
 
-      inputNumber.addEventListener("input", () => {
+      inputNumber.addEventListener("blur", () => {
+
 	  if (inputNumber.value !== "") {
-	      console.log("go")
+	      document.querySelector(".info").classList.remove("show");
+	  } else {
+	      document.querySelector(".info").classList.add("show");	      
 	  }
       })
 
+
+      inputNumber.addEventListener("input", () => {
+	  if (!parseInt(inputNumber.value)) {
+	      document.querySelector(".error").classList.add("show");
+	      if (inputNumber.value === "") {
+		  document.querySelector(".error").classList.remove("show");
+	      }
+	  }
+	  if (inputNumber.value !== "") {
+	      document.querySelector(".info").classList.remove("show");
+	  }
+	  
+      })
+
+
+      
 
       const isPrime = num => {
 	  for(let i = 2; i < num; i++)
