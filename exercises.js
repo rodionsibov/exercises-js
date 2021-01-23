@@ -508,6 +508,27 @@
 // console.log(extractData(document.documentElement))
 
 
+// const isPrime = num => {
+//     for(let i = 2; i < num; i++) {
+// 	if (num % i === 0) {
+// 	    return false
+// 	}
+//     }
+//     return num > 1
+// }
+
+
+
+//const result = [3,5,7,4,25].filter(el => isPrime(el))
+// for (let i = 15; i < 35; i++) {
+//     if (isPrime(i)) {
+// 	console.log(i)
+//     }
+// }
+
+
+
+
 
 
 // if (getIndexToIns([10, 20, 30, 40, 50], 35) !== 3) {

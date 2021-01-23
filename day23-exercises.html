@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hello world!</title>
+    <style>
+      
+      .container {
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  margin-top: 100px;
+	  flex-direction: column;
+      }
+
+      h1 {
+	  font-size: 3em;
+      }
+
+      h2 {
+	  background: #aaa;
+	  padding: 10px 20px;
+	  border-radius: 5px;
+	  color: white;
+	  font-family: sans-serif;
+      }
+      
+      h1,
+      h2 {
+	  margin: 0;
+	  margin-bottom: 5px;
+      }
+
+      p {
+	  margin-bottom: 20px;
+      }
+      
+      .info,
+      .error {
+	  display: none;
+      }
+      
+      .show {
+	  display: block;
+	  margin-bottom: 10px;
+	  font-weight: bold;
+	  color: coral;
+	  font-size: 0.9em;
+	  font-family: sans-serif;
+      }
+      
+      input,
+      button {
+	  margin-bottom: 10px;
+	  font-size: 1em;
+	  padding: 5px;
+      }
+
+      #numbers {
+	  display: flex;
+	  width: 90%;
+	  flex-wrap: wrap;
+	  justify-content: center;
+	  
+	  
+      }
+
+      #numbers div {
+	  margin: 5px;
+	  width: 100px;
+	  height: 50px;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  font-weight: bold;
+	  font-size: 1.5em;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      
+      <h1>Number Generator</h1>
+      <h2>30DayOfJavaScript:DOM Day 3</h2>
+      <p>Author: AY</p>
+
+      <input type="text" id="inputNumber" placeholder="Generate more numbers...">
+      <div class="info">Enter number value on the input field to generate numbers</div>
+      <div class="error">Input value must be a number</div>
+      <button type="button">Generate numbers</button>
+
+      <div id="numbers"></div>
+    </div>
+    
+    <script>
+
+      const inputNumber = document.querySelector("#inputNumber");
+      const button = document.querySelector("button");
+      const numbers = document.querySelector("#numbers");
+
+
+      button.addEventListener("click", () => {
+      let num = parseInt(inputNumber.value);
+
+	  for (let i = 1; i <= num; i++) {
+	      const numbersEl = document.createElement("div");
+	      numbersEl.innerHTML = i;
+	      numbers.appendChild(numbersEl);
+	      
+	      if (i % 1 === 0) {
+		  numbersEl.style.background = "gold";
+	      }
+	      if (isPrime(i)) {
+	       	  numbersEl.style.background = "red";
+	       	  numbersEl.style.color = "white";	
+	      }
+	      if (i % 2 === 0) {
+		  numbersEl.style.background = "green";
+	       	  numbersEl.style.color = "white";	
+	      }
+
+	  }
+
+      })
+
+      inputNumber.addEventListener("blur", () => {
+
+	  if (inputNumber.value !== "") {
+	      document.querySelector(".info").classList.remove("show");
+	  } else {
+	      document.querySelector(".info").classList.add("show");	      
+	  }
+      })
+
+
+      inputNumber.addEventListener("input", () => {
+	  if (!parseInt(inputNumber.value)) {
+	      document.querySelector(".error").classList.add("show");
+	      if (inputNumber.value === "") {
+		  document.querySelector(".error").classList.remove("show");
+	      }
+	  }
+	  if (inputNumber.value !== "") {
+	      document.querySelector(".info").classList.remove("show");
+	  }
+	  
+      })
+
+
+      
+
+      const isPrime = num => {
+	  for(let i = 2; i < num; i++)
+	      if(num % i === 0) return false;
+	  return num > 1;
+      }
+	      
+
+
+      
+    </script>
+  </body>
+</html>
+
+

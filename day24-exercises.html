@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Solar System</title>
+    <style>
+      
+      body {
+	  background: #222;
+	  color: #eee;
+	  font-family: sans-serif;
+      }
+
+      .container {
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  margin-top: 100px;
+	  flex-direction: column;
+      }
+
+      
+      
+      h1 {
+	  font-size: 3em;
+	  font-family: serif;
+      }
+
+      input,
+      select,
+      button {
+	  height: 30px;
+	  box-sizing: border-box;
+	  padding: 0 10px;
+	  width: 150px;
+      }
+
+      button {
+	  border-radius: 5px;
+	  background: lightgreen;
+	  margin-left: 5px;
+	  border: 1px solid green;
+	  text-shadow: 0 1px white;
+	  font-weight: bold;
+	  cursor: pointer;
+	  transition: transform 0.2s, opacity 0.3s;
+      }
+
+      button:hover {
+	  opacity: 0.9;
+	  transform: scale(0.99);
+      }
+
+      .required {
+	  color: coral;
+	  font-weight: bold;
+	  font-size: 0.8em;
+	  margin: 10px 0;
+      }
+
+      .hide {
+	  display: none;
+      }
+      
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <span></span>
+      <h1>Solar System</h1>
+      <p>Calculate a weight of an object on a planet.</p>
+
+      <div class="input-group">
+	<input type="number" id="inputNumber" placeholder="Mass in kilogram">
+	<div class="required hide">Mass is required</div>
+	<div class="info hide">You did not choose a planet yet</div>
+	<select>
+	  <option value="0">-- Select planet: --</option>
+	  <option value="1" >Mercury</option>
+	  <option value="2">Jupiter</option>
+	  <option value="3">Mars</option>
+	  <option value="4">Moon</option>
+	  <option value="5">Neptune</option>
+	  <option value="6">Pluto</option>
+	  <option value="7">Saturn</option>
+	  <option value="8">Uranus</option>
+	  <option value="9">Venus</option>
+	  <option value="10">Earth</option>
+	</select>
+	<button type="button">Calculate weight</button>
+      </div>
+
+      <p>The weight of the object on ${Mercury} 370.00 N</p>
+
+    <!-- <img style="width: 200px; margin: 20px;" src="https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/24_Day_Project_solar_system/24_day_starter/images/mercury.png?raw=true"> -->
+    <!-- <img style="width: 200px; margin: 20px;" src="https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/24_Day_Project_solar_system/24_day_starter/images/jupiter.png?raw=true"> -->
+    <!-- <img style="width: 200px; margin: 20px;" src="https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/24_Day_Project_solar_system/24_day_starter/images/mars.png?raw=true"> -->
+    <!-- <img style="width: 200px; margin: 20px;" src="https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/24_Day_Project_solar_system/24_day_starter/images/moon.png?raw=true"> -->
+    <!-- <img style="width: 200px; margin: 20px;" src="https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/24_Day_Project_solar_system/24_day_starter/images/neptune.png?raw=true"> -->
+    <!-- <img style="width: 200px; margin: 20px;" src="https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/24_Day_Project_solar_system/24_day_starter/images/pluto.png?raw=true"> -->
+    <!-- <img style="width: 200px; margin: 20px;" src="https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/24_Day_Project_solar_system/24_day_starter/images/saturn.png?raw=true"> -->
+    <!-- <img style="width: 200px; margin: 20px;" src="https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/24_Day_Project_solar_system/24_day_starter/images/uranus.png?raw=true"> -->
+    <!-- <img style="width: 200px; margin: 20px;" src="https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/24_Day_Project_solar_system/24_day_starter/images/venus.png?raw=true"> -->
+    <!-- <img style="width: 200px; margin: 20px;" src="https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/24_Day_Project_solar_system/24_day_starter/images/earth.png?raw=true"> -->
+  
+    </div>  
+    
+    <script>
+
+      const select = document.querySelector("select")
+      // Weight = Mass x Surface Gravity
+      // Mercury	Venus	Earth	Mars	Jupiter	Saturn	Uranus	Neptune
+      // 0.38	0.91	1.0	0.38	2.34	0.93	0.92	1.12
+
+      select.addEventListener("input", (e) => {
+	  console.log(select.options)
+      })
+      
+    </script>
+  </body>
+</html>
+
+
