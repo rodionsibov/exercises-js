@@ -21,7 +21,13 @@
 	  flex-direction: column;
       }
 
-      
+      canvas {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  z-index: -1;
+
+      }
       
       h1 {
 	  font-size: 3em;
@@ -35,6 +41,18 @@
 	  box-sizing: border-box;
 	  padding: 0 10px;
 	  width: 150px;
+      }
+
+      input,
+      select {
+	  border: none;
+	  border-bottom: 1px solid lightgreen;
+	  background: transparent;
+	  color: white;
+      }
+
+      select {
+	  color: gray;
       }
 
       button {
@@ -53,7 +71,8 @@
 	  transform: scale(0.99);
       }
 
-      .required {
+      .required,
+      .info {
 	  color: coral;
 	  font-weight: bold;
 	  font-size: 0.8em;
@@ -64,6 +83,71 @@
 	  display: none;
       }
       
+      #weight {
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  background: white;
+	  padding: 5px 10px;
+	  color: #222;
+	  border-radius: 5px;
+	  opacity: 0.8;
+	  position: relative;
+	  transition: 0.2s opacity;
+	  width: 180px;
+	  line-height: 23px;
+      }
+
+      #weight:hover {
+	  opacity: 1;
+      }
+      
+      #weight::after {
+	  position: absolute;
+	  content: "";
+	  bottom: -5px;
+	  left: 75%;
+	  border-left: 5px solid transparent;
+	  border-right: 5px solid transparent;
+	  border-top: 5px solid white;
+      }
+
+      .container img {
+	  width: 200px;
+      }
+
+      @media screen and (max-width: 700px) {
+	  .input-group {
+	      display: flex;
+	      flex-direction: column;
+	  }
+
+	  button {
+	      margin-left: 0;
+	      margin-top: 5px;
+	      width: auto;
+	  }
+
+	  .required,
+	  .info {
+	      text-align: center;
+	  }
+
+	  input,
+	  select {
+	      width: auto;
+	      margin: 10px 0;
+	  }
+
+	  .container {
+	      margin-top: 0;
+	  }
+
+	  h1 {
+	      margin-bottom: 5px;
+	  }
+      }
+      
     </style>
   </head>
   <body>
@@ -72,11 +156,8 @@
       <span></span>
       <h1>Solar System</h1>
       <p>Calculate a weight of an object on a planet.</p>
-
       <div class="input-group">
 	<input type="number" id="inputNumber" placeholder="Mass in kilogram">
-	<div class="required hide">Mass is required</div>
-	<div class="info hide">You did not choose a planet yet</div>
 	<select>
 	  <option value="0">-- Select planet: --</option>
 	  <option value="1" >Mercury</option>
@@ -91,35 +172,194 @@
 	  <option value="10">Earth</option>
 	</select>
 	<button type="button">Calculate weight</button>
+	<div class="required hide">Mass is required</div>
+	<div class="info hide">You did not choose a planet yet</div>
       </div>
 
-      <p>The weight of the object on ${Mercury} 370.00 N</p>
-
-    <!-- <img style="width: 200px; margin: 20px;" src="https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/24_Day_Project_solar_system/24_day_starter/images/mercury.png?raw=true"> -->
-    <!-- <img style="width: 200px; margin: 20px;" src="https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/24_Day_Project_solar_system/24_day_starter/images/jupiter.png?raw=true"> -->
-    <!-- <img style="width: 200px; margin: 20px;" src="https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/24_Day_Project_solar_system/24_day_starter/images/mars.png?raw=true"> -->
-    <!-- <img style="width: 200px; margin: 20px;" src="https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/24_Day_Project_solar_system/24_day_starter/images/moon.png?raw=true"> -->
-    <!-- <img style="width: 200px; margin: 20px;" src="https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/24_Day_Project_solar_system/24_day_starter/images/neptune.png?raw=true"> -->
-    <!-- <img style="width: 200px; margin: 20px;" src="https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/24_Day_Project_solar_system/24_day_starter/images/pluto.png?raw=true"> -->
-    <!-- <img style="width: 200px; margin: 20px;" src="https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/24_Day_Project_solar_system/24_day_starter/images/saturn.png?raw=true"> -->
-    <!-- <img style="width: 200px; margin: 20px;" src="https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/24_Day_Project_solar_system/24_day_starter/images/uranus.png?raw=true"> -->
-    <!-- <img style="width: 200px; margin: 20px;" src="https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/24_Day_Project_solar_system/24_day_starter/images/venus.png?raw=true"> -->
-    <!-- <img style="width: 200px; margin: 20px;" src="https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/24_Day_Project_solar_system/24_day_starter/images/earth.png?raw=true"> -->
-  
     </div>  
     
     <script>
 
-      const select = document.querySelector("select")
-      // Weight = Mass x Surface Gravity
-      // Mercury	Venus	Earth	Mars	Jupiter	Saturn	Uranus	Neptune
-      // 0.38	0.91	1.0	0.38	2.34	0.93	0.92	1.12
+      const select = document.querySelector("select");
+      const inputNumber = document.querySelector("#inputNumber");
+      const button = document.querySelector("button");
 
-      select.addEventListener("input", (e) => {
-	  console.log(select.options)
+      let planet;
+
+
+      inputNumber.addEventListener("input", () => {
+	  if (parseInt(inputNumber.value) > 0) {
+	      document.querySelector(".required").classList.add("hide");
+	  } else {
+	      document.querySelector(".required").classList.remove("hide");
+
+	  }
+	  
       })
+
+
+      select.addEventListener("input", () => {
+	  planet = select.options[select.selectedIndex].text;
+
+	  if (planet !== "") {
+	      document.querySelector(".info").classList.add("hide");
+	  }
+
+	  if (planet === select.options[0].text) {
+	      document.querySelector(".info").classList.remove("hide");
+	  }
+      })
+
+      button.addEventListener("click", () => {
+	  
+	  if (parseInt(inputNumber.value) < 0 || inputNumber.value === "") {
+	      document.querySelector(".required").classList.remove("hide");
+	  }
+
+	  if (planet === undefined) {
+	      document.querySelector(".info").classList.remove("hide");
+	      return;
+	  }
+
+	  
+	  // Weight = Mass x Surface Gravity	  
+	  const getWeight = (mass, planet) => {
+	      switch (planet) {
+	      case "Mercury":
+		  return mass * 0.38; 
+	      case "Venus":
+		  return mass * 0.91;
+	      case "Earth":
+		  return mass * 1.0;
+	      case "Mars":
+		  return mass * 0.38;
+	      case "Jupiter":
+		  return mass * 2.34;
+	      case "Saturn":
+		  return mass * 0.93;
+	      case "Uranus":
+		  return mass * 0.92;
+	      case "Neptune":
+		  return mass * 1.12;
+	      case "Moon":
+		  return mass * 1.62;
+	      default:
+		  return false
+	      }
+	      
+	  }
+	  
+	  if (getWeight(inputNumber.value, planet) === false) {
+	      document.querySelector(".info").classList.remove("hide");
+	      return;
+	  }
+
+
+	  if (document.querySelector("#weight")) {
+	      document.querySelector("#weight").remove();
+	      document.querySelector("#planetImg").remove();
+	  }
+
+	  const pEl = document.createElement("p");
+	  pEl.id = "weight";
+	  document.querySelector(".container").append(pEl);
+	  pEl.innerHTML = `The weight of the object on ${planet} ${getWeight(inputNumber.value, planet).toFixed(2)} N</p>`	  
+	  pEl.style.top = `${Math.random() * 100}px`;
+	  pEl.style.left = `${Math.random() * 50}px`;
+	  
+	  const imgEl = document.createElement("img");
+	  imgEl.id = "planetImg"
+	  imgEl.src =`https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/24_Day_Project_solar_system/24_day_starter/images/${planet.toLowerCase()}.png?raw=true`;
+
+
+	  
+	  document.querySelector(".container").append(imgEl);
+	  
+	  
+	  
+	  
+      })
+
+
+
+      
+
+
+      
       
     </script>
+
+
+    <canvas></canvas>
+    <script>
+
+      const canvas = document.querySelector("canvas");
+      const ctx = canvas.getContext("2d");
+
+      canvas.width = innerWidth;
+      canvas.height = innerHeight;
+      
+      
+      // Event Listeners
+
+      addEventListener("resize", () => {
+	  canvas.width = innerWidth;
+	  canvas.height = innerHeight;
+
+	  init();
+      })
+
+
+      // Objects
+      class Object {
+	  constructor() {
+	      this.x = Math.random() * canvas.width;
+	      this.y = Math.random() * canvas.height;
+	      this.radius = Math.random() * 3;
+	      this.color = `hsl(${Math.floor(Math.random() * 360)}, 10%, 50%)`;
+	  }
+
+	  draw() {
+	      ctx.beginPath();
+	      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+	      ctx.fillStyle = this.color;
+	      ctx.fill();
+	      ctx.closePath();
+	  }
+	  
+	  update() {
+	      this.draw()
+	      this.radius = Math.random() * 2;
+	  }
+
+      }
+
+      let starsArr = [];
+      // Implementation
+      function init() {
+	  starsArr = [];
+	  
+	  for (let i = 0; i < 200; i++) {
+	      starsArr.push(new Object());
+	  }
+
+      }
+
+      // Animation loop
+      function animate() {
+	  requestAnimationFrame(animate);
+	  ctx.clearRect(0, 0, canvas.width, canvas.height);
+	  starsArr.forEach(star => star.update());
+      }
+      
+      init();
+      animate();
+
+      
+    </script>
+
+
+    
   </body>
 </html>
 
