@@ -143,11 +143,14 @@
     .then(res => res.json())
     .then(data => {
 	data.sort((a,b) => b.population - a.population)
-	const sum = data.reduce((sum, country) => sum + country.population, 0);
+	const sumPopulation = data.reduce((sum, country) => sum + country.population, 0);
+	const mostLanguages = getMostLanguages(data);
+	mostLanguages.sort((a,b) => b.count - a.count);
+	const sumLanguages = mostLanguages.reduce((sum, language) => sum + language.count, 0);
 
+	mostLanguages.splice(10);
 	data.splice(10)
-	console.log(data);
-
+	
 	subtitleEl.textContent = `Currently, we have ${data.length} countries`;
 
 	countriesEl.innerHTML = `
@@ -156,12 +159,12 @@
       <div class="country-chart">
 	<div class="chart-width" style="width: 100%"></div>
       </div>
-      <div class="country-quantity">${sum}</div>
+      <div class="country-quantity">${sumPopulation}</div>
     </div>
 `;
 
 	countriesEl.innerHTML += data.map(el => {
-	    const percent = el.population * 100 / sum;
+	    const percent = el.population * 100 / sumPopulation;
 
 	    return `
     <div class="country">
@@ -178,24 +181,18 @@
 	countriesEl.style.display = "block";
 	descCountries.style.display = "block";
 
-	// get languages
-	const result = data
-	      .map(el => el.languages)
-
-	console.log(result)
-
-
-
 
 	
-	languagesEl.innerHTML = data.map(el => {
+	languagesEl.innerHTML = mostLanguages.map(el => {
+	    const percent = el.count * 100 / sumLanguages;
+
 	    return `
     <div class="language">
-      <div class="language-name">language</div>
+      <div class="language-name">${el.language}</div>
       <div class="language-chart">
-	<div class="chart-width"></div>
+	<div class="chart-width" style="width: ${percent}%"></div>
       </div>
-      <div class="language-quantity">131</div>
+      <div class="language-quantity">${el.count}</div>
     </div>
     </div>
 
@@ -221,6 +218,19 @@
 	    descCountries.style.display = "block";
 	})
 
+
+	// get most populated languages
+	function getMostLanguages(data) {
+	    const arrLang = data
+		  .map(el => el.languages)
+		  .flat()
+		  .map(el => el.name)
+	    
+	    const mySet = new Set(arrLang);
+	    const result = [];
+	    mySet.forEach(el => result.push({language: el, count: arrLang.filter(i => i === el).length}));
+	    return result;
+	}
 
 
 	
