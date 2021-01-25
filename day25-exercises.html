@@ -34,12 +34,13 @@
 	  margin-bottom: 30px;
       }
 
-      .description {
+      .description-languages,
+      .description-countries {
 	  display: none;
       }
 
       .btn {
-	  padding: 20px;
+	  padding: 10px;
 	  border-radius: 5px;
 	  border: 1px solid gray;
 	  cursor: pointer;
@@ -78,7 +79,7 @@
       .chart-width {
 	  width: 0;
 	  height: 100%;
-	  background: #eee;
+	  background: orange;
       }
       
       .country-quantity,
@@ -135,6 +136,8 @@
       const languagesEl = document.querySelector(".languages");
       const btnLanguages = document.querySelector("#languages");
       const btnPopulation = document.querySelector("#population");
+      const descLanguages = document.querySelector(".description-languages");
+      const descCountries = document.querySelector(".description-countries");
       
       fetch("https://restcountries.eu/rest/v2/all")
     .then(res => res.json())
@@ -173,12 +176,17 @@
 	}).join("");
 
 	countriesEl.style.display = "block";
+	descCountries.style.display = "block";
 
 	// get languages
 	const result = data
 	      .map(el => el.languages)
-	      .filter(el => el.length > 1)
+
 	console.log(result)
+
+
+
+
 	
 	languagesEl.innerHTML = data.map(el => {
 	    return `
@@ -200,7 +208,8 @@
 	    btnPopulation.classList.remove("active");
 	    countriesEl.style.display = "none";
 	    languagesEl.style.display = "block";
-
+	    descLanguages.style.display = "block";
+	    descCountries.style.display = "none";
 	})
 
 	btnPopulation.addEventListener("click", (e) => {
@@ -208,6 +217,8 @@
 	    btnLanguages.classList.remove("active");
 	    countriesEl.style.display = "block";
 	    languagesEl.style.display = "none";
+	    descLanguages.style.display = "none";
+	    descCountries.style.display = "block";
 	})
 
 
