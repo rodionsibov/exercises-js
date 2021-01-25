@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>World Countrires Data Visualization</title>
+    <style>
+
+      * {
+	  margin: 0;
+	  padding: 0;
+	  box-sizing: border-box;
+      }
+      
+      .container {
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  position: relative;
+	  top: 100px;
+      }
+
+      h2 {
+	  opacity: 0.3;
+	  font-size: 1.2em;
+	  font-family: sans-serif;
+	  text-decoration: underline;
+      }
+      
+      h2,
+      .buttons,
+      .description {
+	  margin-bottom: 30px;
+      }
+
+      .description {
+	  display: none;
+      }
+
+      .btn {
+	  padding: 20px;
+	  border-radius: 5px;
+	  border: 1px solid gray;
+	  cursor: pointer;
+	  margin: 0 5px;
+      }
+
+      .btn:hover {
+	  opacity: 0.7;
+      }
+      
+      .languages,
+      .countries {
+	  width: 90%;
+	  border: 1px solid #ddd;
+	  padding: 10px;
+	  display: none;
+      }
+
+      .country,
+      .language {
+	  display: flex;
+      }
+      
+      .country-name,
+      .language-name {
+	  width: 25%;
+	  padding: 5px;
+      }
+
+      .country-chart,
+      .language-chart {
+	  width: 50%;
+	  padding: 5px;
+      }
+
+      .chart-width {
+	  width: 0;
+	  height: 100%;
+	  background: #eee;
+      }
+      
+      .country-quantity,
+      .language-quantity {
+	  padding: 5px;
+
+      }
+
+      .active {
+	  background: lightblue;
+      }
+      
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+    <h1 class="title">World Countrires Data</h1>
+    <h2 class="subtitle">Currently, we have 250 countries</h2>
+    <div class="buttons">
+    <button class="btn active" id="population" type="button">Population</button>
+    <button class="btn" id="languages" type="button">Languages</button>
+    </div>
+    <div class="description">
+    <div class="description-languages">10 most populated languages in the world</div>
+    <div class="description-countries">10 most populated countries in the world</div>
+    </div>
+    
+    <div class="countries">
+    <div class="country">
+      <div class="country-name">China</div>
+      <div class="country-chart">
+	<div class="chart-width"></div>
+      </div>
+      <div class="country-quantity">126317361</div>
+    </div>
+    </div>
+
+    <div class="languages">
+    <div class="language">
+      <div class="language-name">English</div>
+      <div class="language-chart">
+	<div class="chart-width"></div>
+      </div>
+      <div class="language-quantity">6561</div>
+    </div>
+    </div>
+    </div>
+    
+    <script>
+
+      const subtitleEl = document.querySelector(".subtitle");
+      const countriesEl = document.querySelector(".countries");
+      const languagesEl = document.querySelector(".languages");
+      const btnLanguages = document.querySelector("#languages");
+      const btnPopulation = document.querySelector("#population");
+      
+      fetch("https://restcountries.eu/rest/v2/all")
+    .then(res => res.json())
+    .then(data => {
+	data.sort((a,b) => b.population - a.population)
+	const sum = data.reduce((sum, country) => sum + country.population, 0);
+
+	data.splice(10)
+	console.log(data);
+
+	subtitleEl.textContent = `Currently, we have ${data.length} countries`;
+
+	countriesEl.innerHTML = `
+    <div class="country">
+      <div class="country-name">World</div>
+      <div class="country-chart">
+	<div class="chart-width" style="width: 100%"></div>
+      </div>
+      <div class="country-quantity">${sum}</div>
+    </div>
+`;
+
+	countriesEl.innerHTML += data.map(el => {
+	    const percent = el.population * 100 / sum;
+
+	    return `
+    <div class="country">
+      <div class="country-name">${el.name}</div>
+      <div class="country-chart">
+	<div class="chart-width" style="width: ${percent}%"></div>
+      </div>
+      <div class="country-quantity">${el.population}</div>
+    </div>
+
+`;
+	}).join("");
+
+	countriesEl.style.display = "block";
+
+	// get languages
+	const result = data
+	      .map(el => el.languages)
+	      .filter(el => el.length > 1)
+	console.log(result)
+	
+	languagesEl.innerHTML = data.map(el => {
+	    return `
+    <div class="language">
+      <div class="language-name">language</div>
+      <div class="language-chart">
+	<div class="chart-width"></div>
+      </div>
+      <div class="language-quantity">131</div>
+    </div>
+    </div>
+
+`;
+	}).join("");
+	
+	
+	btnLanguages.addEventListener("click", (e) => {
+	    e.target.classList.add("active");
+	    btnPopulation.classList.remove("active");
+	    countriesEl.style.display = "none";
+	    languagesEl.style.display = "block";
+
+	})
+
+	btnPopulation.addEventListener("click", (e) => {
+	    e.target.classList.add("active");
+	    btnLanguages.classList.remove("active");
+	    countriesEl.style.display = "block";
+	    languagesEl.style.display = "none";
+	})
+
+
+
+	
+    })
+      
+
+
+
+
+      
+    </script>
+  </body>
+</html>
+
+
