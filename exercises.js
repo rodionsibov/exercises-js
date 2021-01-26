@@ -527,10 +527,30 @@
 // }
 
 
+// function sumAll(arr) {
+//     const sortArr = arr.sort((a, b) => a - b);
+//     let result = 0;
+//     for (let i = sortArr[0]; i <= sortArr[sortArr.length - 1]; i++) {
+// 	result += i;
+//     }
+//     return result;
+// }
+// console.log(sumAll([10, 5]));
+
+
+
+function diffArray(arr1, arr2) {
+    const setA = new Set(arr1);
+    const setB = new Set(arr2);
+    return [...arr1.filter(item => !setB.has(item)), ...arr2.filter(item => !setA.has(item))]
+
+}
+console.log(diffArray([1,2,3,3,3,3,5,6,7], [1,2,3,4,5])) //4
 
 
 
 
-// if (getIndexToIns([10, 20, 30, 40, 50], 35) !== 3) {
+
+// if (sumAll([5, 10]) !== 45) {
 //     throw new Error("boom")
 // }
