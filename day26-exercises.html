@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>World Countrires Data Visualization 2</title>
+    <style>
+
+      * {
+	  margin: 0;
+	  padding: 0;
+	  box-sizing: border-box;
+	  font-family: sans-serif;
+      }
+      
+      .container {
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  position: relative;
+	  top: 100px;
+      }
+
+      h2 {
+	  opacity: 0.3;
+	  font-size: 1.2em;
+	  margin-top: 10px;
+      }
+      
+      h2,
+      .buttons,
+      .description {
+	  margin-bottom: 30px;
+      }
+
+      @media screen and (max-width: 500px) {
+	  .buttons {
+	      display: flex;
+	      justify-content: center;
+	      flex-direction: column;
+	  }
+
+	  .btn {
+	      margin-bottom: 10px;
+	  }
+	  
+      }
+      
+
+
+      .btn {
+	  padding: 20px 30px;
+	  border-radius: 50px;
+	  border: none;
+	  font-weight: bold;
+	  text-transform: uppercase;
+	  cursor: pointer;
+      }
+
+      .btn:hover {
+	  opacity: 0.7;
+      }
+
+      .active {
+	  background: purple;
+	  color: white;
+      }
+
+      #inputText {
+	  padding: 20px;
+	  font-size: 2em;
+	  border-radius: 50px;
+	  border: 2px solid purple;
+	  margin-bottom: 20px;
+      }
+
+      .countries {
+	  display: flex;
+	  flex-wrap: wrap;
+	  justify-content: center;
+      }
+
+      .country {
+	  width: 150px;
+	  padding: 20px;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  color: white;
+	  background: purple;
+	  margin: 5px;
+	  text-align: center;
+	  border-radius: 2px;
+	  font-weight: bold;
+      }
+
+      .description-search {
+	  margin: 20px 0;
+	  font-size: 1.2em;
+      }
+      
+      b {
+	  font-size: 2em;
+	  color: purple;
+      }
+      
+      
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+    <h1 class="title">World Countrires List</h1>
+    <h2 class="subtitle">Total Number of Countries: 333</h2>
+    <div class="buttons">
+    <button class="btn" id="startWith" type="button">starting word</button>
+    <button class="btn active" id="anyWord" type="button">Search with any word</button>
+    <button class="btn" id="sort" type="button">sort</button>
+    </div>
+    <div class="description-search"></div>
+    <form>
+      <input type="text" id="inputText" placeholder="Search country...">
+      
+    </form>
+    <div class="countries">
+    </div>
+
+    <script>
+
+      const subtitleEl = document.querySelector(".subtitle");
+      const buttons = document.querySelectorAll(".btn");
+      const inputField = document.querySelector("#inputText");
+      const countriesEl = document.querySelector(".countries");
+      const descSearchEl = document.querySelector(".description-search");
+
+      fetch("https://restcountries.eu/rest/v2/all")
+    .then(res => res.json())
+    .then(data => {
+
+	
+	data.splice(10)
+	console.log(data)
+	subtitleEl.textContent = `Total Number of Countries: ${data.length}`;
+
+	
+	inputField.addEventListener("input", (e) => {
+	    const pattern = new RegExp(e.target.value, "i");
+	    const result = data.map(el => el.name).filter(el => el.match(pattern)).length;
+
+	    descSearchEl.innerHTML = `Countries containing <b>${e.target.value}</b> are <b>${result}</b>`;
+	    
+
+	    if (document.querySelector("#sort").className.includes("active")) {
+		data.sort((a,b) => b.name - a.name);	
+	    } else {
+		data.sort((a,b) => a.name - b.name);
+	    }
+
+	    countriesEl.innerHTML = data
+		.map(el => el.name)
+		.filter(el => el.match(pattern))
+		.map(el => {
+		    return `
+<div class="country">
+${el}
+</div>
+`
+		}).join("");
+
+	    if (e.target.value === "") {
+		countriesEl.innerHTML = "";
+		descSearchEl.innerHTML = "";
+	    }
+
+
+	})
+
+
+	
+
+	
+	
+	buttons.forEach(button => {
+	    button.addEventListener("click", () => {
+		button.classList.toggle("active");
+	    })
+	})
+
+
+    })
+    </script>
+  </body>
+</html>
+
+
