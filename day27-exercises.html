@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Portfolio</title>
+    <style>
+
+      * {
+	  margin: 0;
+	  padding: 0;
+	  box-sizing: border-box;
+	  font-family: sans-serif;
+      }
+      
+
+      body {
+	  width: 90%;
+	  max-width: 800px;
+	  padding: 20px;
+	  margin: 0 auto;
+	  color: #444;
+      }
+
+      h1 {
+	  font-size: 3em;
+	  font-family: serif;
+	  margin-top: 50px;
+      }
+      
+      .profession {
+	  width: 100%;
+	  padding: 20px;
+	  background: linen;
+	  margin: 20px 0;
+	  font-size: 1.3em;
+
+      }
+
+      .about {
+	  line-height: 30px;
+	  margin-bottom: 20px;
+      }
+
+      .challenges {
+	  display: flex;
+	  justify-content: space-between;
+      }
+
+      
+      .challenge {
+	  width: 32%;
+	  border: 1px solid #ddd;
+	  padding: 50px;
+	  background: #eee;
+	  text-align: center;
+	  text-transform: uppercase;
+	  display: flex;
+	  align-items: center;
+	  transition: background 0.5s;
+	  cursor: pointer;
+      }
+
+      .challenge:hover {
+	  background: linen;
+	  color: black;
+	  font-weight: bold;
+      }
+
+      .technologies {
+	  margin: 20px 0;
+      }
+
+      @media (max-width: 700px) {
+	  .challenges {
+	      flex-direction: column;
+	  }
+
+	  .challenge {
+	      width: 100%;
+	      margin: 5px 0;
+	  }
+      }
+      
+      
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Hey there!</h1>
+    <div class="profession"></div>
+    <div class="about">
+      Ullamcorper placerat. Fusce orci magna, vulputate sit amet
+      sapien ut, blandit pulvinar lectus. <b>Sed vitae tristique</b>
+      ligula. Vestibulum auctor tincidunt accumsan. Sed ullamcorper,
+      arcu a viverra efficitur, ex <b>risus laoreet</b> enim, non
+      pellentesque ante est quis metus. Praesent aliquam <b>sit amet
+      neque vel</b> ultricies.
+    </div>
+    <div class="challenges">
+      <div class="challenge">javascript for everyone</div>
+      <div class="challenge">30days of python</div>
+      <div class="challenge">30days of javascript</div>
+    </div>
+    <div class="technologies"></div>
+
+    <script>
+      
+      const techEl = document.querySelector(".technologies");
+      const profEl = document.querySelector(".profession");
+      
+      const techArr = [
+	  "Redux",
+	  "Node",
+	  "MongoDb",
+	  "React",
+	  "Python",
+	  "HTML",
+	  "JavaScript"
+      ]
+
+      const profArr = [
+	  "😸 Content Creator",
+	  "😺 Motivator",
+	  "🤓 Educator",
+	  "😎 Programmer",
+	  "🤠 Instructor",
+	  "😲 Motivational Speaker"
+      ]
+      
+      
+      setInterval(() => {
+	  const randomTech = techArr[Math.floor(Math.random() * techArr.length)];
+	  const randomProf = profArr[Math.floor(Math.random() * profArr.length)];
+	  const randomColor = `hsl(${Math.floor(Math.random() * 360)}, 50%, 50%)`;
+
+	  techEl.innerHTML = `The technologies I tech <span class="tech">${randomTech}</span>`;
+
+	  document.querySelector(".tech").style.fontSize = "1.5em";
+	  document.querySelector(".tech").style.textTransform = "uppercase";
+	  document.querySelector(".tech").style.fontWeight = "bold";
+	  document.querySelector(".tech").style.color = randomColor;
+
+	  profEl.textContent = randomProf;
+
+
+	  
+      }, 2000);
+
+
+    </script>
+  </body>
+</html>
+
+
