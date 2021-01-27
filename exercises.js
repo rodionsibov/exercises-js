@@ -583,12 +583,29 @@
 //     {"bat": 2}
 // ], {"apple": 1}));
 
+// function spinalCase(str) {
+//     return str.
+// 	replace(/([A-Z])/g, " $1")
+// 	.trim()
+// 	.split(" ")
+// 	.filter(el => el !== "")
+// 	.map(el => el.toLowerCase())
+// 	.join("-");
+// }
+// //console.log(spinalCase("This Is Spinal Tap"))
+// //console.log(spinalCase("thisIsSpinalTap"))
+// //console.log(spinalCase("AllThe-small Things"))
+// console.log(spinalCase("Teletubbies say Eh-oh"))
 
 
 
 
 
 
-// if (sumAll([5, 10]) !== 45) {
+
+
+
+
+// if (spinalCase() !== "this-is-spinal-tap") {
 //     throw new Error("boom")
 // }
