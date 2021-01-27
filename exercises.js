@@ -539,13 +539,51 @@
 
 
 
-function diffArray(arr1, arr2) {
-    const setA = new Set(arr1);
-    const setB = new Set(arr2);
-    return [...arr1.filter(item => !setB.has(item)), ...arr2.filter(item => !setA.has(item))]
+// function diffArray(arr1, arr2) {
+//     const setA = new Set(arr1);
+//     const setB = new Set(arr2);
+//     return [...arr1.filter(item => !setB.has(item)), ...arr2.filter(item => !setA.has(item))]
 
-}
-console.log(diffArray([1,2,3,3,3,3,5,6,7], [1,2,3,4,5])) //4
+// }
+// console.log(diffArray([1,2,3,3,3,3,5,6,7], [1,2,3,4,5])) //4
+
+// function destroyer(arr, ...arg) {
+//     return arr.filter(el => !arg.includes(el));
+// }
+// console.log(destroyer([1,2,3,5,1,2,3], 2,3));
+
+
+
+// function whatIsInAName(collection, source) {
+//     const arr = [];
+//     collection.forEach(item => {
+// 	let countProps = 0;
+// 	let countEqualProps = 0;
+// 	for (const key in source) {
+// 	    countProps++;
+// 	    if (item[key] && item[key] === source[key]) {
+// 		countEqualProps++;
+// 	    }
+// 	}
+// 	if (countEqualProps === countProps) {
+// 	    arr.push(item);
+// 	}
+//     })
+//     return arr;
+// }
+// console.log(whatIsInAName([
+//     {first: "Romeo", last: "Montaque"},
+//     {first: "Mercutio", last: null},
+//     {first: "Tybalt", last: "Capulet"}
+// ], {last: "Capulet"}));
+// console.log(whatIsInAName([
+//     {"apple": 1},
+//     {"apple": 1},
+//     {"apple": 1},
+//     {"bat": 2}
+// ], {"apple": 1}));
+
+
 
 
 
