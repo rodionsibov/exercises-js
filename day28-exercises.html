@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Leaderboard</title>
+    <style>
+
+      * {
+	  margin: 0;
+	  padding: 0;
+	  box-sizing: border-box;
+	  font-family: sans-serif;
+      }
+      
+      body {
+	  width: 90%;
+	  margin: 0 auto;
+	  margin-top: 100px;
+      }
+
+      .input-group {
+	  display: grid;
+	  grid-template-columns: repeat(5, 1fr);
+	  grid-gap: 5px;
+	  width: 100%;
+	  margin: 20px 0;
+      }
+
+      .input-group > * {
+	  width: 100%;
+	  padding: 5px;
+      }
+
+      .players {
+	  display: grid;
+	  grid-template-columns: 1fr;
+	  grid-gap: 5px;
+      }
+
+      .player {
+	  display: grid;
+	  grid-template-columns: 3fr 2fr 1fr auto;
+	  width: 100%;
+	  grid-gap: 5px;
+	  align-items: center;
+	  background: teal;
+	  color: white;
+	  padding: 5px 10px;
+      }
+
+      .player-options button {
+	  padding: 5px;
+	  cursor: pointer;
+      }
+
+
+      form button {
+	  cursor: pointer;
+      }
+      
+    </style>
+  </head>
+  <body>
+
+    <h1>30 Days of JavaScript Challenge Leaderboard</h1>
+    <form class="input-group">
+      <input type="text" id="firstName" name="firstName" placeholder="First Name">
+    <input type="text" id="lastName" name="lastName" placeholder="Last Name">
+    <input type="text" id="country" name="country" placeholder="Country">
+    <input type="text" id="playerScore" name="playerScore" placeholder="Player Score">
+    <button type="button" class="btn-add-player">Add Player</button>
+    </form>
+    
+    <div class="players">
+      <!-- <div class="player"> -->
+      <!-- 	<div class="player-name">David</div> -->
+      <!-- 	<div class="player-country">Smith</div> -->
+      <!-- 	<div class="player-score">88</div> -->
+      <!-- 	<div class="player-options"> -->
+      <!-- 	  <button type="button" class="btn-player-options-delete">Delete</button> -->
+      <!-- 	  <button type="button" class="btn-player-options-add">+5</button> -->
+      <!-- 	  <button type="button" class="btn-player-options-remove">-5</button> -->
+      <!-- 	</div> -->
+      </div>	
+    <script>
+
+      const btn = document.querySelector(".btn-add-player");
+      const playersEl = document.querySelector(".players");
+      const players = []
+      
+      btn.addEventListener("click", () => {
+	  const firstName = document.querySelector("#firstName").value;
+	  const lastName = document.querySelector("#lastName").value;
+	  const country = document.querySelector("#country").value;
+	  const score = document.querySelector("#playerScore").value;
+
+	  players.push({firstName, lastName, country, score});
+	  console.log(players)
+
+	  function render() {
+	      playersEl.innerHTML = players.map((el, index) => {
+		  return `
+      <div class="player">
+	<div class="player-name">${el.firstName} ${el.lastName}</div>
+	<div class="player-country">${el.country}</div>
+	<div id="${index}" class="player-score">${el.score}</div>
+	<div class="player-options">
+	  <button type="button" class="btn-player-options-delete">Delete</button>
+	  <button type="button" class="btn-player-options-add">+5</button>
+	  <button type="button" class="btn-player-options-remove">-5</button>
+	</div>
+      </div>
+
+`;
+	      }).join("");
+	      
+	  }
+	  render();
+
+	  let updatedScore = Number(score);
+	  document.querySelectorAll(".player-options").forEach(el => {
+	      el.addEventListener("click", (e) => {
+		  if (e.target.classList.contains("btn-player-options-delete")) {
+		      e.target.closest(".player").remove()
+		  }
+		  if (e.target.classList.contains("btn-player-options-add")) {
+		      updatedScore = updatedScore + 5;
+		      players[e.target.closest(".player").querySelector(".player-score").id].score = updatedScore;
+		      console.log(players);
+
+
+		  }
+		  if (e.target.classList.contains("btn-player-options-remove")) {
+		      console.log("remove")
+		  }
+	      })
+	      
+	      
+	  })
+
+	  
+	  
+      });
+
+
+    </script>
+  </body>
+</html>
+
+
