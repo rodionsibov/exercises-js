@@ -67,83 +67,85 @@
     <h1>30 Days of JavaScript Challenge Leaderboard</h1>
     <form class="input-group">
       <input type="text" id="firstName" name="firstName" placeholder="First Name">
-    <input type="text" id="lastName" name="lastName" placeholder="Last Name">
-    <input type="text" id="country" name="country" placeholder="Country">
-    <input type="text" id="playerScore" name="playerScore" placeholder="Player Score">
-    <button type="button" class="btn-add-player">Add Player</button>
+      <input type="text" id="lastName" name="lastName" placeholder="Last Name">
+      <input type="text" id="country" name="country" placeholder="Country">
+      <input type="text" id="playerScore" name="playerScore" placeholder="Player Score">
+      <button type="submit" class="btn-add-player">Add Player</button>
     </form>
     
     <div class="players">
-      <!-- <div class="player"> -->
-      <!-- 	<div class="player-name">David</div> -->
-      <!-- 	<div class="player-country">Smith</div> -->
-      <!-- 	<div class="player-score">88</div> -->
-      <!-- 	<div class="player-options"> -->
-      <!-- 	  <button type="button" class="btn-player-options-delete">Delete</button> -->
-      <!-- 	  <button type="button" class="btn-player-options-add">+5</button> -->
-      <!-- 	  <button type="button" class="btn-player-options-remove">-5</button> -->
-      <!-- 	</div> -->
-      </div>	
+      
+    </div>	
     <script>
 
-      const btn = document.querySelector(".btn-add-player");
+      const addBtn = document.querySelector(".btn-add-player");
+      const inputGroup = document.querySelector(".input-group");
       const playersEl = document.querySelector(".players");
-      const players = []
-      
-      btn.addEventListener("click", () => {
-	  const firstName = document.querySelector("#firstName").value;
-	  const lastName = document.querySelector("#lastName").value;
-	  const country = document.querySelector("#country").value;
-	  const score = document.querySelector("#playerScore").value;
+      const formEl = document.querySelector("form");
+      const players = [];
 
-	  players.push({firstName, lastName, country, score});
-	  console.log(players)
 
-	  function render() {
-	      playersEl.innerHTML = players.map((el, index) => {
-		  return `
-      <div class="player">
+      function showPlayers() {
+	  playersEl.innerHTML = players.map((el, index) => {
+	      return `
+      <div id="${index}" class="player">
 	<div class="player-name">${el.firstName} ${el.lastName}</div>
 	<div class="player-country">${el.country}</div>
-	<div id="${index}" class="player-score">${el.score}</div>
+	<div class="player-score">${el.score}</div>
 	<div class="player-options">
-	  <button type="button" class="btn-player-options-delete">Delete</button>
-	  <button type="button" class="btn-player-options-add">+5</button>
-	  <button type="button" class="btn-player-options-remove">-5</button>
+	  <button  onclick="deleteOpt(${index})" class="btn-player-options-delete">Delete</button>
+	  <button  onclick="addOpt(${index})" class="btn-player-options-add">+5</button>
+	  <button onclick="removeOpt(${index})" class="btn-player-options-remove">-5</button>
 	</div>
       </div>
 
 `;
-	      }).join("");
-	      
-	  }
-	  render();
-
-	  let updatedScore = Number(score);
-	  document.querySelectorAll(".player-options").forEach(el => {
-	      el.addEventListener("click", (e) => {
-		  if (e.target.classList.contains("btn-player-options-delete")) {
-		      e.target.closest(".player").remove()
-		  }
-		  if (e.target.classList.contains("btn-player-options-add")) {
-		      updatedScore = updatedScore + 5;
-		      players[e.target.closest(".player").querySelector(".player-score").id].score = updatedScore;
-		      console.log(players);
-
-
-		  }
-		  if (e.target.classList.contains("btn-player-options-remove")) {
-		      console.log("remove")
-		  }
-	      })
-	      
-	      
-	  })
+	  }).join("");
 
 	  
-	  
+      }
+
+
+
+      addBtn.addEventListener("click", (e) => {
+	  e.preventDefault();
+	  const firstName = document.querySelector("#firstName").value;
+	  const lastName = document.querySelector("#lastName").value;
+	  const country = document.querySelector("#country").value;
+	  const score = Number(document.querySelector("#playerScore").value);
+
+	  players.push({firstName, lastName, country, score});
+
+	  showPlayers();
+	  console.log(players);
+	  formEl.reset();
       });
 
+
+      
+      function deleteOpt(index) {
+	  players.splice(index, 1);
+	  showPlayers();
+	  console.log("delete")
+	  console.log(players)
+      }
+      
+      
+      function removeOpt(index) {
+	  players[index].score -= 5;
+	  showPlayers();
+	  console.log("remove")
+	  console.log(players)
+      }
+
+      function addOpt(index) {
+	  players[index].score += 5;
+	  showPlayers();
+	  console.log("add")
+	  console.log(players)
+
+      }
+      
 
     </script>
   </body>
