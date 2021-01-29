@@ -60,6 +60,12 @@
 	  cursor: pointer;
       }
       
+      .info {
+	  margin-bottom: 20px;
+	  font-size: 14px;
+	  color: #444;
+      }
+      
     </style>
   </head>
   <body>
@@ -69,22 +75,58 @@
       <input type="text" id="firstName" name="firstName" placeholder="First Name">
       <input type="text" id="lastName" name="lastName" placeholder="Last Name">
       <input type="text" id="country" name="country" placeholder="Country">
-      <input type="text" id="playerScore" name="playerScore" placeholder="Player Score">
-      <button type="submit" class="btn-add-player">Add Player</button>
+      <input type="number" id="playerScore" name="playerScore" placeholder="Player Score">
+      <button disabled type="submit" class="btn-add-player">Add Player</button>
     </form>
+    <div class="info">All fields are required</div>
     
     <div class="players">
-      
+      <!-- player comes from ... -->
     </div>	
     <script>
 
       const addBtn = document.querySelector(".btn-add-player");
-      const inputGroup = document.querySelector(".input-group");
       const playersEl = document.querySelector(".players");
       const formEl = document.querySelector("form");
+      const firstNameEl = document.querySelector("#firstName");
+      const lastNameEl = document.querySelector("#lastName");
+      const countryEl = document.querySelector("#country");
+      const scoreEl = document.querySelector("#playerScore");
       const players = [];
 
+      formEl.addEventListener("keyup", () => {
+	  let firstName = firstNameEl.value;
+	  let lastName = lastNameEl.value;
+	  let country = countryEl.value;
+	  let score = scoreEl.value;
 
+	  if (firstName !== "" && lastName !== "" && country !== "" && score !== "") {
+	      addBtn.disabled = false;
+	      document.querySelector(".info").style.display = "none";
+	  } else {
+	      addBtn.disabled = true;
+	      document.querySelector(".info").style.display = "block";
+	  }
+      })
+
+      
+
+
+      addBtn.addEventListener("click", (e) => {
+	  e.preventDefault();
+	  let firstName = firstNameEl.value;
+	  let lastName = lastNameEl.value;
+	  let country = countryEl.value;
+	  let score = Number(scoreEl.value);
+	  players.push({firstName, lastName, country, score});
+
+	  showPlayers();
+	  console.log(players);
+	  formEl.reset();
+      });
+
+
+      
       function showPlayers() {
 	  playersEl.innerHTML = players.map((el, index) => {
 	      return `
@@ -101,28 +143,12 @@
 
 `;
 	  }).join("");
-
+	  
+	  addBtn.disabled = true;
 	  
       }
 
 
-
-      addBtn.addEventListener("click", (e) => {
-	  e.preventDefault();
-	  const firstName = document.querySelector("#firstName").value;
-	  const lastName = document.querySelector("#lastName").value;
-	  const country = document.querySelector("#country").value;
-	  const score = Number(document.querySelector("#playerScore").value);
-
-	  players.push({firstName, lastName, country, score});
-
-	  showPlayers();
-	  console.log(players);
-	  formEl.reset();
-      });
-
-
-      
       function deleteOpt(index) {
 	  players.splice(index, 1);
 	  showPlayers();
