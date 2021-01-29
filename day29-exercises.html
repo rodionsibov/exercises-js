@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Animating Characters</title>
+    <style>
+
+      * {
+	  margin: 0;
+	  padding: 0;
+	  box-sizing: border-box;
+	  font-family: sans-serif;
+      }
+
+      html {
+	  height: 100%;
+	  display: grid;
+	  place-items: center;
+      }
+
+      #title {
+	  padding: 50px;
+	  text-align: center;
+	  font-size: 10vw;
+	  font-weight: bold;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div id="title"></div>
+
+    <script>
+
+      
+      const str = "30 Days of JavaScript Challenge 2021";
+      const titleEl = document.querySelector("#title");
+
+      function showTitle() {
+	  titleEl.innerHTML = str
+	      .split(" ")
+	      .map(el => {
+ 		  return `
+ <span style="color: hsl(${Math.round(Math.random() * 360)}, 50%, 50%)">${el}</span>
+ `;
+	      })
+	      .join("")
+	  
+      }
+
+      setInterval(showTitle, 2000);
+      
+      
+    </script>
+  </body>
+</html>
+
+
