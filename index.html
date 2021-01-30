@@ -8,26 +8,77 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Hello world!</title>
     <style>
-      
+
+      iframe {
+	  position: relative;
+	  transition: opacity 1.2s, transform 1s;
+	  opacity: 0;
+      }
+
+      body {
+	  background: black;
+      }
 
     </style>
   </head>
   <body>
 
-    <div class="container">
-      <h1 class="text-center mt-5">Exercises JS</h1>
-    </div>
+    <!-- <div class="container"> -->
+    <!--   <h1 class="text-center mt-5">Exercises JS</h1> -->
+    <!-- </div> -->
 
     <div id="root" class="container">
 
     <!--   <form> -->
     <!-- 	<input type="url" name="website" placeholder="http://johndoe.com" required pattern="(http|https)://.+" /> -->
     <!-- 	</form> -->
-      
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/h1_OMfI3UW0?playlist=h1_OMfI3UW0&loop=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
     </div>
 
+        
     <script>
 
+
+      const idInterval = setInterval(() => {
+	  document.querySelector("iframe").style.top = Math.random() * 300 + "px";
+	  document.querySelector("iframe").style.left = Math.random() * 300 + "px";
+	  document.querySelector("iframe").style.opacity = 1;
+
+	  setTimeout(() => {
+	      document.querySelector("iframe").style.opacity = 0;
+	  }, 2000)
+	  
+      }, 5000)
+
+      let rotate = 0;
+      addEventListener("keydown", (e) => {
+
+	  if (e.key === "r") {
+	      rotate += 10;
+	      document.querySelector("iframe").style.transform = `rotate(${rotate*(Math.PI/180)}turn)`;
+	  }
+
+	  if (e.key === "l") {
+	      rotate -= 10;
+	      document.querySelector("iframe").style.transform = `rotate(${rotate*(Math.PI/180)}turn)`;
+	  }
+
+	  if (e.key === "0") {
+	      rotate = 0;
+	      document.querySelector("iframe").style.transform = `rotate(${rotate*(Math.PI/180)}turn)`;
+	  }
+
+
+      })
+
+
+      addEventListener("dblclick", () => {
+	  document.body.style.background = `#${Math.random().toString(16).slice(2, 8)}99`;
+
+      })
+      
     </script>
   </body>
 </html>

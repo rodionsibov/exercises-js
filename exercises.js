@@ -599,8 +599,17 @@
 
 
 
-
-
+function translatePigLatin(str) {
+    //    return str.replace(/([^aeiou]+)(.*)/, "$1$2")
+    if (/^[aeiouy]/.test(str)) {
+	return `${str.split("").slice(1).join("")}way`;
+    } else {
+	return `${str.split("").slice(1).join("")}ay`;
+    }
+}
+console.log(translatePigLatin("algorithm")) // lgorithmway
+console.log(translatePigLatin("glove")) // oveglay
+console.log(translatePigLatin("paragraphs")) // aragraphspay
 
 
 
