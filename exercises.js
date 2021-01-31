@@ -600,12 +600,13 @@
 
 
 function translatePigLatin(str) {
-    //    return str.replace(/([^aeiou]+)(.*)/, "$1$2")
-    if (/^[aeiouy]/.test(str)) {
-	return `${str.split("").slice(1).join("")}way`;
+    const regex = /^([^aeiou]+)(.*)/;
+    if (regex.test(str)) {
+	str = str.replace(regex, "$2$1ay");
     } else {
-	return `${str.split("").slice(1).join("")}ay`;
+	str += "way";
     }
+    return str;
 }
 console.log(translatePigLatin("algorithm")) // lgorithmway
 console.log(translatePigLatin("glove")) // oveglay
