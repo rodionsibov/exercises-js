@@ -598,19 +598,50 @@
 // console.log(spinalCase("Teletubbies say Eh-oh"))
 
 
+// function translatePigLatin(str) {
+//     const regex = /^([^aeiou]+)(.*)/;
+//     if (regex.test(str)) {
+// 	str = str.replace(regex, "$2$1ay");
+//     } else {
+// 	str += "way";
+//     }
+//     return str;
+// }
+// console.log(translatePigLatin("algorithm")) // lgorithmway
+// console.log(translatePigLatin("glove")) // oveglay
+// console.log(translatePigLatin("paragraphs")) // aragraphspay
 
-function translatePigLatin(str) {
-    const regex = /^([^aeiou]+)(.*)/;
-    if (regex.test(str)) {
-	str = str.replace(regex, "$2$1ay");
-    } else {
-	str += "way";
-    }
-    return str;
-}
-console.log(translatePigLatin("algorithm")) // lgorithmway
-console.log(translatePigLatin("glove")) // oveglay
-console.log(translatePigLatin("paragraphs")) // aragraphspay
+
+
+
+
+// function myReplace(str, before, after) {
+//     if (before[0].toLowerCase() !== before[0]) {
+// 	after = after[0].toUpperCase() + after.slice(1);
+//     }
+//     return str.replace(before, after);
+// }
+// console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting")) // "He is Sitting on the couch"
+
+
+// const pairs = {
+//     A: "T",
+//     T: "A",
+//     C: "G",
+//     G: "C"
+// }
+
+// function pairElement(str) {
+//     return str.split("").map(item => [item, pairs[item]])
+// }
+// console.log(pairElement("GCG"))
+
+
+
+
+
+
+
 
 
 
@@ -619,3 +650,5 @@ console.log(translatePigLatin("paragraphs")) // aragraphspay
 // if (spinalCase() !== "this-is-spinal-tap") {
 //     throw new Error("boom")
 // }
+
+
