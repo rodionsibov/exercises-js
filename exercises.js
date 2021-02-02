@@ -649,19 +649,63 @@
 // console.log(fearNotLetter("abce")); // d
 // console.log(fearNotLetter("stvwx")); // u
 
-function uniteUnique(arr) {
-    return [...new Set(arr.flat())];
-}
-console.log(uniteUnique([[1,3,2],[5,2,1,4],[2,1]])) // [1,3,2,5,4]
-console.log(uniteUnique([[1,2,3],[5,2,1]])) // [1,2,3,5]
+// function uniteUnique(arr) {
+//     //    return [...new Set(arr.flat())];
+//     const finalArr = [];
+//     // arr.forEach(innerArr => {
+//     // 	innerArr.forEach(item => {
+//     // 	    if (!finalArr.includes(item)) {
+//     // 		finalArr.push(item);
+//     // 	    }
+//     // 	});
+//     // });
+//     // return finalArr;
+//     return arr.reduce((acc, innerArr) => {
+// 	innerArr.forEach(item => {
+// 	    if (!acc.includes(item)) {
+// 		acc.push(item)
+// 	    }
+// 	});
+// 	return acc;
+//     }, [])
+// }
+// console.log(uniteUnique([[1,3,2],[5,2,1,4],[2,1]])) // [1,3,2,5,4]
+// console.log(uniteUnique([[1,2,3],[5,2,1]])) // [1,2,3,5]
 
 
+// const repl = {
+//     "&": "&amp;",
+//     ">": "&gt;"
+// }
+// function convertHTML(str) {
+//     for (const key in repl) {
+// 	const re = new RegExp(key, "g");
+// 	str = str.replace(re, repl[key]);
+//     }
+//     return str;
+// }
+// console.log(convertHTML("Sixty > twelve")) // Sixty &gt; twelve
 
 
+// function sumFibs(num) {
+//     let a = 1;
+//     let b = 1;
+//     let sum = a + b;
+//     while(b <= num) {
+// 	const temp = a;
+// 	a = b;
+// 	b = temp + b;
+// 	if (b <= num) {
+// 	    sum += (b % 2 !== 0) ? b : 0;
+// 	}
+//     }
+
+//     return sum;
+// }
+// console.log(sumFibs(1000)); // 1785
 
 
-
-// if (spinalCase() !== "this-is-spinal-tap") {
+// if (function() !== "") {
 //     throw new Error("boom")
 // }
 
