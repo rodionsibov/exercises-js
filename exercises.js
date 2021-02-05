@@ -705,6 +705,60 @@
 // console.log(sumFibs(1000)); // 1785
 
 
+
+// function sumPrimes(num) {
+//     let sum = 0;
+//     for (let i = 2; i <= num; i++) {
+// 	if (isPrime(i)) {
+// 	    sum += i;
+// 	}
+
+//     }
+//     return sum;
+// }
+
+// function isPrime(num) {
+//     for (let i = 2; i <= num / 2; i++) {
+// 	if (num % i === 0) {
+// 	    return false;
+// 	}
+//     }
+//     return true;
+// }
+// // console.log(isPrime(9))
+// console.log(sumPrimes(10)); // 17
+// console.log(sumPrimes(977)); // 73156
+
+
+function smallestCommons(arr) {
+    if(arr[0] > arr[1]) {
+	const temp = arr[1];
+	arr[1] = arr[0];
+	arr[0] = temp;
+    }
+
+    const newArr = [];
+    for(let i = arr[0]; i <= arr[1]; i++) {
+	newArr.push(i);
+    }
+    const prod = newArr.reduce((acc, nr) => acc *= nr, 1);
+    for (let i = 1; i <= prod; i++) {
+	const len = newArr.filter(nr => i % nr === 0).length;
+	if (len === newArr.length) {
+	    return i;
+	}
+    }
+
+    return prod;
+}
+console.log(smallestCommons([1,5])) // 60
+console.log(smallestCommons([2,10])) // 2520
+
+
+
+
+
+
 // if (function() !== "") {
 //     throw new Error("boom")
 // }
