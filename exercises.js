@@ -730,32 +730,38 @@
 // console.log(sumPrimes(977)); // 73156
 
 
-function smallestCommons(arr) {
-    if(arr[0] > arr[1]) {
-	const temp = arr[1];
-	arr[1] = arr[0];
-	arr[0] = temp;
-    }
+// function smallestCommons(arr) {
+//     if(arr[0] > arr[1]) {
+// 	const temp = arr[1];
+// 	arr[1] = arr[0];
+// 	arr[0] = temp;
+//     }
 
-    const newArr = [];
-    for(let i = arr[0]; i <= arr[1]; i++) {
-	newArr.push(i);
-    }
-    const prod = newArr.reduce((acc, nr) => acc *= nr, 1);
-    for (let i = 1; i <= prod; i++) {
-	const len = newArr.filter(nr => i % nr === 0).length;
-	if (len === newArr.length) {
-	    return i;
-	}
-    }
+//     const newArr = [];
+//     for(let i = arr[0]; i <= arr[1]; i++) {
+// 	newArr.push(i);
+//     }
+//     const prod = newArr.reduce((acc, nr) => acc *= nr, 1);
+//     for (let i = 1; i <= prod; i++) {
+// 	const len = newArr.filter(nr => i % nr === 0).length;
+// 	if (len === newArr.length) {
+// 	    return i;
+// 	}
+//     }
 
-    return prod;
+//     return prod;
+// }
+// console.log(smallestCommons([1,5])) // 60
+// console.log(smallestCommons([2,10])) // 2520
+
+
+function dropElements(arr, func) {
+    return arr.filter(func);
 }
-console.log(smallestCommons([1,5])) // 60
-console.log(smallestCommons([2,10])) // 2520
 
-
-
+console.log(dropElements([1,2,3,4], function(n) {return n >= 3;})) // [3,4]
+console.log(dropElements([0,1,0,1], function(n) {return n === 1;})) // [1,0,1]
+console.log(dropElements([1,2,3,4], function(n) {return n > 5;})) // []
 
 
 
