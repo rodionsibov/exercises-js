@@ -755,14 +755,23 @@
 // console.log(smallestCommons([2,10])) // 2520
 
 
-function dropElements(arr, func) {
-    const index = arr.findIndex(func);
-    return (index === -1) ? [] : arr.slice(index);
-}
+// function dropElements(arr, func) {
+//     const index = arr.findIndex(func);
+//     return (index === -1) ? [] : arr.slice(index);
+// }
 
-console.log(dropElements([1,2,3,4], function(n) {return n >= 3;})) // [3,4]
-console.log(dropElements([0,1,0,1], function(n) {return n === 1;})) // [1,0,1]
-console.log(dropElements([1,2,3,4], function(n) {return n > 5;})) // []
+// console.log(dropElements([1,2,3,4], function(n) {return n >= 3;})) // [3,4]
+// console.log(dropElements([0,1,0,1], function(n) {return n === 1;})) // [1,0,1]
+// console.log(dropElements([1,2,3,4], function(n) {return n > 5;})) // []
+
+
+function steamrollArray(arr) {
+    return arr.flat(3);
+}
+console.log(steamrollArray([1,[2],[3,[[4]]]])) // [1,2,3,4]
+console.log(steamrollArray([1,{},[3,[[4]]]])) // [1,2,3,4]
+//console.log(Array.isArray([]))
+
 
 
 
