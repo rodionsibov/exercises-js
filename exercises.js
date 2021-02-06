@@ -773,14 +773,30 @@
 //console.log(Array.isArray([]))
 
 
+// function binaryAgent(str) {
+//     return str.split(" ")
+// 	.map(item => String.fromCharCode(parseInt(item, 2)))
+// 	.join("");
+// }
+// console.log(binaryAgent("010000001 010101 0100010 0101010101 11101010101 010 01100101")) 
 
 
-function binaryAgent(str) {
-    return str.split(" ")
-	.map(item => String.fromCharCode(parseInt(item, 2)))
-	.join("");
+// const items = { a: 1, b: 2 };
+// const newItems = { ...items, a: 3 };
+// console.log(newItems)
+
+
+function addTogether(a, b) {
+    
+    return function(b) {
+	return a + b;
+    }
 }
-console.log(binaryAgent("010000001 010101 0100010 0101010101 11101010101 010 01100101")) 
+console.log(addTogether(2)(3))	// 5
+console.log(addTogether(2)([3])) // undefined
+
+
+
 
 // if (function() !== "") {
 //     throw new Error("boom")
