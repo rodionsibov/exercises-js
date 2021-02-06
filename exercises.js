@@ -786,14 +786,29 @@
 // console.log(newItems)
 
 
-function addTogether(a, b) {
+// function addTogether(a, b) {
+//     return function(b) {
+// 	return a + b;
+//     }
+// }
+// console.log(addTogether(2)(3))	// 5
+// console.log(addTogether(2)([3])) // undefined
+
+
+// function steamrollArray(arr) {
+//     const finalArr = [];
+//     arr.forEach(item => {
+// 	if (Array.isArray(item)) {
+// 	    finalArr.push(...steamrollArray(item));
+// 	} else {
+// 	    finalArr.push(item);
+// 	}
+//     });
+//     return finalArr;
+// }
+// console.log(steamrollArray([1,[2],[3,[[4]]]])) // [1,2,3,4]
     
-    return function(b) {
-	return a + b;
-    }
-}
-console.log(addTogether(2)(3))	// 5
-console.log(addTogether(2)([3])) // undefined
+
 
 
 
