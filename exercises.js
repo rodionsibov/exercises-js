@@ -851,6 +851,19 @@
 // console.log(orbitalPeriod([{name: "sputnik", avgAlt: 35873.5553}])) // [{name: "sputnik", orbitalPeriond: 86400}]
 
 
+// function palindrome(str) {
+//     const newStr = str.replace(/[_\W]/g, "").toLowerCase();
+//     const revStr = newStr.split("").reverse().join("");
+//     return newStr.toLowerCase() === revStr;
+// }
+// //console.log(palindrome("eye"))	// true
+// console.log(palindrome("never odd or even"))	// true
+// console.log(palindrome("A man, a plan, a canal. Panama"))	// true
+// console.log(palindrome("_eye"))	// true
+
+
+
+
 
 
 
