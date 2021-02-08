@@ -808,36 +808,49 @@
 // }
 // console.log(steamrollArray([1,[2],[3,[[4]]]])) // [1,2,3,4]
     
-const Person = function(firstAndLast) {
-    let [first, last] = firstAndLast.split(" ");
+// const Person = function(firstAndLast) {
+//     let [first, last] = firstAndLast.split(" ");
     
-    this.getFullName = function() {
-	return `${first} ${last}`
-    }
+//     this.getFullName = function() {
+// 	return `${first} ${last}`
+//     }
 
-    this.getFirstName = function() {
-	return first;
-    }
+//     this.getFirstName = function() {
+// 	return first;
+//     }
 
-    this.getLastName = function() {
-	return last;
-    }
+//     this.getLastName = function() {
+// 	return last;
+//     }
 
-    this.setFirstName = function(_first) {
-	first = _first;
-    }
+//     this.setFirstName = function(_first) {
+// 	first = _first;
+//     }
 
-    this.setLastName = function(_last) {
-	last = _last
-    }
+//     this.setLastName = function(_last) {
+// 	last = _last
+//     }
 
-    this.setFullName = function(_firstAndLast) {
-	[first, last] = _firstAndLast.split(" ");
-    }
+//     this.setFullName = function(_firstAndLast) {
+// 	[first, last] = _firstAndLast.split(" ");
+//     }
+// }
+
+// const bob = new Person("Bob Ross");
+// console.log(bob.getFullName());
+
+
+function orbitalPeriod(arr) {
+    const GM = 398600.4418;
+    const earthRadius = 6367.4447;
+
+    return arr.map(item => ({
+	name: item.name,
+	orbitalPeriod: Math.round(2 * Math.PI * Math.sqrt(Math.pow(earthRadius + item.avgAlt, 3) / GM))
+    }))
 }
+console.log(orbitalPeriod([{name: "sputnik", avgAlt: 35873.5553}])) // [{name: "sputnik", orbitalPeriond: 86400}]
 
-const bob = new Person("Bob Ross");
-console.log(bob.getFullName());
 
 
 
