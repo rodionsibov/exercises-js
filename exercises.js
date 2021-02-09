@@ -863,20 +863,59 @@
 
 
 
-function telephoneChecke(str) {
-    const re = /^(1 |1)*(\d{3}|\(\d{3}\))[ -]{0,1}(\d{3})[ -]{0,1}(\d{4})$/g;
-    // return str.match(re);
-    return re.test(str);
+// function telephoneChecke(str) {
+//     const re = /^(1 |1)*(\d{3}|\(\d{3}\))[ -]{0,1}(\d{3})[ -]{0,1}(\d{4})$/g;
+//     // return str.match(re);
+//     return re.test(str);
+// }
+
+// console.log(telephoneChecke("555-555-5555")) // true
+// console.log(telephoneChecke("(555)555 5555")) // true
+// console.log(telephoneChecke("(555) 555-5555")) // true
+// console.log(telephoneChecke("555 555 5555")) // true
+// console.log(telephoneChecke("5555555555")) // true
+// console.log(telephoneChecke("1 555 555 5555")) // true
+
+
+
+
+// M - 1000
+// D - 500
+// C - 100
+// L - 50
+// X - 10
+// V - 5
+// I - 1
+
+const converted = {
+    M: 1000,
+    CM: 900,
+    D: 500,
+    CD: 400,
+    C: 100,
+    XC: 90,
+    L: 50,
+    XL: 40,
+    X: 10,
+    IX: 9,
+    V: 5,
+    IV: 4,
+    I: 1
 }
 
-console.log(telephoneChecke("555-555-5555")) // true
-console.log(telephoneChecke("(555)555 5555")) // true
-console.log(telephoneChecke("(555) 555-5555")) // true
-console.log(telephoneChecke("555 555 5555")) // true
-console.log(telephoneChecke("5555555555")) // true
-console.log(telephoneChecke("1 555 555 5555")) // true
-
-
+function convertToRoman(num) {
+    let result = "";
+    for (let roman in converted) {
+	while (num >= converted[roman]) {
+	    num -= converted[roman];
+	    result += roman;
+	}
+    }
+    return result;
+}
+console.log(convertToRoman(45))	// "XLV"
+console.log(convertToRoman(1023))	// "MXXIII"
+console.log(convertToRoman(337))	// "CCCXXXVII"
 
 
 // if (function() !== "") {
