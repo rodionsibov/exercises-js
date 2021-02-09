@@ -863,6 +863,18 @@
 
 
 
+function telephoneChecke(str) {
+    const re = /(\d ){0,1}[\(]{0,1}(\d{3})[\)-]{0,1}[ ]{0,1}(\d{3})[ -]{0,1}(\d{4}$)/g;
+    // return str.match(re);
+    return re.test(str);
+}
+
+console.log(telephoneChecke("555-555-5555")) // true
+console.log(telephoneChecke("(555)555 5555")) // true
+console.log(telephoneChecke("(555) 555-5555")) // true
+console.log(telephoneChecke("555 555 5555")) // true
+console.log(telephoneChecke("5555555555")) // true
+console.log(telephoneChecke("1 555 555 5555")) // true
 
 
 
