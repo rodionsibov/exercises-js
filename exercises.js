@@ -864,7 +864,7 @@
 
 
 function telephoneChecke(str) {
-    const re = /(\d ){0,1}[\(]{0,1}(\d{3})[\)-]{0,1}[ ]{0,1}(\d{3})[ -]{0,1}(\d{4}$)/g;
+    const re = /^(1 |1)*(\d{3}|\(\d{3}\))[ -]{0,1}(\d{3})[ -]{0,1}(\d{4})$/g;
     // return str.match(re);
     return re.test(str);
 }
