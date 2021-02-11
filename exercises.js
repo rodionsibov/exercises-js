@@ -887,35 +887,38 @@
 // V - 5
 // I - 1
 
-const converted = {
-    M: 1000,
-    CM: 900,
-    D: 500,
-    CD: 400,
-    C: 100,
-    XC: 90,
-    L: 50,
-    XL: 40,
-    X: 10,
-    IX: 9,
-    V: 5,
-    IV: 4,
-    I: 1
-}
+// const converted = {
+//     M: 1000,
+//     CM: 900,
+//     D: 500,
+//     CD: 400,
+//     C: 100,
+//     XC: 90,
+//     L: 50,
+//     XL: 40,
+//     X: 10,
+//     IX: 9,
+//     V: 5,
+//     IV: 4,
+//     I: 1
+// }
 
-function convertToRoman(num) {
-    let result = "";
-    for (let roman in converted) {
-	while (num >= converted[roman]) {
-	    num -= converted[roman];
-	    result += roman;
-	}
-    }
-    return result;
-}
-console.log(convertToRoman(45))	// "XLV"
-console.log(convertToRoman(1023))	// "MXXIII"
-console.log(convertToRoman(337))	// "CCCXXXVII"
+// function convertToRoman(num) {
+//     let result = "";
+//     for (let roman in converted) {
+// 	while (num >= converted[roman]) {
+// 	    num -= converted[roman];
+// 	    result += roman;
+// 	}
+//     }
+//     return result;
+// }
+// console.log(convertToRoman(45))	// "XLV"
+// console.log(convertToRoman(1023))	// "MXXIII"
+// console.log(convertToRoman(337))	// "CCCXXXVII"
+
+
+
 
 
 // if (function() !== "") {
