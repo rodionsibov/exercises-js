@@ -85,6 +85,7 @@
 	 ctx.beginPath();
 	 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
 	 ctx.fill();
+	 ctx.closePath();
 	 
        }
        
@@ -103,9 +104,11 @@
 	   if (distance < 100) {
 	     ctx.beginPath();
 	     ctx.strokeStyle = particlesArray[i].color;
+	     ctx.lineWidth  = 0.2;
 	     ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
 	     ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
 	     ctx.stroke();
+	     ctx.closePath();
 	   }
 	 }
 	 if (particlesArray[i].size <= 0.3) {
