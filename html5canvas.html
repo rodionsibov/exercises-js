@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hello world!</title>
+    <style>
+     
+     body {
+       margin: 0;
+       height: 100vh;
+       background: #111;
+     }
+
+    </style>
+  </head>
+  <body>
+
+    <canvas id="canvas1"></canvas>
+        
+    <script>
+     
+     const canvas = document.querySelector('#canvas1');
+     const ctx= canvas.getContext('2d');
+     canvas.width = window.innerWidth;
+     canvas.height = window.innerHeight;
+
+     addEventListener('resize', () => {
+       canvas.width = window.innerWidth;
+       canvas.height = window.innerHeight;
+     })
+     
+     const mouse = {
+       x: null,
+       y: null
+     }
+
+     canvas.addEventListener('click', (e) => {
+       mouse.x = e.x;
+       mouse.y = e.y;
+     })
+
+     canvas.addEventListener('mousemove', (e) => {
+       mouse.x = e.x;
+       mouse.y = e.y;
+     })
+
+     
+     class Particle {
+       constructor() {
+	 this.x = mouse.x;
+	 this.y = mouse.y;
+	 this.size = Math.random() * 5 + 1;
+	 this.speedX = Math.random() * 3 - 1.5;
+	 this.speedY = Math.random() * 3 - 1.5;
+       }
+
+       update() {
+	 this.x += this.speedX;
+	 this.y += this.speedY;
+       }
+
+       draw() {
+	 ctx.fillStyle = 'blue';
+	 ctx.beginPath();
+	 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+	 ctx.fill();
+	 
+       }
+       
+     }
+
+     function init() {
+       
+     }
+     
+
+     function animate() {
+       ctx.clearRect(0, 0, canvas.width, canvas.height);
+       requestAnimationFrame(animate);
+     }
+     animate()
+     
+
+    </script>
+  </body>
+</html>
