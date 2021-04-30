@@ -926,3 +926,18 @@
 // }
 
 
+function reverse(num) {
+    let result = null
+
+    if (num < 0) {
+        num = Math.abs(num)
+        result = -num.toString().split('').reverse().join('')
+    } else {
+        result = +num.toString().split('').reverse().join('')
+    }
+
+    return result
+}
+console.log(reverse(-120)); // 21
+console.log(reverse(234)); // 21
+console.log(reverse(0)); // 21
