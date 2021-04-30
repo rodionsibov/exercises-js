@@ -967,3 +967,13 @@
 // console.log(isValidWalk(['n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's',]));
 
 
+// function f(clockArr, money) {
+//     return !clockArr
+//         .find((a, i) => {
+//             clockArr
+//                 .slice(i + 1)
+//                 .filter((b) => a * 100 + b * 100 - money * 100 === 0)
+//         })
+// }
+// console.log(f([54.10, 20.00, 18.51, 97.75, 35.20, 76.42], 89.3))
+// console.log(0.0000005);
