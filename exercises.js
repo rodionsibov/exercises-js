@@ -129,7 +129,7 @@
 // 	if (data.hasOwnProperty(key)) {
 // 	    result[key] = data[key]
 // 	}
-	
+
 //     }
 
 //     return result;
@@ -277,12 +277,12 @@
 
 
 // function reverseString(str) {
-    //    return str.split("").reverse().join("")
-    // let result = [];
-    // for (let i = 0; i < str.length; i++) {
-    // 	result.unshift(str[i])
-    // }
-    // return result.join("");
+//    return str.split("").reverse().join("")
+// let result = [];
+// for (let i = 0; i < str.length; i++) {
+// 	result.unshift(str[i])
+// }
+// return result.join("");
 // }
 // console.log(reverseString("hello"))
 
@@ -291,12 +291,12 @@
 // 	return 1;
 //     }
 //     return num * factorialize(num - 1);
-    // let result = 1;
-    // for (let i = 1; i <= num; i++) {
-    // 	result *= i;
-    // }
-    // return result;
-    
+// let result = 1;
+// for (let i = 1; i <= num; i++) {
+// 	result *= i;
+// }
+// return result;
+
 // }
 // console.log(factorialize(5))
 
@@ -315,18 +315,18 @@
 // console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"))
 
 //function largestOfFour(arr) {
-    // const result = [];
-    // let max = -Infinity;
-    // arr.forEach(el => {
-    // 	max = 0;
-    // 	el.forEach(i => {
-    // 	    if (i > max) {
-    // 		max = i;
-    // 	    }
-    // 	})
-    // 	result.push(max)
-    // })
-    // return result;
+// const result = [];
+// let max = -Infinity;
+// arr.forEach(el => {
+// 	max = 0;
+// 	el.forEach(i => {
+// 	    if (i > max) {
+// 		max = i;
+// 	    }
+// 	})
+// 	result.push(max)
+// })
+// return result;
 //     return arr.map(el => el.reduce((a, b) => a > b ? a : b));
 // }
 // console.log(largestOfFour([[13,27,18,26],[4,5,1,3],[32,35,37,39],[1000,1001,857,1]]))
@@ -363,7 +363,7 @@
 //     // 	    return undefined;
 //     // 	}
 //     // })
-    
+
 //     // return result.shift()
 //     return arr.filter(func)[0];
 // } 
@@ -473,7 +473,7 @@
 //     // const partOne = arr[0]
 //     // const partTwo = arr[1]
 //     const [str1, str2] = arr.map(el => el.toLowerCase())
-    
+
 //     for (let i = 0; i < str2.length; i++) {
 // 	const letter = str2[i]
 // 	if (str1.indexOf(letter) === -1) {
@@ -807,10 +807,10 @@
 //     return finalArr;
 // }
 // console.log(steamrollArray([1,[2],[3,[[4]]]])) // [1,2,3,4]
-    
+
 // const Person = function(firstAndLast) {
 //     let [first, last] = firstAndLast.split(" ");
-    
+
 //     this.getFullName = function() {
 // 	return `${first} ${last}`
 //     }
@@ -926,18 +926,44 @@
 // }
 
 
-function reverse(num) {
-    let result = null
+// function reverse(num) {
+//     let result = null
 
-    if (num < 0) {
-        num = Math.abs(num)
-        result = -num.toString().split('').reverse().join('')
-    } else {
-        result = +num.toString().split('').reverse().join('')
-    }
+//     if (num < 0) {
+//         num = Math.abs(num)
+//         result = -num.toString().split('').reverse().join('')
+//     } else {
+//         result = +num.toString().split('').reverse().join('')
+//     }
 
-    return result
-}
-console.log(reverse(-120)); // 21
-console.log(reverse(234)); // 21
-console.log(reverse(0)); // 21
+//     return result
+// }
+// console.log(reverse(-120)); // 21
+// console.log(reverse(234)); // 21
+// console.log(reverse(0)); // 21
+
+// function isValidWalk(walk) {
+//     let [x, y] = [0, 0]
+//     walk.forEach((dir) => {
+//         switch (dir) {
+//             case 'n':
+//                 y++
+//                 break
+//             case 's':
+//                 y--
+//                 break
+//             case 'w':
+//                 x--
+//                 break
+//             case 'e':
+//                 x++
+//                 break
+//             default:
+//                 break
+//         }
+//     })
+//     return walk.length === 10 && x === 0 && y === 0
+// }
+// console.log(isValidWalk(['n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's',]));
+
+
