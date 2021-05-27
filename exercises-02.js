@@ -194,6 +194,7 @@
 function anagram(str1, str2) {
     const dictionary1 = {}
     const dictionary2 = {}
+    
     for (char of str1.toLowerCase()) dictionary1[char] = dictionary1[char] + 1 || 1
     for (char of str2.toLowerCase()) dictionary2[char] = dictionary2[char] + 1 || 1
 
