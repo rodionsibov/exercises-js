@@ -191,3 +191,16 @@
 // }
 // console.log(linearWithoutRepeat([1, 1, 2, 2, 3, 4, 5, 5])); // ['3','4']
 
+function anagram(str1, str2) {
+    const dictionary1 = {}
+    const dictionary2 = {}
+    for (char of str1.toLowerCase()) dictionary1[char] = dictionary1[char] + 1 || 1
+    for (char of str2.toLowerCase()) dictionary2[char] = dictionary2[char] + 1 || 1
+
+    if (Object.keys(dictionary1).length !== Object.keys(dictionary2).length) return false
+    for (char in dictionary1) {
+        if (dictionary1[char] !== dictionary2[char]) return false
+    }
+    return true
+}
+console.log((anagram('friend', 'Finder')));
