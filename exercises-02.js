@@ -62,3 +62,23 @@
 //     .join('')
 // }
 // console.log(myFunction('bnchmf'));
+
+// function myFunction(str1, str2) {
+//     return str2.match(new RegExp(str1, 'gi'))?.length || 0
+// }
+// console.log(myFunction('z', 'How many times does the character occur in this sentence?'));
+// console.log(myFunction('h', 'How many times does the character occur in this sentence?'));
+
+
+// function myFunction(n) {
+//     const isPrime = num => {
+//         for (let i = 2; i < num; i++)
+//             if (num % i === 0) return false;
+//         return num > 1;
+//     }
+//     let result = n
+//     while(!isPrime(result)) result++
+//     return result
+// }
+// console.log(myFunction(115));
+// console.log(myFunction(38));
