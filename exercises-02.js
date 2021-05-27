@@ -82,3 +82,10 @@
 // }
 // console.log(myFunction(115));
 // console.log(myFunction(38));
+
+function isPrime(n) {
+    for (let i = 2; i < n; i++)
+    if(n%i===0)return false
+    return num > 1
+}
+isPrime(33)
