@@ -114,3 +114,36 @@
 // console.log(myFunction([1, 2, 3], [3, 4, 5]));
 // console.log(myFunction([-10, 22, 333, 42], [-11, 5, 22, 41, 42]));
 
+// function fibonacci(n) {
+//     if (n <= 0) return 0
+//     if (n <= 2) return 1
+//     return fibonacci(n - 1) + fibonacci(n - 2)
+// }
+// console.log(fibonacci(7));
+
+// function fibonacciIteration(n) {
+//     if (n <= 0) return 0
+//     if (n <= 2) return 1
+//     let prev = 1
+//     let result = 1
+//     for (let i = 0; i < n - 2; i++) {
+//         let temp = result
+//         result += prev
+//         prev = temp
+//     }
+//     return result
+// }
+// console.log(fibonacciIteration(7));
+
+// function palindrom(word) {
+//     word = word.toLowerCase()
+//     for (let i = 0; i < word.length / 2; i++) {
+//         if(word[i] !== word[word.length - i - 1]) {
+//             return false
+//         }
+//     }
+//     return true
+//     // return word === word.split('').reverse().join('')
+// }
+// console.log(palindrom('aaaZzaaa'));
+
