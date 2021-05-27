@@ -90,3 +90,27 @@
 // console.log(myFunction([true, true, true, true]));
 // console.log(myFunction([1,1,1,2]));
 
+// function myFunction(arr) {
+//     let max = arr[0]
+//     for (i of arr)
+//         if (i.length > max.length) max = i
+//         return max
+// }
+// console.log(myFunction(['help', 'me']));
+// console.log(myFunction(['I', 'need', 'candy']));
+
+// function myFunction(...b) {
+//     return b.flat()
+// }
+// console.log(myFunction([1, 2, 3], [4, 5, 6]));
+// console.log(myFunction(['a', 'b', 'c'], [4, 5, 6]));
+// console.log(myFunction([true, true], [1, 2], ['a', 'b']));
+
+// function myFunction(a, b) {
+
+//     return [...new Set([...a, ...b])]
+//     .sort((a, b) => a-b)
+// }
+// console.log(myFunction([1, 2, 3], [3, 4, 5]));
+// console.log(myFunction([-10, 22, 333, 42], [-11, 5, 22, 41, 42]));
+
