@@ -69,7 +69,6 @@
 // console.log(myFunction('z', 'How many times does the character occur in this sentence?'));
 // console.log(myFunction('h', 'How many times does the character occur in this sentence?'));
 
-
 // function myFunction(n) {
 //     const isPrime = num => {
 //         for (let i = 2; i < num; i++)
@@ -82,10 +81,12 @@
 // }
 // console.log(myFunction(115));
 // console.log(myFunction(38));
+// console.log(myFunction(2000));
 
-function isPrime(n) {
-    for (let i = 2; i < n; i++)
-    if(n%i===0)return false
-    return num > 1
-}
-isPrime(33)
+// function myFunction(arr) {
+//     return new Set(arr).size === 1
+// }
+// console.log(myFunction(['10', 10, 10, 10]));
+// console.log(myFunction([true, true, true, true]));
+// console.log(myFunction([1,1,1,2]));
+
