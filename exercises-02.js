@@ -191,17 +191,70 @@
 // }
 // console.log(linearWithoutRepeat([1, 1, 2, 2, 3, 4, 5, 5])); // ['3','4']
 
-function anagram(str1, str2) {
-    const dictionary1 = {}
-    const dictionary2 = {}
-    
-    for (char of str1.toLowerCase()) dictionary1[char] = dictionary1[char] + 1 || 1
-    for (char of str2.toLowerCase()) dictionary2[char] = dictionary2[char] + 1 || 1
+// function anagram(str1, str2) {
+//     const dictionary1 = {}
+//     const dictionary2 = {}
 
-    if (Object.keys(dictionary1).length !== Object.keys(dictionary2).length) return false
-    for (char in dictionary1) {
-        if (dictionary1[char] !== dictionary2[char]) return false
-    }
-    return true
-}
-console.log((anagram('friend', 'Finder')));
+//     for (char of str1.toLowerCase()) dictionary1[char] = dictionary1[char] + 1 || 1
+//     for (char of str2.toLowerCase()) dictionary2[char] = dictionary2[char] + 1 || 1
+
+//     if (Object.keys(dictionary1).length !== Object.keys(dictionary2).length) return false
+//     for (char in dictionary1) {
+//         if (dictionary1[char] !== dictionary2[char]) return false
+//     }
+//     return true
+
+//     // oneliner
+//     // return [...str1.toLowerCase()].sort().toString() === [...str2.toLowerCase()].sort().toString()
+// }
+// console.log((anagram('friend', 'Finder')));
+// console.log((anagram('hello', 'bye')));
+
+// function singleNumber(array) {
+//     let uniq = new Set()
+//     let uniqSum = 0
+//     let numSum = 0
+
+//     for (let index = 0; index < array.length; index++) {
+//         const element = array[index];
+//         if (!uniq.has(element)) {
+//             uniq.add(element)
+//             uniqSum += element
+//         }
+//         numSum += element
+//     }
+//     return uniqSum * 2 - numSum
+// }
+// console.log(singleNumber([4, 1, 2, 1, 2]));
+
+// function singleNumber(array) {
+//     let uniq = Array.from(new Set(array))
+//     let uniqSum = uniq.reduce((a, b) => a + b)
+//     let numSum = array.reduce((a, b) => a + b)
+
+//     return uniqSum * 2 - numSum
+// }
+// console.log(singleNumber([4, 1, 2, 1, 2, 33]));
+
+// function myFunction(a, b) {
+//     return Math.abs(a - b) / (1000 * 60) <= 60
+// }
+// console.log(myFunction(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 08:45:00')));
+// console.log(myFunction(new Date('2000/01/01 09:00:00'), new Date('2000/01/01 08:45:00')));
+
+// function myFunction({ date, daysToAdd }) {
+//     return date.getTime() + (daysToAdd * 1000 * 60 * 60 * 24)
+// }
+// console.log(myFunction({ date: new Date(Date.UTC(2000, 01, 01)), daysToAdd: 31 }));
+// console.log(myFunction({ date: new Date(Date.UTC(2000, 02, 28,)), daysToAdd: 2 }));
+
+// function myFunction(a, b) {
+//     return {
+//         hrs: Math.abs(a.getHours() - b.getHours()),
+//         min: Math.abs(a.getMinutes() - b.getMinutes()),
+//         sec: Math.abs(a.getSeconds() - b.getSeconds())
+//     }
+// }
+// console.log(myFunction(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 08:45:10')));
+// console.log(myFunction(new Date('2000/01/01 11:04:12'), new Date('2000/01/01 08:00:00')));
+
