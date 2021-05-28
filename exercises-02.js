@@ -258,3 +258,8 @@
 // console.log(myFunction(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 08:45:10')));
 // console.log(myFunction(new Date('2000/01/01 11:04:12'), new Date('2000/01/01 08:00:00')));
 
+// function myFunction(array) {
+//     return array.sort((a, b) => Math.random() - 0.5)
+// }
+// for (let i = 0; i < 5; i++) console.log(myFunction([1, 2, 3, 4, 5, 6, 7, 8, 9]).join());
+
