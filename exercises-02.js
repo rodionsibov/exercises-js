@@ -263,3 +263,27 @@
 // }
 // for (let i = 0; i < 5; i++) console.log(myFunction([1, 2, 3, 4, 5, 6, 7, 8, 9]).join());
 
+// function myFunction(myObj) {
+//     // return Object.fromEntries(Object.entries(myObj).filter(([key, value]) => key !== 'country'))
+//     const { country, ...rest } = myObj
+//     return rest
+
+// }
+// console.log(myFunction({ continent: 'Asia', country: 'Japan', region: 'Kansai' }));
+
+// function myFunction(myObj) {
+//     return Object.fromEntries(Object.entries(myObj).map(([a, b]) => [b, a]))
+// }
+// console.log(myFunction({ bear: 'animal', sow: 'female', boar: 'male', cub: 'young' }));
+
+// function myFunction(myObj, str) {
+//     return myObj.map(i => ({...i, continent: str}))
+// }
+// console.log(myFunction([{ city: 'Tokyo', country: 'Japan' }, { city: 'Bangkok', country: 'Thailand' }], 'Asia'));
+
+function myFunction(a, b) {
+    b.city = b.country
+    delete b.country
+    return {...a,...b}
+}
+console.log(myFunction({ continent: 'Europe', country: 'Germany' }, { planet: 'Earth', country: 'Munich', state: 'Bavaria' }));
