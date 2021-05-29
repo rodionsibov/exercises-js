@@ -263,3 +263,11 @@
 // }
 // for (let i = 0; i < 5; i++) console.log(myFunction([1, 2, 3, 4, 5, 6, 7, 8, 9]).join());
 
+// function myFunction(myObj) {
+//     // return Object.fromEntries(Object.entries(myObj).filter(([key, value]) => key !== 'country'))
+//     const { country, ...rest } = myObj
+//     return rest
+
+// }
+// console.log(myFunction({ continent: 'Asia', country: 'Japan', region: 'Kansai' }));
+
