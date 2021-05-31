@@ -293,11 +293,18 @@
 // const month = 4
 // console.log(new Date(2021, month + 1, 0).getDate());
 
-function myFunction(myObj) {
-    return Object.fromEntries(Object.entries(myObj)
-        .filter(([key, value]) => ['fn', 'ln', 'size', 'weight'].includes(key))
-        .map(([key, value]) => ['size', 'weight'].includes(key) ? [key, value + 'cm'] : [key, value]))
-}
-console.log(myFunction({ fn: 'Andrew', ln: 'Harper', age: 81, size: 175, weight: 71 }));
-console.log(myFunction({ fn: 'Martin', ln: 'Harper', age: 26, email: 'martin.harper@test.de', weight: 102 }));
-console.log(myFunction({ fn: 'Matthew', ln: 'Müller', age: 19, email: 'matthew@mueller.de' }));
+// function myFunction(myObj) {
+//     return Object.fromEntries(Object.entries(myObj)
+//         .filter(([key, value]) => ['fn', 'ln', 'size', 'weight'].includes(key))
+//         .map(([key, value]) => ['size', 'weight'].includes(key) ? [key, value + 'cm'] : [key, value]))
+// }
+// console.log(myFunction({ fn: 'Andrew', ln: 'Harper', age: 81, size: 175, weight: 71 }));
+// console.log(myFunction({ fn: 'Martin', ln: 'Harper', age: 26, email: 'martin.harper@test.de', weight: 102 }));
+// console.log(myFunction({ fn: 'Matthew', ln: 'Müller', age: 19, email: 'matthew@mueller.de' }));
+
+// function myFunction(myObj) {
+//     return Object.fromEntries(Object.entries(myObj)
+//         .map(([key, value]) => ['', ' '].includes(value) ? [key, null] : [key, value]))
+// }
+// console.log(myFunction({ a: 'a', b: 'b ', c: ' ', d: '' }));
+
