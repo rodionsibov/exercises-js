@@ -288,3 +288,18 @@
 // }
 // console.log(myFunction({ continent: 'Europe', country: 'Germany' }, { planet: 'Earth', country: 'Munich', state: 'Bavaria' }));
 
+// console.log(new Intl.DateTimeFormat('en', {month: 'long'}).format(new Date()));
+
+// const month = 4
+// console.log(new Date(2021, month + 1, 0).getDate());
+
+function myFunction(myObj) {
+    return Object.fromEntries(Object.entries(myObj).filter(([key, value]) => {
+        return key === 'fn' || key === 'ln' || key === 'size' || key === 'weight'
+    }).map(([key, value]) => {
+        return (key === 'size' || key === 'weight') ? [key, value + 'cm'] : [key, value]
+    }))
+}
+console.log(myFunction({ fn: 'Andrew', ln: 'Harper', age: 81, size: 175, weight: 71 }));
+console.log(myFunction({ fn: 'Martin', ln: 'Harper', age: 26, email: 'martin.harper@test.de', weight: 102 }));
+console.log(myFunction({ fn: 'Matthew', ln: 'Müller', age: 19, email: 'matthew@mueller.de' }));
