@@ -271,7 +271,6 @@
 // }
 // console.log(myFunction({ continent: 'Asia', country: 'Japan', region: 'Kansai' }));
 
-<<<<<<< HEAD
 // function myFunction(myObj) {
 //     return Object.fromEntries(Object.entries(myObj).map(([a, b]) => [b, a]))
 // }
@@ -282,11 +281,10 @@
 // }
 // console.log(myFunction([{ city: 'Tokyo', country: 'Japan' }, { city: 'Bangkok', country: 'Thailand' }], 'Asia'));
 
-function myFunction(a, b) {
-    b.city = b.country
-    delete b.country
-    return {...a,...b}
-}
-console.log(myFunction({ continent: 'Europe', country: 'Germany' }, { planet: 'Earth', country: 'Munich', state: 'Bavaria' }));
-=======
->>>>>>> 3d7a9b6e51279d4b709e3aa7b1d72fad24fc4df0
+// function myFunction(a, b) {
+//     b.city = b.country
+//     delete b.country
+//     return {...a,...b}
+// }
+// console.log(myFunction({ continent: 'Europe', country: 'Germany' }, { planet: 'Earth', country: 'Munich', state: 'Bavaria' }));
+
