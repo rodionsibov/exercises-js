@@ -271,6 +271,7 @@
 // }
 // console.log(myFunction({ continent: 'Asia', country: 'Japan', region: 'Kansai' }));
 
+<<<<<<< HEAD
 // function myFunction(myObj) {
 //     return Object.fromEntries(Object.entries(myObj).map(([a, b]) => [b, a]))
 // }
@@ -287,3 +288,5 @@ function myFunction(a, b) {
     return {...a,...b}
 }
 console.log(myFunction({ continent: 'Europe', country: 'Germany' }, { planet: 'Earth', country: 'Munich', state: 'Bavaria' }));
+=======
+>>>>>>> 3d7a9b6e51279d4b709e3aa7b1d72fad24fc4df0
