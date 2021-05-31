@@ -294,11 +294,9 @@
 // console.log(new Date(2021, month + 1, 0).getDate());
 
 function myFunction(myObj) {
-    return Object.fromEntries(Object.entries(myObj).filter(([key, value]) => {
-        return key === 'fn' || key === 'ln' || key === 'size' || key === 'weight'
-    }).map(([key, value]) => {
-        return (key === 'size' || key === 'weight') ? [key, value + 'cm'] : [key, value]
-    }))
+    return Object.fromEntries(Object.entries(myObj)
+        .filter(([key, value]) => ['fn', 'ln', 'size', 'weight'].includes(key))
+        .map(([key, value]) => ['size', 'weight'].includes(key) ? [key, value + 'cm'] : [key, value]))
 }
 console.log(myFunction({ fn: 'Andrew', ln: 'Harper', age: 81, size: 175, weight: 71 }));
 console.log(myFunction({ fn: 'Martin', ln: 'Harper', age: 26, email: 'martin.harper@test.de', weight: 102 }));
