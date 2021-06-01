@@ -308,3 +308,29 @@
 // }
 // console.log(myFunction({ a: 'a', b: 'b ', c: ' ', d: '' }));
 
+// function myFunction(mySet, value) {
+//     mySet.delete(value)
+//     return mySet
+// }
+// console.log(myFunction(new Set([1, 2, 3]), 1));
+// console.log(myFunction(new Set('12345'), '3'));
+// console.log(myFunction(new Set([1, 2, 3]), 4));
+
+// function myFunction(a, b) {
+//     return [...a].filter(i => b.has(i))
+//     // const result = new Set()
+//     // a.forEach(i => {
+//     //     if(b.has(i)) result.add(i)
+//     // })
+//     // return result
+// }
+// console.log(myFunction(new Set('12345'), new Set([...'45678']))); //45
+// console.log(myFunction(new Set([1, 2, 3]), new Set([2, 3, 4]))); //[2,3] 
+
+// function myFunction(mySet, value) {
+//     return new Set([...mySet, ...value])
+// }
+// console.log(myFunction(new Set('12345'), [...'6789'])); // [...'123456789']
+
+
+
