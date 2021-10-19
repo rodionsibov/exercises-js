@@ -12,11 +12,12 @@ function findBinary(decimal, result) {
     if (decimal === 0) {
         return result
     }
-    result = decimal % 2 + result
+    result = (decimal % 2 + result)
     return findBinary(decimal / 2, result)
 }
 
 const result3 = findBinary(234, '')
+// console.log(Number(234).toString(2))
 
 function reverseString(input) {
     if (input === '') {
@@ -26,3 +27,17 @@ function reverseString(input) {
 }
 
 const result4 = reverseString('olleh')
+
+function isPalindrome(input) {
+    // Define the base-case / stopping condition
+    if (input.length === 0 || input.length === 1) {
+        return true
+    }
+    // Do some work to shrink the problem space
+    if (input.charAt(0) === input.charAt(input.length - 1)) {
+        return isPalindrome(input.substring(1, input.length - 1))
+    }
+    return false
+}
+
+const result5 = isPalindrome('racecar')
