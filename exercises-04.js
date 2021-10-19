@@ -42,6 +42,6 @@ function isPalindrome(input) {
 
 const result5 = isPalindrome('racecar')
 
-const { stat } = require('fs')
-stat('./exercises-04.js', ((err, stats) => console.log('Created date:', stats.birthtime.toLocaleString())));
-console.log('Current date:', new Date().toLocaleString()); 
+// const { stat } = require('fs')
+// stat('./exercises-04.js', ((err, stats) => console.log('Created date:', stats.birthtime.toLocaleString())));
+// console.log('Current date:', new Date().toLocaleString()); 
