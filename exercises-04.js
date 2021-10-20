@@ -12,7 +12,7 @@ function findBinary(decimal, result) {
     if (decimal === 0) {
         return result
     }
-    result = (decimal % 2 + result)
+    result = decimal % 2 + result
     return findBinary(decimal / 2, result)
 }
 
@@ -45,3 +45,4 @@ const result5 = isPalindrome('racecar')
 // const { stat } = require('fs')
 // stat('./exercises-04.js', ((err, stats) => console.log('Created date:', stats.birthtime.toLocaleString())));
 // console.log('Current date:', new Date().toLocaleString()); 
+
