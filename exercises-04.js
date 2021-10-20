@@ -71,3 +71,4 @@ function binarySearch(list, left, right, x) {
 
 const result6 = binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 1, 11, 9)
 
+// console.log((1 + Math.sqrt(5)) / 2);
