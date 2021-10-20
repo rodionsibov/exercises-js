@@ -42,7 +42,13 @@ function isPalindrome(input) {
 
 const result5 = isPalindrome('racecar')
 
-// const { stat } = require('fs')
-// stat('./exercises-04.js', ((err, stats) => console.log('Created date:', stats.birthtime.toLocaleString())));
-// console.log('Current date:', new Date().toLocaleString()); 
+const { readdir, statSync, stat } = require('fs')
 
+readdir('./', (err, files) => {
+    files.forEach(file => {
+        // if (statSync(file).isFile()) console.log(statSync(file).birthtime.toLocaleString(), ' - ', file);
+        stat(file, (err, stats) => {
+            if(stats.isFile()) console.log(file)
+        })
+    })
+})
