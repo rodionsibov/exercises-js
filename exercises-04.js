@@ -13,7 +13,7 @@ function findBinary(decimal, result) {
         return result
     }
     result = parseInt(decimal) % 2 + result
-    return findBinary(decimal / 2, result)
+    return findBinary(parseInt(decimal) / 2, result)
 }
 
 const result3 = findBinary(234, '')
