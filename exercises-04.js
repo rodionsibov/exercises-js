@@ -48,7 +48,8 @@ readdir('./', (err, files) => {
     files.forEach(file => {
         // if (statSync(file).isFile()) console.log(statSync(file).birthtime.toLocaleString(), ' - ', file);
         stat(file, (err, stats) => {
-            if(stats.isFile()) console.log(file)
+            if (stats.isFile() && file.includes('04')) console.log(file, ' - ', stats.birthtime.toLocaleString())
         })
     })
 })
+
