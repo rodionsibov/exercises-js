@@ -42,16 +42,32 @@ function isPalindrome(input) {
 
 const result5 = isPalindrome('racecar')
 
-const { readdir, stat } = require('fs')
+// const { readdir, stat } = require('fs')
 
+// readdir('./', (err, files) => {
+//     files.forEach(file => {
+//         // if (statSync(file).isFile()) console.log(statSync(file).birthtime.toLocaleString(), ' - ', file);
+//         stat(file, (err, stats) => {
+//             if (stats.isFile() && file.includes('04')) {
+//                 console.log(`${file} -> ${stats.birthtime.toLocaleString()}`)
+//             }
+//         })
+//     })
+// })
 
-readdir('./', (err, files) => {
-    files.forEach(file => {
-        // if (statSync(file).isFile()) console.log(statSync(file).birthtime.toLocaleString(), ' - ', file);
-        stat(file, (err, stats) => {
-            if (stats.isFile() && file.includes('04')) {
-                console.log(`${file} -> ${stats.birthtime.toLocaleString()}`)
-            }
-        })
-    })
-})
+function binarySearch(list, left, right, x) {
+    if (left > right) {
+        return -1
+    }
+    let mid = parseInt((left + right) / 2)
+    if (x === list[mid]) {
+        return mid
+    }
+    if (x < list[mid]) {
+        return binarySearch(list, left, mid - 1, x)
+    }
+    return binarySearch(list, mid + 1, right, x)
+}
+
+const result6 = binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 1, 11, 9)
+
