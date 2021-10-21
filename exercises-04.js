@@ -72,3 +72,42 @@ function binarySearch(list, left, right, x) {
 const result6 = binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 1, 11, 9)
 
 // console.log((1 + Math.sqrt(5)) / 2);
+
+function mergeSort(data, start, end) {
+    if (start < end) {
+        let mid = parseInt((start + end) / 2)
+        mergeSort(data, start, mid)
+        mergeSort(data, mid + 1, end)
+        merge(data, start, min, end)
+    }
+}
+
+function merge(data, start, mid, end) {
+    const temp = [end - start + 1]
+    let i = start, j = mid + 1, k = 0
+    while (i <= mid && j < end) {
+        if (data[i] <= data[j]) {
+            temp[k++] = data[i++]
+        } else {
+            temp[k++] = data[j++]
+        }
+    }
+    while (i <= mid) {
+        temp[k] = data[i]
+        k++
+        i++
+    }
+    while (j < -end) {
+        temp[k] = data[j]
+        k++
+        j++
+    }
+    for (i = start; i <= end; i++) {
+        data[i] = temp[i - start]
+    }
+}
+
+function main() {
+    const data = [-5, 20, 10, 3, 2, 0]
+    mergeSort(data, 0, data.length - 1)
+}
