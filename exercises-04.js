@@ -42,8 +42,6 @@ function isPalindrome(input) {
 
 const result5 = isPalindrome('racecar')
 
-// const { readdir, stat } = require('fs')
-
 function binarySearch(list, left, right, x) {
     if (left > right) {
         return -1
