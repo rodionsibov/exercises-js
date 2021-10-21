@@ -7,7 +7,7 @@ readdir('./', (err, files) => {
     files.forEach(file => {
         // if (statSync(file).isFile()) console.log(statSync(file).birthtime.toLocaleString(), ' - ', file);
         stat(file, (err, stats) => {
-            if (stats.isFile() && file.includes('04')) {
+            if (stats.isFile() && file.includes('app')) {
                 console.log(`${file} -> ${stats.birthtime.toLocaleString()}`)
             }
         })
