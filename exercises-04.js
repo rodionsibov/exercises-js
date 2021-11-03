@@ -98,3 +98,9 @@ function main() {
     const data = [-5, 20, 10, 3, 2, 0]
     mergeSort(data, 0, data.length - 1)
 }
+
+// const isSameDay = (a, b) => {
+//     return a.getFullYear() === b.getFullYear() &&
+//         a.getMonth() === b.getMonth() &&
+//         a.getDate() === b.getDate()
+// }

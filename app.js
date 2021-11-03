@@ -1,21 +1,17 @@
-let msg = 'Hello world'
-console.log(msg);
+const { createHash } = require('crypto')
 
-const { readdir, stat } = require('fs')
+function hash(input) {
+    return createHash('sha256').update(input).digest('hex')
+}
 
-readdir('./', (err, files) => {
-    files.forEach(file => {
-        // if (statSync(file).isFile()) console.log(statSync(file).birthtime.toLocaleString(), ' - ', file);
-        stat(file, (err, stats) => {
-            if (stats.isFile() && file.includes('app')) {
-                console.log(`${file} -> ${stats.birthtime.toLocaleString()}`)
-            }
-        })
-    })
-})
+// Compare two hashed passwords
 
-// const isSameDay = (a, b) => {
-//     return a.getFullYear() === b.getFullYear() &&
-//         a.getMonth() === b.getMonth() &&
-//         a.getDate() === b.getDate()
-// }
+let password = 'hi-mom!'
+const hash1 = hash(password)
+console.log(hash1);
+
+password = 'hi-mom'
+const hash2 = hash(password)
+const match = hash1 === hash2
+
+console.log(match ? '✅ good password' : '❌ password does not match');
