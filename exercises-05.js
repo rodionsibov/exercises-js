@@ -13,9 +13,16 @@ const path = require('path')
 //     }
 // })
 
-fs.writeFile(path.resolve(__dirname, 'test.txt'), '5 sdfsdfsd 7 78s9 9', (err) => {
+// fs.writeFile(path.resolve(__dirname, 'test.txt'), '5 sdfsdfsd 7 78s9 9', (err) => {
+//     if (err) {
+//         throw (err)
+//     }
+//     console.log('the file has written');
+// })
+
+fs.appendFile(path.resolve(__dirname, 'test.txt'), '5 sdfsdfsd 7 78s9 9', (err) => {
     if (err) {
         throw (err)
     }
-    console.log('the file has written');
+    console.log('the file has appended');
 })
