@@ -1,17 +1,21 @@
 const fs = require('fs')
 const path = require('path')
 
-console.log('start');
+// fs.mkdir(path.resolve(__dirname, 'dir'), (err) => {
+//     if (err) {
+//         throw(err)
+//     }
+// })
 
-fs.mkdir(path.resolve(__dirname, 'dir'), (err) => {
+// fs.rmdir(path.resolve(__dirname, 'dir'), (err) => {
+//     if(err) {
+//         throw(err)
+//     }
+// })
+
+fs.writeFile(path.resolve(__dirname, 'test.txt'), '5 sdfsdfsd 7 78s9 9', (err) => {
     if (err) {
-        throw(err)
+        throw (err)
     }
-    console.log('go');
-})
-
-fs.rmdir(path.resolve(__dirname, 'dir'), (err) => {
-    if(err) {
-        throw(err)
-    }
+    console.log('the file has written');
 })
