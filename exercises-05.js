@@ -79,10 +79,17 @@ const removeFileAsync = async (path) => {
 //     .then(() => console.log('file was removed'))
 //     .catch(err => console.log(err))
 
-const text = process.env.TEXT || ''
+// const text = process.env.TEXT || ''
 
-writeFileAsync(path.resolve(__dirname, 'text.txt'), text)
-.then(() => readFileAsync(path.resolve(__dirname, 'text.txt')))
-.then(data => data.split(' ').length)
-.then(count => writeFileAsync(path.resolve(__dirname, 'count.txt'), `There are ${count} words`))
-.then(() => removeFileAsync(path.resolve(__dirname, 'text.txt')))
+// writeFileAsync(path.resolve(__dirname, 'text.txt'), text)
+// .then(() => readFileAsync(path.resolve(__dirname, 'text.txt')))
+// .then(data => data.split(' ').length)
+// .then(count => writeFileAsync(path.resolve(__dirname, 'count.txt'), `There are ${count} words`))
+// .then(() => removeFileAsync(path.resolve(__dirname, 'text.txt')))
+
+const os = require('os')
+
+console.log(os.platform());
+console.log(os.arch());
+console.log(os.cpus().length);
+console.log(process.pid)
