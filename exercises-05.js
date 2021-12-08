@@ -56,9 +56,23 @@ const readFileAsync = async (path) => {
         resolve(data)
     }))
 }
+const removeFileAsync = async (path) => {
+    return new Promise((resolve, reject) => fs.rm(path, (err) => {
+        if (err) {
+            return reject(err.message)
+        }
+        resolve()
+    }))
+}
 
-writeFileAsync(path.resolve(__dirname, 'test.txt'), JSON.stringify(data))
-    .then(() => appendFileAsync(path.resolve(__dirname, 'test.txt'), '\n133'))
-    .then(() => appendFileAsync(path.resolve(__dirname, 'test.txt'), ' 3454'))
-    .then(() => appendFileAsync(path.resolve(__dirname, 'test.txt'), ' 1sfsd3'))
+// writeFileAsync(path.resolve(__dirname, 'test.txt'), JSON.stringify(data))
+//     .then(() => appendFileAsync(path.resolve(__dirname, 'test.txt'), '\n133'))
+//     .then(() => appendFileAsync(path.resolve(__dirname, 'test.txt'), ' 3454'))
+//     .then(() => appendFileAsync(path.resolve(__dirname, 'test.txt'), ' 1sfsd3'))
+//     .then(() => readFileAsync(path.resolve(__dirname, 'test.txt')))
+//     .then(data => console.log(data))
+//     .catch(err => console.log(err))
+
+removeFileAsync(path.resolve(__dirname, 'test.txt'))
+    .then(() => console.log('file was removed'))
     .catch(err => console.log(err))
