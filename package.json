@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/rodionsibov/exercises-js/issues"
   },
-  "homepage": "https://github.com/rodionsibov/exercises-js#readme"
+  "homepage": "https://github.com/rodionsibov/exercises-js#readme",
+  "dependencies": {
+    "mongoose": "^6.1.0"
+  }
 }
