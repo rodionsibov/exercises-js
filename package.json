@@ -1,0 +1,20 @@
+{
+  "name": "exercises",
+  "version": "1.0.0",
+  "description": "Each exercise starts with a problem description. Read this description and try to solve the exercise.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodionsibov/exercises-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodionsibov/exercises-js/issues"
+  },
+  "homepage": "https://github.com/rodionsibov/exercises-js#readme"
+}
