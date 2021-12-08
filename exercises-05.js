@@ -28,7 +28,9 @@ const path = require('path')
 // })
 
 const data = {
-    title: 'Design Patterns', id: Date.now()
+    id: Date.now(),
+    title: 'Design Patterns', 
+    subtitle: 'A Brain-Friendly Guide'
 }
 
 const writeFileAsync = async (path, data) => {
@@ -73,6 +75,6 @@ const removeFileAsync = async (path) => {
 //     .then(data => console.log(data))
 //     .catch(err => console.log(err))
 
-removeFileAsync(path.resolve(__dirname, 'test.txt'))
-    .then(() => console.log('file was removed'))
-    .catch(err => console.log(err))
+// removeFileAsync(path.resolve(__dirname, 'test.txt'))
+//     .then(() => console.log('file was removed'))
+//     .catch(err => console.log(err))
