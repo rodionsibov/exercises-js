@@ -78,3 +78,11 @@ const removeFileAsync = async (path) => {
 // removeFileAsync(path.resolve(__dirname, 'test.txt'))
 //     .then(() => console.log('file was removed'))
 //     .catch(err => console.log(err))
+
+const text = process.env.TEXT || ''
+
+writeFileAsync(path.resolve(__dirname, 'text.txt'), text)
+.then(() => readFileAsync(path.resolve(__dirname, 'text.txt')))
+.then(data => data.split(' ').length)
+.then(count => writeFileAsync(path.resolve(__dirname, 'count.txt'), `There are ${count} words`))
+.then(() => removeFileAsync(path.resolve(__dirname, 'text.txt')))
