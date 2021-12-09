@@ -1,4 +1,3 @@
-const mongoose = require('mongoose')
 const express = require('express')
 
 const app = express()
@@ -12,3 +11,4 @@ app.use('/public', express.static('public'))
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })
+
