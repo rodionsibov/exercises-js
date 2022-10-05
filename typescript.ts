@@ -9,7 +9,7 @@ console.log(getFullNamed("13", "33"));
 interface UserInterface {
   name: string;
   age?: number;
-  getMessages?(): string
+  getMessages?(): string;
 }
 
 // const user: UserInterface = {
@@ -21,13 +21,22 @@ const user2: UserInterface = {
   name: "bob",
 };
 
-console.log(user2.name)
+console.log(user2.name);
+
+let username: string = "alex";
+
+let pageName: string | number = "1";
+
+let errorMessage: string | null = null;
+
+// let user: UserInterface | null = null;
+
+interface User3Interface {
+  name: string;
+  surname: string;
+}
 
 
-let username: string = 'alex'
+let user: User3Interface | null = null; 
 
-let pageName: string | number = '1'
 
-let errorMessage: string | null = null
-
-let user: UserInterface | null = null
