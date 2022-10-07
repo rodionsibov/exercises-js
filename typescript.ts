@@ -31,12 +31,12 @@ let errorMessage: string | null = null;
 
 // let user: UserInterface | null = null;
 
-interface User3Interface {
+interface User2Interface {
   name: string;
   surname: string;
 }
 
 
-let user: User3Interface | null = null; 
+let user: User2Interface | null = null; 
 
 
