@@ -12,16 +12,14 @@ interface UserInterface {
   getMessages?(): string;
 }
 
-// const user: UserInterface = {
-//   name: "bob",
-//   age: 23,
-// };
+const user: UserInterface = {
+  name: "bob",
+  age: 23,
+};
 
 const user2: UserInterface = {
   name: "bob",
 };
-
-console.log(user2.name);
 
 let username: string = "alex";
 
@@ -36,8 +34,7 @@ interface User2Interface {
   surname: string;
 }
 
-
-let user: User2Interface | null = null; 
+const user3: User2Interface | null = null; 
 
 // type aliases in ts
 type ID = string
