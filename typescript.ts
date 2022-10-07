@@ -32,7 +32,7 @@ let errorMessage: string | null = null;
 // let user: UserInterface | null = null;
 
 interface User2Interface {
-  name: string;
+  name: ID;
   surname: string;
 }
 
@@ -40,4 +40,9 @@ interface User2Interface {
 let user: User2Interface | null = null; 
 
 // type aliases in ts
+type ID = string
+type PopularTag  = string
+type MaybePopularTag = PopularTag | null
 
+const popularTags: PopularTag[] = ['dragon', 'coffee']
+const dragonsTag: MaybePopularTag = 'dragon'
