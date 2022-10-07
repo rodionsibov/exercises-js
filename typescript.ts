@@ -39,4 +39,3 @@ interface User2Interface {
 
 let user: User2Interface | null = null; 
 
-
