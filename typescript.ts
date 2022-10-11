@@ -34,15 +34,15 @@ interface User2Interface {
   surname: string;
 }
 
-const user3: User2Interface | null = null; 
+const user3: User2Interface | null = null;
 
 // type aliases in ts
-type ID = string
-type PopularTag  = string
-type MaybePopularTag = PopularTag | null
+type ID = string;
+type PopularTag = string;
+type MaybePopularTag = PopularTag | null;
 
-const popularTags: PopularTag[] = ['dragon', 'coffee']
-const dragonsTag: MaybePopularTag = 'dragon'
+const popularTags: PopularTag[] = ["dragon", "coffee"];
+const dragonsTag: MaybePopularTag = "dragon";
 
 const doSomething = (): void => {
   console.log("doSomething");
@@ -52,13 +52,13 @@ const doSomething2 = (): never => {
   throw "never";
 };
 
-let vAny: any = 10
-let vUnknown: unknown = 10
+let vAny: any = 10;
+let vUnknown: unknown = 10;
 let s1: string = vAny;
 let s2: string = vUnknown as string;
 
 let pageNumber: string = "1";
-let numericPageNumber: number = (pageNumber as unknown) as number;
+let numericPageNumber: number = pageNumber as unknown as number;
 
 // console.log(vAny.foo())
 // console.log(vUnknown.foo())
@@ -108,9 +108,27 @@ class Admin extends User {
   }
 }
 
-const user4 = new User('Mo', 'lessons')
-console.log(User.maxAge)
+const user4 = new User("Mo", "lessons");
+console.log(User.maxAge);
 // console.log(user4.maxAge)
 
-const admin = new Admin('Foo', 'Bar')
-console.log(admin.getEditor())
+const admin = new Admin("Foo", "Bar");
+console.log(admin.getEditor());
+
+const addId = <T extends object>(obj: T) => {
+  const id = Math.random().toString(16);
+  return {
+    ...obj,
+    id,
+  };
+};
+
+interface UserInterface3 {
+  name: string;
+}
+
+const user5: UserInterface3 = {
+  name: "Jack",
+};
+
+const result = addId<UserInterface3>(user5);
