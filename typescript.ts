@@ -63,3 +63,5 @@ let numericPageNumber: number = (pageNumber as unknown) as number;
 // console.log(vAny.foo())
 // console.log(vUnknown.foo())
 
+const someElement = document.querySelector("foo") as HTMLInputElement;
+console.log(someElement.value);
