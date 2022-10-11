@@ -123,12 +123,23 @@ const addId = <T extends object>(obj: T) => {
   };
 };
 
-interface UserInterface3 {
+interface UserInterface3<T> {
   name: string;
+  data: T;
 }
 
-const user5: UserInterface3 = {
+const user5: UserInterface3<{ meta: string }> = {
   name: "Jack",
+  data: {
+    meta: "foo",
+  },
 };
 
-const result = addId<UserInterface3>(user5);
+const user6: UserInterface3<string[]> = {
+  name: "John",
+  data: ["foo", "bar", "baz"],
+};
+
+// const result = addId<UserInterface3>(user5);
+
+
