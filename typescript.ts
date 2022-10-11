@@ -70,3 +70,30 @@ someElement.addEventListener("blur", (event) => {
   const target = event.target as HTMLInputElement;
   console.log("event", target.value);
 });
+
+interface UserInterface2 {
+  getFullname(): string;
+}
+
+class User implements UserInterface2 {
+  protected firstName: string;
+  private lastname: string;
+  readonly unchangableName: string;
+
+  constructor(firstName: string, lastname: string) {
+    this.firstName = firstName;
+    this.lastname = lastname;
+    this.unchangableName = firstName;
+  }
+
+  changeUnchangableName(): void {
+    // this.unchangableName = "foo";
+  }
+
+  getFullname(): string {
+    return this.firstName + "" + this.lastname;
+  }
+}
+
+const user4 = new User('Mo', 'lessons')
+// console.log(user4.lastnamesf)
