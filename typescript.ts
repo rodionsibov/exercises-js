@@ -43,3 +43,19 @@ type MaybePopularTag = PopularTag | null
 
 const popularTags: PopularTag[] = ['dragon', 'coffee']
 const dragonsTag: MaybePopularTag = 'dragon'
+
+const doSomething = (): void => {
+  console.log("doSomething");
+};
+
+const doSomething2 = (): never => {
+  throw "never";
+};
+
+let vAny: any = 10
+let vUnknown: unknown = 10
+let s1: string = vAny;
+let s2: string = vUnknown;
+
+console.log(vAny.foo())
+console.log(vUnknown.foo())
