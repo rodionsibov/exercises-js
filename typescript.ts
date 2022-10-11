@@ -77,12 +77,13 @@ interface UserInterface2 {
 
 class User implements UserInterface2 {
   protected firstName: string;
-  private lastname: string;
+  private lastName: string;
   readonly unchangableName: string;
+  static readonly maxAge = 50;
 
-  constructor(firstName: string, lastname: string) {
+  constructor(firstName: string, lastName: string) {
     this.firstName = firstName;
-    this.lastname = lastname;
+    this.lastName = lastName;
     this.unchangableName = firstName;
   }
 
@@ -91,9 +92,25 @@ class User implements UserInterface2 {
   }
 
   getFullname(): string {
-    return this.firstName + "" + this.lastname;
+    return this.firstName + "" + this.lastName;
+  }
+}
+
+class Admin extends User {
+  private editor: string;
+
+  setEditor(editor: string): void {
+    this.editor = editor;
+  }
+
+  getEditor() {
+    return this.editor;
   }
 }
 
 const user4 = new User('Mo', 'lessons')
-// console.log(user4.lastnamesf)
+console.log(User.maxAge)
+// console.log(user4.maxAge)
+
+const admin = new Admin('Foo', 'Bar')
+console.log(admin.getEditor())
