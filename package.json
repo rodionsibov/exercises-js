@@ -19,6 +19,6 @@
   "homepage": "https://github.com/rodionsibov/exercises-js#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^6.1.0"
+    "mongoose": "^6.4.6"
   }
 }
